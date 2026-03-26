@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 6: Job Trigger and Verification – Octoplant e-Academy</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="layout">
+<nav id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">🌿</div>
+    <h1>Octoplant<br>e-Academy</h1>
+    <p>Online Learning Manual</p>
+  </div>
+  <div class="sidebar-search"><input type="text" id="sidebar-search" placeholder="Search chapters..."></div>
+  <div class="sidebar-nav">
+    <div class="nav-section">Getting Started</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span><span class="nav-label">Home &amp; Overview</span></a>
+    <a href="ch01-asset-creation.html" class="nav-item"><span class="nav-num">1</span><span class="nav-label">Manual Asset Creation</span><span class="nav-duration">4:34</span></a>
+    <div class="nav-section">Core Tutorials</div>
+    <a href="ch02-lifecycle.html" class="nav-item"><span class="nav-num">2</span><span class="nav-label">Lifecycle Change Process</span><span class="nav-duration">4:57</span></a>
+    <a href="ch03-change-history.html" class="nav-item"><span class="nav-num">3</span><span class="nav-label">Change History</span><span class="nav-duration">3:54</span></a>
+    <a href="ch04-user-management.html" class="nav-item"><span class="nav-num">4</span><span class="nav-label">User Management</span><span class="nav-duration">5:03</span></a>
+    <a href="ch05-create-jobs.html" class="nav-item"><span class="nav-num">5</span><span class="nav-label">Create Jobs</span><span class="nav-duration">5:24</span></a>
+    <div class="nav-section">Automation &amp; Jobs</div>
+    <a href="ch06-job-trigger.html" class="nav-item active"><span class="nav-num">6</span><span class="nav-label">Job Trigger &amp; Verification</span><span class="nav-duration">3:47</span></a>
+    <a href="ch07-recovery.html" class="nav-item"><span class="nav-num">7</span><span class="nav-label">Recovery &amp; Restore</span><span class="nav-duration">5:17</span></a>
+    <a href="ch08-hub-dashboard.html" class="nav-item"><span class="nav-num">8</span><span class="nav-label">Hub &amp; Dashboard</span><span class="nav-duration">6:15</span></a>
+    <div class="nav-section">Dashboard &amp; Services</div>
+    <a href="ch09-asset-inventory.html" class="nav-item"><span class="nav-num">9</span><span class="nav-label">Asset Inventory Service</span><span class="nav-duration">3:22</span></a>
+    <a href="ch10-easy-asset-integrator.html" class="nav-item"><span class="nav-num">10</span><span class="nav-label">Easy Asset Integrator</span><span class="nav-duration">4:44</span></a>
+    <a href="ch11-supplier-workflow.html" class="nav-item"><span class="nav-num">11</span><span class="nav-label">Supplier Workflow</span><span class="nav-duration">4:46</span></a>
+    <div class="nav-section">Advanced Features</div>
+    <a href="ch12-export.html" class="nav-item"><span class="nav-num">12</span><span class="nav-label">Manual &amp; Auto Export</span><span class="nav-duration">5:18</span></a>
+    <a href="ch13-active-directory.html" class="nav-item"><span class="nav-num">13</span><span class="nav-label">Active Directory</span><span class="nav-duration">5:57</span></a>
+    <a href="ch14-library-management.html" class="nav-item"><span class="nav-num">14</span><span class="nav-label">Library Management</span><span class="nav-duration">5:31</span></a>
+    <a href="ch15-scripting.html" class="nav-item"><span class="nav-num">15</span><span class="nav-label">Scripting</span><span class="nav-duration">4:37</span></a>
+  </div>
+</nav>
+
+<div id="main">
+  <div id="topbar">
+    <div class="topbar-left">
+      <button id="sidebar-toggle">☰</button>
+      <div class="topbar-breadcrumb">Octoplant e-Academy &rsaquo; <span class="current">Chapter 6: Job Trigger and Verification</span></div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-progress"><span>Reading</span><div class="progress-bar"><div class="progress-fill"></div></div></div>
+      <a href="ch05-create-jobs.html" class="btn-nav">← Chapter 5: Create Jobs</a>
+      <a href="ch07-recovery.html" class="btn-nav">Next →</a>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="chapter-page">
+
+      <div class="chapter-header">
+        <div class="ch-num">Chapter 6 of 15</div>
+        <h1>Job Trigger and Verification</h1>
+        <p class="ch-intro">Once jobs are configured, you need to know how to manually trigger them, monitor their execution, and interpret the results. This chapter covers manual job execution, reading job results, comparing server versions with backups, and understanding email reports.</p>
+        <div class="ch-meta">
+          <span class="ch-badge">⏱ 3:47 min</span>
+          <span class="ch-badge">🎯 Operations</span>
+          <span class="ch-badge">📋 5 Steps</span>
+        </div>
+      </div>
+
+      <div class="video-embed">
+        <div class="video-embed-header">Tutorial Video – iOpen e-ACADEMY: Job Trigger and Verification</div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/vsZIz2Md4io" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+
+      
+
+      
+      <div class="section-header">
+        <div class="snum">1</div>
+        <h2>Manually Triggering a Job</h2>
+      </div>
+      <p>While jobs run automatically on schedule, you can also trigger them manually at any time — for example, after making changes to a device.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">In the <strong>UserClient</strong>, select the component associated with the job in the Project tree.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Navigate to the <strong>Jobs</strong> tab in the menu bar.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Click the <strong>Execute jobs once</strong> button. The job starts immediately.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">Click the <strong>Show progress information</strong> button (which becomes active during execution) to monitor the real-time execution status.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">2</div>
+        <h2>Reading Job Results</h2>
+      </div>
+      <p>After a job completes, the results are available in both the AdminClient and UserClient.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">In the <strong>Jobs</strong> tab of the UserClient, select the component and review the job history table.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Look at the <strong>Server version ↔ Backup</strong> column:<br>• <strong>Equal</strong>: The backup matches the server version — no changes detected<br>• <strong>Different, with warning</strong>: The backup differs from the server version — a change was detected on the device</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Look at the <strong>Prev. backup ↔ Backup</strong> column to see if the device program changed since the last backup.</div>
+        </div><div class="callout warning">
+          <span class="callout-icon">⚠️</span>
+          <div><strong>Not Present Warning</strong>If a previous backup was unavailable for comparison (e.g., first run), you will see a 'Not present, with warning' status. This is normal for the first execution.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">3</div>
+        <h2>Comparing Server Version with Backup</h2>
+      </div>
+      <p>When a 'Different' status appears, you should investigate the differences before deciding how to proceed.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">In the job results, <strong>right-click</strong> on the result row that shows a 'Different' status.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Select <strong>Compare server version with backup</strong> from the context menu. A detailed comparison window opens.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Review the side-by-side <strong>Difference tree</strong> to understand exactly what changed on the device. Based on this analysis, decide whether the device change was authorized or unexpected.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">4</div>
+        <h2>Understanding Email Reports</h2>
+      </div>
+      <p>If email notifications are configured, Octoplant sends automated reports after job execution.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Open the notification email in your email client. The email contains a summary of all job results.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Download the attached <strong>CSV file</strong> for a detailed breakdown of all differences detected across all monitored components.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Use the CSV data to create reports, track trends, or integrate with other systems.</div>
+        </div>
+      </div>
+
+      
+    <div class="screenshot-box">
+      <div class="screenshot-caption">Figure 6.1 – Job results showing comparison status in the UserClient</div>
+      <img src="assets/img/10.jpg" alt="Figure 6.1 – Job results showing comparison status in the UserClient" onclick="openLightbox(this)">
+    </div>
+
+      
+      <div class="section-header">
+        <div class="snum">📋</div>
+        <h2>Summary</h2>
+      </div>
+      <table>
+        <thead><tr><th>Action</th><th>Where / How</th><th>Result</th></tr></thead>
+        <tbody><tr><td><strong>Manual Trigger</strong></td><td>Jobs tab → Execute jobs once</td><td>Job runs immediately</td></tr><tr><td><strong>Monitor Progress</strong></td><td>Show progress information button</td><td>Real-time execution status</td></tr><tr><td><strong>Read Results</strong></td><td>Jobs tab → Job history table</td><td>Equal / Different status per component</td></tr><tr><td><strong>Compare Differences</strong></td><td>Right-click result → Compare server version with backup</td><td>Detailed difference tree</td></tr><tr><td><strong>Email Report</strong></td><td>Automated email with CSV attachment</td><td>Full job summary for all components</td></tr></tbody></table>
+
+    </div>
+
+    <div class="chapter-nav">
+      <a href="ch05-create-jobs.html">← Chapter 5: Create Jobs</a>
+      <span style="color:var(--muted);font-size:13px">Chapter 6 of 15</span>
+      <a href="ch07-recovery.html">Chapter 7: Recovery →</a>
+    </div>
+  </div>
+
+  <footer>Octoplant e-Academy Online Manual &mdash; Chapter 6: Job Trigger and Verification</footer>
+</div>
+</div>
+
+<div id="lightbox"><span id="lightbox-close">&#x2715;</span><img id="lightbox-img" src="" alt=""></div>
+<script src="assets/js/main.js"></script>
+<script>function openLightbox(img){document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').classList.add('active');}</script>
+</body>
+</html>
