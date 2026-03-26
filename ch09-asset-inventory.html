@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 9: Asset Inventory Service – Octoplant e-Academy</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="layout">
+<nav id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">🌿</div>
+    <h1>Octoplant<br>e-Academy</h1>
+    <p>Online Learning Manual</p>
+  </div>
+  <div class="sidebar-search"><input type="text" id="sidebar-search" placeholder="Search chapters..."></div>
+  <div class="sidebar-nav">
+    <div class="nav-section">Getting Started</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span><span class="nav-label">Home &amp; Overview</span></a>
+    <a href="ch01-asset-creation.html" class="nav-item"><span class="nav-num">1</span><span class="nav-label">Manual Asset Creation</span><span class="nav-duration">4:34</span></a>
+    <div class="nav-section">Core Tutorials</div>
+    <a href="ch02-lifecycle.html" class="nav-item"><span class="nav-num">2</span><span class="nav-label">Lifecycle Change Process</span><span class="nav-duration">4:57</span></a>
+    <a href="ch03-change-history.html" class="nav-item"><span class="nav-num">3</span><span class="nav-label">Change History</span><span class="nav-duration">3:54</span></a>
+    <a href="ch04-user-management.html" class="nav-item"><span class="nav-num">4</span><span class="nav-label">User Management</span><span class="nav-duration">5:03</span></a>
+    <a href="ch05-create-jobs.html" class="nav-item"><span class="nav-num">5</span><span class="nav-label">Create Jobs</span><span class="nav-duration">5:24</span></a>
+    <div class="nav-section">Automation &amp; Jobs</div>
+    <a href="ch06-job-trigger.html" class="nav-item"><span class="nav-num">6</span><span class="nav-label">Job Trigger &amp; Verification</span><span class="nav-duration">3:47</span></a>
+    <a href="ch07-recovery.html" class="nav-item"><span class="nav-num">7</span><span class="nav-label">Recovery &amp; Restore</span><span class="nav-duration">5:17</span></a>
+    <a href="ch08-hub-dashboard.html" class="nav-item"><span class="nav-num">8</span><span class="nav-label">Hub &amp; Dashboard</span><span class="nav-duration">6:15</span></a>
+    <div class="nav-section">Dashboard &amp; Services</div>
+    <a href="ch09-asset-inventory.html" class="nav-item active"><span class="nav-num">9</span><span class="nav-label">Asset Inventory Service</span><span class="nav-duration">3:22</span></a>
+    <a href="ch10-easy-asset-integrator.html" class="nav-item"><span class="nav-num">10</span><span class="nav-label">Easy Asset Integrator</span><span class="nav-duration">4:44</span></a>
+    <a href="ch11-supplier-workflow.html" class="nav-item"><span class="nav-num">11</span><span class="nav-label">Supplier Workflow</span><span class="nav-duration">4:46</span></a>
+    <div class="nav-section">Advanced Features</div>
+    <a href="ch12-export.html" class="nav-item"><span class="nav-num">12</span><span class="nav-label">Manual &amp; Auto Export</span><span class="nav-duration">5:18</span></a>
+    <a href="ch13-active-directory.html" class="nav-item"><span class="nav-num">13</span><span class="nav-label">Active Directory</span><span class="nav-duration">5:57</span></a>
+    <a href="ch14-library-management.html" class="nav-item"><span class="nav-num">14</span><span class="nav-label">Library Management</span><span class="nav-duration">5:31</span></a>
+    <a href="ch15-scripting.html" class="nav-item"><span class="nav-num">15</span><span class="nav-label">Scripting</span><span class="nav-duration">4:37</span></a>
+  </div>
+</nav>
+
+<div id="main">
+  <div id="topbar">
+    <div class="topbar-left">
+      <button id="sidebar-toggle">☰</button>
+      <div class="topbar-breadcrumb">Octoplant e-Academy &rsaquo; <span class="current">Chapter 9: Asset Inventory Service</span></div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-progress"><span>Reading</span><div class="progress-bar"><div class="progress-fill"></div></div></div>
+      <a href="ch08-hub-dashboard.html" class="btn-nav">← Chapter 8: Hub & Dashboard</a>
+      <a href="ch10-easy-asset-integrator.html" class="btn-nav">Next →</a>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="chapter-page">
+
+      <div class="chapter-header">
+        <div class="ch-num">Chapter 9 of 15</div>
+        <h1>Asset Inventory Service</h1>
+        <p class="ch-intro">The Asset Inventory Service is a security-focused feature that automatically identifies device information and vulnerability data for all managed assets. This chapter shows how to access device details, read vulnerability reports, and interpret CVE risk scores.</p>
+        <div class="ch-meta">
+          <span class="ch-badge">⏱ 3:22 min</span>
+          <span class="ch-badge">🎯 Security</span>
+          <span class="ch-badge">📋 4 Steps</span>
+        </div>
+      </div>
+
+      <div class="video-embed">
+        <div class="video-embed-header">Tutorial Video – iOpen e-ACADEMY: Asset Inventory Service</div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/PKPwQxxM7iI" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+
+      
+
+      
+      <div class="section-header">
+        <div class="snum">1</div>
+        <h2>Triggering Asset Identification via Check-In</h2>
+      </div>
+      <p>The Asset Inventory Service is automatically populated when components are checked into the server. Octoplant reads the CPU configuration from the project data.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">In the UserClient, select a component (e.g., a <strong>Simatic S7</strong> component) and perform a <strong>Check-In</strong> with project data.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Octoplant automatically reads the CPU configuration from the project data and registers it in the Asset Inventory Service.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">2</div>
+        <h2>Accessing the Asset Inventory Dashboard</h2>
+      </div>
+      <p>The Asset Inventory Service is accessible from the octoplant Hub.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Log into the <strong>octoplant Hub</strong> (see Chapter 8).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Navigate to the <strong>Asset Inventory Service</strong> dashboard. A list of all managed assets appears, showing: Name, IP address, Risk level (Low / Medium / High), Device type, Vendor.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">A color-coded donut chart provides an overview of the vulnerability distribution across all assets.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">3</div>
+        <h2>Viewing Device Information</h2>
+      </div>
+      <p>Click on any asset to see its full technical profile.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Click on an asset in the list to open its <strong>Device Information</strong> page.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Review the comprehensive device details: network configuration, hardware information (including rack slots and module assignments), and installed firmware/software versions.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">4</div>
+        <h2>Reading Vulnerability Reports</h2>
+      </div>
+      <p>The vulnerability report provides a detailed security assessment for each device.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">From the Asset Inventory dashboard, click on the <strong>risk level</strong> (e.g., 'Medium') next to a specific asset.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">The detailed risk report opens, showing: overall <strong>Risk Score</strong>, a <strong>Radar Chart</strong> visualizing risk across categories (Vulnerability, Threat, Criticality), and a breakdown of each category.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Scroll down to the <strong>Insights</strong> section to see a list of <strong>Full Match CVEs</strong> (Common Vulnerabilities and Exposures). Each CVE entry shows its score, title, and date identified.</div>
+        </div><div class="callout info">
+          <span class="callout-icon">ℹ️</span>
+          <div><strong>CVE Information</strong>CVE data is sourced from the National Vulnerability Database (NVD). Octoplant matches your device's firmware version against known CVEs to identify potential security risks.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">Click on any CVE entry to see more details and recommended mitigations.</div>
+        </div>
+      </div>
+
+      
+
+      
+      <div class="section-header">
+        <div class="snum">📋</div>
+        <h2>Summary</h2>
+      </div>
+      <table>
+        <thead><tr><th>Action</th><th>Where / How</th><th>Result</th></tr></thead>
+        <tbody><tr><td><strong>Trigger Identification</strong></td><td>Check-In component with project data</td><td>CPU configuration registered</td></tr><tr><td><strong>Access Dashboard</strong></td><td>Hub → Asset Inventory Service</td><td>All assets listed with risk levels</td></tr><tr><td><strong>View Device Info</strong></td><td>Click asset → Device Information</td><td>Full hardware and network profile</td></tr><tr><td><strong>Read CVE Report</strong></td><td>Click risk level → Insights section</td><td>Specific vulnerabilities listed</td></tr></tbody></table>
+
+    </div>
+
+    <div class="chapter-nav">
+      <a href="ch08-hub-dashboard.html">← Chapter 8: Hub & Dashboard</a>
+      <span style="color:var(--muted);font-size:13px">Chapter 9 of 15</span>
+      <a href="ch10-easy-asset-integrator.html">Chapter 10: Easy Asset Integrator →</a>
+    </div>
+  </div>
+
+  <footer>Octoplant e-Academy Online Manual &mdash; Chapter 9: Asset Inventory Service</footer>
+</div>
+</div>
+
+<div id="lightbox"><span id="lightbox-close">&#x2715;</span><img id="lightbox-img" src="" alt=""></div>
+<script src="assets/js/main.js"></script>
+<script>function openLightbox(img){document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').classList.add('active');}</script>
+</body>
+</html>
