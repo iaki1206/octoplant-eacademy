@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 4: User Management – Octoplant e-Academy</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="layout">
+<nav id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">🌿</div>
+    <h1>Octoplant<br>e-Academy</h1>
+    <p>Online Learning Manual</p>
+  </div>
+  <div class="sidebar-search"><input type="text" id="sidebar-search" placeholder="Search chapters..."></div>
+  <div class="sidebar-nav">
+    <div class="nav-section">Getting Started</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span><span class="nav-label">Home &amp; Overview</span></a>
+    <a href="ch01-asset-creation.html" class="nav-item"><span class="nav-num">1</span><span class="nav-label">Manual Asset Creation</span><span class="nav-duration">4:34</span></a>
+    <div class="nav-section">Core Tutorials</div>
+    <a href="ch02-lifecycle.html" class="nav-item"><span class="nav-num">2</span><span class="nav-label">Lifecycle Change Process</span><span class="nav-duration">4:57</span></a>
+    <a href="ch03-change-history.html" class="nav-item"><span class="nav-num">3</span><span class="nav-label">Change History</span><span class="nav-duration">3:54</span></a>
+    <a href="ch04-user-management.html" class="nav-item active"><span class="nav-num">4</span><span class="nav-label">User Management</span><span class="nav-duration">5:03</span></a>
+    <a href="ch05-create-jobs.html" class="nav-item"><span class="nav-num">5</span><span class="nav-label">Create Jobs</span><span class="nav-duration">5:24</span></a>
+    <div class="nav-section">Automation &amp; Jobs</div>
+    <a href="ch06-job-trigger.html" class="nav-item"><span class="nav-num">6</span><span class="nav-label">Job Trigger &amp; Verification</span><span class="nav-duration">3:47</span></a>
+    <a href="ch07-recovery.html" class="nav-item"><span class="nav-num">7</span><span class="nav-label">Recovery &amp; Restore</span><span class="nav-duration">5:17</span></a>
+    <a href="ch08-hub-dashboard.html" class="nav-item"><span class="nav-num">8</span><span class="nav-label">Hub &amp; Dashboard</span><span class="nav-duration">6:15</span></a>
+    <div class="nav-section">Dashboard &amp; Services</div>
+    <a href="ch09-asset-inventory.html" class="nav-item"><span class="nav-num">9</span><span class="nav-label">Asset Inventory Service</span><span class="nav-duration">3:22</span></a>
+    <a href="ch10-easy-asset-integrator.html" class="nav-item"><span class="nav-num">10</span><span class="nav-label">Easy Asset Integrator</span><span class="nav-duration">4:44</span></a>
+    <a href="ch11-supplier-workflow.html" class="nav-item"><span class="nav-num">11</span><span class="nav-label">Supplier Workflow</span><span class="nav-duration">4:46</span></a>
+    <div class="nav-section">Advanced Features</div>
+    <a href="ch12-export.html" class="nav-item"><span class="nav-num">12</span><span class="nav-label">Manual &amp; Auto Export</span><span class="nav-duration">5:18</span></a>
+    <a href="ch13-active-directory.html" class="nav-item"><span class="nav-num">13</span><span class="nav-label">Active Directory</span><span class="nav-duration">5:57</span></a>
+    <a href="ch14-library-management.html" class="nav-item"><span class="nav-num">14</span><span class="nav-label">Library Management</span><span class="nav-duration">5:31</span></a>
+    <a href="ch15-scripting.html" class="nav-item"><span class="nav-num">15</span><span class="nav-label">Scripting</span><span class="nav-duration">4:37</span></a>
+  </div>
+</nav>
+
+<div id="main">
+  <div id="topbar">
+    <div class="topbar-left">
+      <button id="sidebar-toggle">☰</button>
+      <div class="topbar-breadcrumb">Octoplant e-Academy &rsaquo; <span class="current">Chapter 4: User Management</span></div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-progress"><span>Reading</span><div class="progress-bar"><div class="progress-fill"></div></div></div>
+      <a href="ch03-change-history.html" class="btn-nav">← Chapter 3: Change History</a>
+      <a href="ch05-create-jobs.html" class="btn-nav">Next →</a>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="chapter-page">
+
+      <div class="chapter-header">
+        <div class="ch-num">Chapter 4 of 15</div>
+        <h1>User Management</h1>
+        <p class="ch-intro">Octoplant's user management system allows administrators to control who can access which components and perform which actions. This chapter covers creating groups, adding users, assigning rights, and setting account policies — all from the AdminClient.</p>
+        <div class="ch-meta">
+          <span class="ch-badge">⏱ 5:03 min</span>
+          <span class="ch-badge">🎯 Admin</span>
+          <span class="ch-badge">📋 7 Steps</span>
+        </div>
+      </div>
+
+      <div class="video-embed">
+        <div class="video-embed-header">Tutorial Video – iOpen e-ACADEMY: User Management</div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/zNoq6el-BBw" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+
+      
+
+      
+      <div class="section-header">
+        <div class="snum">1</div>
+        <h2>Opening User Management in the AdminClient</h2>
+      </div>
+      <p>All user management tasks are performed in the Octoplant AdminClient, which requires administrator privileges.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Open the <strong>Octoplant AdminClient</strong> on your PC and log in with administrator credentials.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">In the left navigation panel, click on <strong>User Management</strong>. The user management interface opens, showing existing users and groups.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">2</div>
+        <h2>Creating a New Group</h2>
+      </div>
+      <p>It is best practice in Octoplant to assign rights to groups rather than individual users. This makes permission management much more efficient.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">In the User Management module, click the <strong>New group</strong> button (or right-click in the groups panel and select New group).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Enter a descriptive name for the group (e.g., <code>Development_Engineers</code>, <code>Operators_Line1</code>).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Click <strong>OK</strong> to create the group.</div>
+        </div><div class="callout tip">
+          <span class="callout-icon">💡</span>
+          <div><strong>Best Practice</strong>Create groups that reflect your organizational structure or job roles. Assign rights to groups, then add users to groups. This way, when a user changes roles, you only need to change their group membership.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">3</div>
+        <h2>Creating a New User</h2>
+      </div>
+      <p>With the group created, you can now add individual users and assign them to the appropriate groups.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Click the <strong>New user</strong> button in the User Management module.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Enter the user's <strong>username</strong>, <strong>full name</strong>, and <strong>email address</strong>. The email address is required for job notification emails.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Set an initial <strong>password</strong> for the user. You can optionally check <strong>Force password change on next login</strong> to require the user to set their own password.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">In the <strong>Groups</strong> section, assign the user to one or more groups by clicking <strong>Add to group</strong> and selecting the appropriate group(s).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-content">If your organization uses Active Directory, you can enable <strong>Login via Windows credentials</strong> to allow the user to log in with their domain password.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">6</div>
+          <div class="step-content">Click <strong>Save</strong> to create the user account.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">4</div>
+        <h2>Assigning Access Rights to Groups</h2>
+      </div>
+      <p>Rights in Octoplant are assigned at two levels: at the project tree level (which components a group can access) and at the feature level (which functions they can use).</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Select the group you want to configure in the groups list.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">In the <strong>Project tree rights</strong> section, navigate to the directory or component and assign the appropriate rights: <strong>Check-Out</strong>, <strong>Check-In</strong>, <strong>Create component</strong>, <strong>Delete</strong>, etc.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">In the <strong>Module rights</strong> section, grant or restrict access to AdminClient modules and UserClient features as needed.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">Click <strong>Save</strong> to apply the rights.</div>
+        </div><div class="callout warning">
+          <span class="callout-icon">⚠️</span>
+          <div><strong>Superadministrator</strong>The built-in Superadministrator account and the Administrators group cannot be deleted. Be careful when modifying their rights, as this could lock you out of the system.</div>
+        </div>
+      </div>
+
+      
+    <div class="screenshot-box">
+      <div class="screenshot-caption">Figure 4.1 – AdminClient User Management module overview</div>
+      <img src="assets/img/1.jpg" alt="Figure 4.1 – AdminClient User Management module overview" onclick="openLightbox(this)">
+    </div>
+
+      
+      <div class="section-header">
+        <div class="snum">📋</div>
+        <h2>Summary</h2>
+      </div>
+      <table>
+        <thead><tr><th>Action</th><th>Where / How</th><th>Result</th></tr></thead>
+        <tbody><tr><td><strong>Open User Management</strong></td><td>AdminClient → User Management</td><td>User and group list visible</td></tr><tr><td><strong>Create Group</strong></td><td>New group button → Enter name</td><td>Group created for role-based access</td></tr><tr><td><strong>Create User</strong></td><td>New user button → Fill details</td><td>User account created</td></tr><tr><td><strong>Assign to Group</strong></td><td>User properties → Add to group</td><td>User inherits group rights</td></tr><tr><td><strong>Set Project Rights</strong></td><td>Group → Project tree rights</td><td>Access to specific components defined</td></tr><tr><td><strong>Set Module Rights</strong></td><td>Group → Module rights</td><td>Feature access configured</td></tr></tbody></table>
+
+    </div>
+
+    <div class="chapter-nav">
+      <a href="ch03-change-history.html">← Chapter 3: Change History</a>
+      <span style="color:var(--muted);font-size:13px">Chapter 4 of 15</span>
+      <a href="ch05-create-jobs.html">Chapter 5: Create Jobs →</a>
+    </div>
+  </div>
+
+  <footer>Octoplant e-Academy Online Manual &mdash; Chapter 4: User Management</footer>
+</div>
+</div>
+
+<div id="lightbox"><span id="lightbox-close">&#x2715;</span><img id="lightbox-img" src="" alt=""></div>
+<script src="assets/js/main.js"></script>
+<script>function openLightbox(img){document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').classList.add('active');}</script>
+</body>
+</html>
