@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 15: Scripting – Automation and Custom Actions – Octoplant e-Academy</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="layout">
+<nav id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">🌿</div>
+    <h1>Octoplant<br>e-Academy</h1>
+    <p>Online Learning Manual</p>
+  </div>
+  <div class="sidebar-search"><input type="text" id="sidebar-search" placeholder="Search chapters..."></div>
+  <div class="sidebar-nav">
+    <div class="nav-section">Getting Started</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span><span class="nav-label">Home &amp; Overview</span></a>
+    <a href="ch01-asset-creation.html" class="nav-item"><span class="nav-num">1</span><span class="nav-label">Manual Asset Creation</span><span class="nav-duration">4:34</span></a>
+    <div class="nav-section">Core Tutorials</div>
+    <a href="ch02-lifecycle.html" class="nav-item"><span class="nav-num">2</span><span class="nav-label">Lifecycle Change Process</span><span class="nav-duration">4:57</span></a>
+    <a href="ch03-change-history.html" class="nav-item"><span class="nav-num">3</span><span class="nav-label">Change History</span><span class="nav-duration">3:54</span></a>
+    <a href="ch04-user-management.html" class="nav-item"><span class="nav-num">4</span><span class="nav-label">User Management</span><span class="nav-duration">5:03</span></a>
+    <a href="ch05-create-jobs.html" class="nav-item"><span class="nav-num">5</span><span class="nav-label">Create Jobs</span><span class="nav-duration">5:24</span></a>
+    <div class="nav-section">Automation &amp; Jobs</div>
+    <a href="ch06-job-trigger.html" class="nav-item"><span class="nav-num">6</span><span class="nav-label">Job Trigger &amp; Verification</span><span class="nav-duration">3:47</span></a>
+    <a href="ch07-recovery.html" class="nav-item"><span class="nav-num">7</span><span class="nav-label">Recovery &amp; Restore</span><span class="nav-duration">5:17</span></a>
+    <a href="ch08-hub-dashboard.html" class="nav-item"><span class="nav-num">8</span><span class="nav-label">Hub &amp; Dashboard</span><span class="nav-duration">6:15</span></a>
+    <div class="nav-section">Dashboard &amp; Services</div>
+    <a href="ch09-asset-inventory.html" class="nav-item"><span class="nav-num">9</span><span class="nav-label">Asset Inventory Service</span><span class="nav-duration">3:22</span></a>
+    <a href="ch10-easy-asset-integrator.html" class="nav-item"><span class="nav-num">10</span><span class="nav-label">Easy Asset Integrator</span><span class="nav-duration">4:44</span></a>
+    <a href="ch11-supplier-workflow.html" class="nav-item"><span class="nav-num">11</span><span class="nav-label">Supplier Workflow</span><span class="nav-duration">4:46</span></a>
+    <div class="nav-section">Advanced Features</div>
+    <a href="ch12-export.html" class="nav-item"><span class="nav-num">12</span><span class="nav-label">Manual &amp; Auto Export</span><span class="nav-duration">5:18</span></a>
+    <a href="ch13-active-directory.html" class="nav-item"><span class="nav-num">13</span><span class="nav-label">Active Directory</span><span class="nav-duration">5:57</span></a>
+    <a href="ch14-library-management.html" class="nav-item"><span class="nav-num">14</span><span class="nav-label">Library Management</span><span class="nav-duration">5:31</span></a>
+    <a href="ch15-scripting.html" class="nav-item active"><span class="nav-num">15</span><span class="nav-label">Scripting</span><span class="nav-duration">4:37</span></a>
+  </div>
+</nav>
+
+<div id="main">
+  <div id="topbar">
+    <div class="topbar-left">
+      <button id="sidebar-toggle">☰</button>
+      <div class="topbar-breadcrumb">Octoplant e-Academy &rsaquo; <span class="current">Chapter 15: Scripting – Automation and Custom Actions</span></div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-progress"><span>Reading</span><div class="progress-bar"><div class="progress-fill"></div></div></div>
+      <a href="ch14-library-management.html" class="btn-nav">← Chapter 14: Library Management</a>
+      <a href="index.html" class="btn-nav">Next →</a>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="chapter-page">
+
+      <div class="chapter-header">
+        <div class="ch-num">Chapter 15 of 15</div>
+        <h1>Scripting – Automation and Custom Actions</h1>
+        <p class="ch-intro">Octoplant's scripting feature allows you to automate custom actions — such as running validation checks, sending notifications, or executing external tools — triggered by events like opening a component for editing or clicking a custom button.</p>
+        <div class="ch-meta">
+          <span class="ch-badge">⏱ 4:37 min</span>
+          <span class="ch-badge">🎯 Advanced</span>
+          <span class="ch-badge">📋 6 Steps</span>
+        </div>
+      </div>
+
+      <div class="video-embed">
+        <div class="video-embed-header">Tutorial Video – iOpen e-ACADEMY: Scripting – Automation and Custom Actions</div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/Kt2jdYvx5W0" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+
+      
+
+      
+      <div class="section-header">
+        <div class="snum">1</div>
+        <h2>Preparing Script Files</h2>
+      </div>
+      <p>A complete Octoplant script package consists of three files that must be prepared before configuration.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Create a <strong>.script file</strong> containing the script code (the logic to execute).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Obtain or compile the <strong>.exe application file</strong> that executes the script. Download the scripting package from <code>my.auvesy-mdt.com</code>.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Create a matching <strong>.ini file</strong> that configures which component types the script applies to.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">Optionally, include an <strong>image file</strong> if you want to create a custom button with an icon.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">2</div>
+        <h2>Configuring Scripts in the AdminClient</h2>
+      </div>
+      <p>Scripts are registered and configured in the AdminClient's Script Management module.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Open the <strong>AdminClient</strong> and navigate to <strong>Script management</strong>.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Copy the prepared script files to the appropriate directory:<br>• <strong>Client-side scripts</strong>: Executed on the user's PC<br>• <strong>Server-side scripts</strong>: Executed on the Octoplant server</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">In <strong>Scripting settings</strong>, enable scripting functionality globally.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">3</div>
+        <h2>Configuring Script Triggers</h2>
+      </div>
+      <p>Scripts can be triggered by specific events in the Octoplant workflow.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">In the script configuration, set the <strong>trigger event</strong>. For example, the <strong>Before Edit</strong> event triggers the script whenever a user opens a component for editing.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Configure the trigger to apply to specific component types using the <code>.ini</code> file.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">4</div>
+        <h2>Creating a Custom Button</h2>
+      </div>
+      <p>You can add a custom button to the Extras tab in the UserClient to allow users to run scripts on demand.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Include the image file for the button icon in the script package.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Configure the button in the script settings. The button will appear in the <strong>Extras</strong> tab of the UserClient.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Users can click the button to manually trigger the script on the selected component.</div>
+        </div><div class="callout tip">
+          <span class="callout-icon">💡</span>
+          <div><strong>Online Help</strong>For more scripting examples and advanced usage, navigate to <strong>Help → Online help</strong> in the UserClient or AdminClient. The documentation includes sample scripts for common automation scenarios.</div>
+        </div>
+      </div>
+
+      <div class="screenshot-row">
+      <div class="screenshot-box" style="margin:0">
+        <div class="screenshot-caption">Figure 15.1 – Script management in the AdminClient</div>
+        <img src="assets/img/12.jpg" alt="Figure 15.1 – Script management in the AdminClient" onclick="openLightbox(this)">
+      </div>
+      <div class="screenshot-box" style="margin:0">
+        <div class="screenshot-caption">Figure 15.2 – Scripting settings and trigger configuration</div>
+        <img src="assets/img/13_1.jpg" alt="Figure 15.2 – Scripting settings and trigger configuration" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+      
+      <div class="section-header">
+        <div class="snum">📋</div>
+        <h2>Summary</h2>
+      </div>
+      <table>
+        <thead><tr><th>Action</th><th>Where / How</th><th>Result</th></tr></thead>
+        <tbody><tr><td><strong>Prepare Files</strong></td><td>.script + .exe + .ini files</td><td>Script package ready</td></tr><tr><td><strong>Register in AdminClient</strong></td><td>Script management → Copy files to directory</td><td>Script registered in Octoplant</td></tr><tr><td><strong>Enable Scripting</strong></td><td>Scripting settings → Enable globally</td><td>Scripting functionality active</td></tr><tr><td><strong>Set Trigger</strong></td><td>Script config → Before Edit event</td><td>Script runs on specified event</td></tr><tr><td><strong>Custom Button</strong></td><td>Extras tab → Custom button</td><td>Manual script execution available</td></tr></tbody></table>
+
+    </div>
+
+    <div class="chapter-nav">
+      <a href="ch14-library-management.html">← Chapter 14: Library Management</a>
+      <span style="color:var(--muted);font-size:13px">Chapter 15 of 15</span>
+      <a href="index.html">Back to Home →</a>
+    </div>
+  </div>
+
+  <footer>Octoplant e-Academy Online Manual &mdash; Chapter 15: Scripting – Automation and Custom Actions</footer>
+</div>
+</div>
+
+<div id="lightbox"><span id="lightbox-close">&#x2715;</span><img id="lightbox-img" src="" alt=""></div>
+<script src="assets/js/main.js"></script>
+<script>function openLightbox(img){document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').classList.add('active');}</script>
+</body>
+</html>
