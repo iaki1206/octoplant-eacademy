@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 14: Library Management – Octoplant e-Academy</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="layout">
+<nav id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">🌿</div>
+    <h1>Octoplant<br>e-Academy</h1>
+    <p>Online Learning Manual</p>
+  </div>
+  <div class="sidebar-search"><input type="text" id="sidebar-search" placeholder="Search chapters..."></div>
+  <div class="sidebar-nav">
+    <div class="nav-section">Getting Started</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span><span class="nav-label">Home &amp; Overview</span></a>
+    <a href="ch01-asset-creation.html" class="nav-item"><span class="nav-num">1</span><span class="nav-label">Manual Asset Creation</span><span class="nav-duration">4:34</span></a>
+    <div class="nav-section">Core Tutorials</div>
+    <a href="ch02-lifecycle.html" class="nav-item"><span class="nav-num">2</span><span class="nav-label">Lifecycle Change Process</span><span class="nav-duration">4:57</span></a>
+    <a href="ch03-change-history.html" class="nav-item"><span class="nav-num">3</span><span class="nav-label">Change History</span><span class="nav-duration">3:54</span></a>
+    <a href="ch04-user-management.html" class="nav-item"><span class="nav-num">4</span><span class="nav-label">User Management</span><span class="nav-duration">5:03</span></a>
+    <a href="ch05-create-jobs.html" class="nav-item"><span class="nav-num">5</span><span class="nav-label">Create Jobs</span><span class="nav-duration">5:24</span></a>
+    <div class="nav-section">Automation &amp; Jobs</div>
+    <a href="ch06-job-trigger.html" class="nav-item"><span class="nav-num">6</span><span class="nav-label">Job Trigger &amp; Verification</span><span class="nav-duration">3:47</span></a>
+    <a href="ch07-recovery.html" class="nav-item"><span class="nav-num">7</span><span class="nav-label">Recovery &amp; Restore</span><span class="nav-duration">5:17</span></a>
+    <a href="ch08-hub-dashboard.html" class="nav-item"><span class="nav-num">8</span><span class="nav-label">Hub &amp; Dashboard</span><span class="nav-duration">6:15</span></a>
+    <div class="nav-section">Dashboard &amp; Services</div>
+    <a href="ch09-asset-inventory.html" class="nav-item"><span class="nav-num">9</span><span class="nav-label">Asset Inventory Service</span><span class="nav-duration">3:22</span></a>
+    <a href="ch10-easy-asset-integrator.html" class="nav-item"><span class="nav-num">10</span><span class="nav-label">Easy Asset Integrator</span><span class="nav-duration">4:44</span></a>
+    <a href="ch11-supplier-workflow.html" class="nav-item"><span class="nav-num">11</span><span class="nav-label">Supplier Workflow</span><span class="nav-duration">4:46</span></a>
+    <div class="nav-section">Advanced Features</div>
+    <a href="ch12-export.html" class="nav-item"><span class="nav-num">12</span><span class="nav-label">Manual &amp; Auto Export</span><span class="nav-duration">5:18</span></a>
+    <a href="ch13-active-directory.html" class="nav-item"><span class="nav-num">13</span><span class="nav-label">Active Directory</span><span class="nav-duration">5:57</span></a>
+    <a href="ch14-library-management.html" class="nav-item active"><span class="nav-num">14</span><span class="nav-label">Library Management</span><span class="nav-duration">5:31</span></a>
+    <a href="ch15-scripting.html" class="nav-item"><span class="nav-num">15</span><span class="nav-label">Scripting</span><span class="nav-duration">4:37</span></a>
+  </div>
+</nav>
+
+<div id="main">
+  <div id="topbar">
+    <div class="topbar-left">
+      <button id="sidebar-toggle">☰</button>
+      <div class="topbar-breadcrumb">Octoplant e-Academy &rsaquo; <span class="current">Chapter 14: Library Management</span></div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-progress"><span>Reading</span><div class="progress-bar"><div class="progress-fill"></div></div></div>
+      <a href="ch13-active-directory.html" class="btn-nav">← Chapter 13: Active Directory</a>
+      <a href="ch15-scripting.html" class="btn-nav">Next →</a>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="chapter-page">
+
+      <div class="chapter-header">
+        <div class="ch-num">Chapter 14 of 15</div>
+        <h1>Library Management</h1>
+        <p class="ch-intro">Library Management allows you to create centralized code libraries (e.g., standard function blocks) that are shared across multiple projects. Octoplant automatically detects inconsistencies between library versions and project copies, helping you maintain code quality and consistency.</p>
+        <div class="ch-meta">
+          <span class="ch-badge">⏱ 5:31 min</span>
+          <span class="ch-badge">🎯 Advanced</span>
+          <span class="ch-badge">📋 6 Steps</span>
+        </div>
+      </div>
+
+      <div class="video-embed">
+        <div class="video-embed-header">Tutorial Video – iOpen e-ACADEMY: Library Management</div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/SQgqls_njTI" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+
+      
+
+      
+      <div class="section-header">
+        <div class="snum">1</div>
+        <h2>Creating a Library Component</h2>
+      </div>
+      <p>A library in Octoplant is a special component that serves as the master source for shared code blocks.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">In the UserClient, create a new component with the appropriate type for your library (e.g., <strong>Simatic S7 Library</strong>).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Add the library's program blocks to the component and check it into the server.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">2</div>
+        <h2>Linking Projects to the Library</h2>
+      </div>
+      <p>Projects that use the library must be explicitly linked to it in their component configuration.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Select a project component in the Project tree and open its <strong>component properties</strong>.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">In the properties, assign the library component as a <strong>standard library</strong> for this project.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Repeat for all projects that should use this library.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">3</div>
+        <h2>Understanding Inconsistency Indicators</h2>
+      </div>
+      <p>The Library Management view uses color-coded dots to indicate the relationship status between library blocks and project copies.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Open the <strong>Library Management</strong> view in the UserClient.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Interpret the color-coded indicators:<br>• <strong>Yellow dot</strong>: A block in the library has been updated — the project's copy is outdated<br>• <strong>Grey dot</strong>: A block has been deleted from the library — the project still has the old copy<br>• <strong>Red dot</strong>: A block in the project has been modified independently — it no longer matches the library version</div>
+        </div><div class="callout tip">
+          <span class="callout-icon">💡</span>
+          <div><strong>Maintaining Consistency</strong>Regularly check the Library Management view to identify and resolve inconsistencies. This ensures all projects use the latest, approved versions of shared code blocks.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">For each inconsistency, decide whether to update the project to match the library or to accept the project's local modification.</div>
+        </div>
+      </div>
+
+      <div class="screenshot-row">
+      <div class="screenshot-box" style="margin:0">
+        <div class="screenshot-caption">Figure 14.1 – Library Management showing linked projects and inconsistency indicators</div>
+        <img src="assets/img/11_1.jpg" alt="Figure 14.1 – Library Management showing linked projects and inconsistency indicators" onclick="openLightbox(this)">
+      </div>
+      <div class="screenshot-box" style="margin:0">
+        <div class="screenshot-caption">Figure 14.2 – Color-coded inconsistency dots: yellow (updated), grey (deleted), red (project-modified)</div>
+        <img src="assets/img/11_2.jpg" alt="Figure 14.2 – Color-coded inconsistency dots: yellow (updated), grey (deleted), red (project-modified)" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+      
+      <div class="section-header">
+        <div class="snum">📋</div>
+        <h2>Summary</h2>
+      </div>
+      <table>
+        <thead><tr><th>Action</th><th>Where / How</th><th>Result</th></tr></thead>
+        <tbody><tr><td><strong>Create Library</strong></td><td>New component → Library type → Check-In</td><td>Central library available on server</td></tr><tr><td><strong>Link Projects</strong></td><td>Component properties → Assign standard library</td><td>Projects linked to library</td></tr><tr><td><strong>Yellow Dot</strong></td><td>Library block updated</td><td>Project copy is outdated</td></tr><tr><td><strong>Grey Dot</strong></td><td>Library block deleted</td><td>Project has orphaned block</td></tr><tr><td><strong>Red Dot</strong></td><td>Project block modified independently</td><td>Divergence from library standard</td></tr></tbody></table>
+
+    </div>
+
+    <div class="chapter-nav">
+      <a href="ch13-active-directory.html">← Chapter 13: Active Directory</a>
+      <span style="color:var(--muted);font-size:13px">Chapter 14 of 15</span>
+      <a href="ch15-scripting.html">Chapter 15: Scripting →</a>
+    </div>
+  </div>
+
+  <footer>Octoplant e-Academy Online Manual &mdash; Chapter 14: Library Management</footer>
+</div>
+</div>
+
+<div id="lightbox"><span id="lightbox-close">&#x2715;</span><img id="lightbox-img" src="" alt=""></div>
+<script src="assets/js/main.js"></script>
+<script>function openLightbox(img){document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').classList.add('active');}</script>
+</body>
+</html>
