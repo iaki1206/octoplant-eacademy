@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 1: Manual Asset Creation – Octoplant e-Academy</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="layout">
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">🌿</div>
+    <h1>Octoplant<br>e-Academy</h1>
+    <p>Online Learning Manual</p>
+  </div>
+  <div class="sidebar-search"><input type="text" id="sidebar-search" placeholder="Search chapters..."></div>
+  <div class="sidebar-nav">
+    <div class="nav-section">Getting Started</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span><span class="nav-label">Home &amp; Overview</span></a>
+    <div class="nav-section">Core Tutorials</div>
+    <a href="ch01-asset-creation.html" class="nav-item active"><span class="nav-num">1</span><span class="nav-label">Manual Asset Creation</span><span class="nav-duration">4:34</span></a>
+    <a href="ch02-lifecycle.html" class="nav-item"><span class="nav-num">2</span><span class="nav-label">Lifecycle Change Process</span><span class="nav-duration">4:57</span></a>
+    <a href="ch03-change-history.html" class="nav-item"><span class="nav-num">3</span><span class="nav-label">Change History</span><span class="nav-duration">3:54</span></a>
+    <a href="ch04-user-management.html" class="nav-item"><span class="nav-num">4</span><span class="nav-label">User Management</span><span class="nav-duration">5:03</span></a>
+    <div class="nav-section">Automation &amp; Jobs</div>
+    <a href="ch05-create-jobs.html" class="nav-item"><span class="nav-num">5</span><span class="nav-label">Create Jobs</span><span class="nav-duration">5:24</span></a>
+    <a href="ch06-job-trigger.html" class="nav-item"><span class="nav-num">6</span><span class="nav-label">Job Trigger &amp; Verification</span><span class="nav-duration">3:47</span></a>
+    <a href="ch07-recovery.html" class="nav-item"><span class="nav-num">7</span><span class="nav-label">Recovery &amp; Restore</span><span class="nav-duration">5:17</span></a>
+    <div class="nav-section">Dashboard &amp; Services</div>
+    <a href="ch08-hub-dashboard.html" class="nav-item"><span class="nav-num">8</span><span class="nav-label">Hub &amp; Dashboard</span><span class="nav-duration">6:15</span></a>
+    <a href="ch09-asset-inventory.html" class="nav-item"><span class="nav-num">9</span><span class="nav-label">Asset Inventory Service</span><span class="nav-duration">3:22</span></a>
+    <a href="ch10-easy-asset-integrator.html" class="nav-item"><span class="nav-num">10</span><span class="nav-label">Easy Asset Integrator</span><span class="nav-duration">4:44</span></a>
+    <div class="nav-section">Advanced Features</div>
+    <a href="ch11-supplier-workflow.html" class="nav-item"><span class="nav-num">11</span><span class="nav-label">Supplier Workflow</span><span class="nav-duration">4:46</span></a>
+    <a href="ch12-export.html" class="nav-item"><span class="nav-num">12</span><span class="nav-label">Manual &amp; Auto Export</span><span class="nav-duration">5:18</span></a>
+    <a href="ch13-active-directory.html" class="nav-item"><span class="nav-num">13</span><span class="nav-label">Active Directory</span><span class="nav-duration">5:57</span></a>
+    <a href="ch14-library-management.html" class="nav-item"><span class="nav-num">14</span><span class="nav-label">Library Management</span><span class="nav-duration">5:31</span></a>
+    <a href="ch15-scripting.html" class="nav-item"><span class="nav-num">15</span><span class="nav-label">Scripting</span><span class="nav-duration">4:37</span></a>
+  </div>
+</nav>
+
+<div id="main">
+  <div id="topbar">
+    <div class="topbar-left">
+      <button id="sidebar-toggle">☰</button>
+      <div class="topbar-breadcrumb">Octoplant e-Academy &rsaquo; <span class="current">Chapter 1: Manual Asset Creation</span></div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-progress"><span>Reading</span><div class="progress-bar"><div class="progress-fill"></div></div></div>
+      <a href="index.html" class="btn-nav">← Home</a>
+      <a href="ch02-lifecycle.html" class="btn-nav">Next →</a>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="chapter-page">
+
+      <div class="chapter-header">
+        <div class="ch-num">Chapter 1 of 15</div>
+        <h1>Manual Creation of Assets</h1>
+        <p class="ch-intro">In Octoplant, an <strong>asset</strong> (also called a <strong>component</strong>) is the fundamental unit of project data. This chapter walks you through the complete process of manually creating assets from scratch — building the project tree structure, creating components, populating them with data, and securely uploading them to the server.</p>
+        <div class="ch-meta">
+          <span class="ch-badge">⏱ 4:34 min</span>
+          <span class="ch-badge">🎯 Beginner</span>
+          <span class="ch-badge">📋 5 Steps</span>
+        </div>
+      </div>
+
+      <!-- VIDEO -->
+      <div class="video-embed">
+        <div class="video-embed-header">Tutorial Video – iOpen e-ACADEMY: Manual Creation of Assets</div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/ADn14cNEQE8" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <!-- OVERVIEW -->
+      <div class="section-header">
+        <div class="snum">📖</div>
+        <h2>What You Will Learn</h2>
+      </div>
+
+      <p>Before adding assets to Octoplant, you need to understand what a <strong>component</strong> is. A component is a directory in the Windows file system that Octoplant has assigned special properties to. It acts as a container for your project data — for example, a PLC program, an HMI project, or any other automation file.</p>
+
+      <p>The manual asset creation process follows five sequential steps that take a project from your local PC to the secure Octoplant server archive, where it becomes available to all authorized users.</p>
+
+      <div class="workflow">
+        <div class="wf-step"><div class="wf-num">1</div><h4>Create Structure</h4><p>Add directories in the Project tree</p></div>
+        <div class="wf-step"><div class="wf-num">2</div><h4>Create Component</h4><p>Right-click → New component</p></div>
+        <div class="wf-step"><div class="wf-num">3</div><h4>Copy Data</h4><p>Paste project files into component</p></div>
+        <div class="wf-step"><div class="wf-num">4</div><h4>Base Version</h4><p>Create the initial version</p></div>
+        <div class="wf-step"><div class="wf-num">5</div><h4>Check-In</h4><p>Upload to server archive</p></div>
+      </div>
+
+      <!-- STEP 1 -->
+      <div class="section-header">
+        <div class="snum">1</div>
+        <h2>Step 1: Create the Project Structure</h2>
+      </div>
+
+      <p>The first step is to build a logical folder structure in the Octoplant <strong>Project tree</strong>. This structure mirrors how your automation project is organized — for example, by plant area, machine type, or production line. A well-planned structure makes it easy for all users to find and manage assets.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Open the <strong>Octoplant UserClient</strong> on your PC. The main window displays the Project tree on the left side.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">In the Project tree, <strong>right-click</strong> on the root node or an existing directory where you want to add a new folder.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">From the context menu, select <strong>"New directory"</strong>. A dialog box appears prompting you to enter the directory name.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">Type a descriptive name for the directory (e.g., <code>Line_01</code>, <code>Conveyor_Belt</code>, or <code>PLC_Programs</code>) and click <strong>OK</strong>.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-content">Repeat steps 2–4 to create any additional sub-directories needed to match your plant's logical structure.</div>
+        </div>
+      </div>
+
+      <div class="screenshot-box">
+        <div class="screenshot-caption">Figure 1.1 – The UserClient interface showing the Project tree structure</div>
+        <img src="assets/img/15.jpg" alt="UserClient Interface with Project Tree" onclick="openLightbox(this)">
+      </div>
+
+      <div class="callout tip">
+        <span class="callout-icon">💡</span>
+        <div><strong>Best Practice</strong>Plan your directory structure before creating it in Octoplant. A logical hierarchy (e.g., Plant → Line → Machine → Component) makes it much easier to locate assets and assign access rights later.</div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="section-header">
+        <div class="snum">2</div>
+        <h2>Step 2: Create a New Component</h2>
+      </div>
+
+      <p>Once the directory structure is in place, you can create the actual components (assets) within the appropriate directories. Each component corresponds to one automation project or device program.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content"><strong>Right-click</strong> on the directory where you want to create the new component in the Project tree.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">From the context menu, select <strong>"New component"</strong>. The component creation dialog opens.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Enter a <strong>name</strong> for the component. This name will appear in the Project tree and should clearly identify the device or program (e.g., <code>PLC_Conveyor_01</code>).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">Select the appropriate <strong>component type</strong> from the dropdown list. The component type determines which comparator Octoplant uses to detect changes. Choose the type that matches your project data:
+            <br>• <strong>Simatic S7</strong> for STEP 7 / TIA Portal projects
+            <br>• <strong>WinCC</strong> for WinCC HMI projects
+            <br>• <strong>TwinCAT</strong> for Beckhoff TwinCAT projects
+            <br>• <strong>General</strong> for any other file type
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-content">Click <strong>OK</strong> to create the component. It will appear in the Project tree under the selected directory.</div>
+        </div>
+      </div>
+
+      <div class="screenshot-row">
+        <div class="screenshot-box" style="margin:0">
+          <div class="screenshot-caption">Figure 1.2 – Component creation in the Project tree</div>
+          <img src="assets/img/2.jpg" alt="Working with Components" onclick="openLightbox(this)">
+        </div>
+        <div class="screenshot-box" style="margin:0">
+          <div class="screenshot-caption">Figure 1.3 – Component definition and types</div>
+          <img src="assets/img/3.jpg" alt="Component Definition" onclick="openLightbox(this)">
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="section-header">
+        <div class="snum">3</div>
+        <h2>Step 3: Copy Project Data into the Component</h2>
+      </div>
+
+      <p>After creating the component, you need to populate it with the actual project files from your local PC. Octoplant components are stored as directories on your file system, so you can use Windows Explorer to copy files directly into them.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Open <strong>Windows Explorer</strong> and navigate to the location of your existing project files (e.g., a STEP 7 project folder on your local drive).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content"><strong>Copy</strong> the project files or folder (<kbd>Ctrl+C</kbd>).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Navigate to the Octoplant component directory. This is typically located at the path defined in your Octoplant client settings (e.g., <code>C:\Octoplant\WorkDir\[ComponentName]</code>).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content"><strong>Paste</strong> the project files into the component directory (<kbd>Ctrl+V</kbd>). The files are now inside the component's working directory.</div>
+        </div>
+      </div>
+
+      <div class="callout info">
+        <span class="callout-icon">ℹ️</span>
+        <div><strong>Tip from the Tutorial</strong>You can also use example data to test the process. The video demonstrates copying a sample STEP 7 project into the newly created component to verify the workflow before using real production data.</div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="section-header">
+        <div class="snum">4</div>
+        <h2>Step 4: Create a Base Version</h2>
+      </div>
+
+      <p>Before a component can be uploaded to the server, you must create its <strong>base version</strong>. The base version is the initial snapshot of the component — it serves as the starting point for all future version comparisons and change tracking.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">In the Octoplant UserClient, select the component you just created and populated in the Project tree.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Navigate to the <strong>Home</strong> tab in the menu bar and click <strong>"Create base version"</strong>. Alternatively, right-click the component and select this option from the context menu.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">A dialog appears confirming the base version creation. Click <strong>OK</strong> to proceed. The component now has its first version recorded locally.</div>
+        </div>
+      </div>
+
+      <div class="callout warning">
+        <span class="callout-icon">⚠️</span>
+        <div><strong>Important</strong>The base version must be created before the Check-In step. Without a base version, Octoplant cannot establish a reference point for future comparisons. The base version cannot be deleted from the server once it has been checked in.</div>
+      </div>
+
+      <!-- STEP 5 -->
+      <div class="section-header">
+        <div class="snum">5</div>
+        <h2>Step 5: Check-In to the Server</h2>
+      </div>
+
+      <p>The final step is to upload the component and its base version to the Octoplant server archive. Once checked in, the component is securely stored on the server and becomes accessible to all authorized users — even if the local copy is later deleted.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Ensure you have an active connection to the Octoplant server (the connection indicator above the Project tree should be green/active).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Select the component in the Project tree.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">In the <strong>Home</strong> tab, click the <strong>"Check-In"</strong> button. The Check-In dialog opens, showing the component ready for upload.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">Add a <strong>comment</strong> in the provided field to describe what this initial version contains (e.g., "Initial upload – Conveyor PLC program v1.0").</div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-content">Click <strong>"Check-In and close"</strong>. Octoplant uploads the component to the server. A confirmation message appears when the upload is complete.</div>
+        </div>
+      </div>
+
+      <div class="screenshot-box">
+        <div class="screenshot-caption">Figure 1.4 – Check-In procedure uploading the component to the server</div>
+        <img src="assets/img/4.jpg" alt="Check-In Procedure" onclick="openLightbox(this)">
+      </div>
+
+      <div class="callout info">
+        <span class="callout-icon">✅</span>
+        <div><strong>Result</strong>After a successful Check-In, the component is stored in the server archive. Even if you delete the local copy, the component will still appear in the Project tree (shown in gray) and can be retrieved at any time by any authorized user using the Check-Out function.</div>
+      </div>
+
+      <!-- SUMMARY TABLE -->
+      <div class="section-header">
+        <div class="snum">📋</div>
+        <h2>Summary</h2>
+      </div>
+
+      <table>
+        <thead><tr><th>Step</th><th>Action</th><th>Where</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1</strong></td><td>Create directory structure</td><td>Project tree → Right-click → New directory</td><td>Logical folder hierarchy created</td></tr>
+          <tr><td><strong>2</strong></td><td>Create component</td><td>Project tree → Right-click → New component</td><td>Empty component container created</td></tr>
+          <tr><td><strong>3</strong></td><td>Copy project data</td><td>Windows Explorer → Paste into component folder</td><td>Project files inside component</td></tr>
+          <tr><td><strong>4</strong></td><td>Create base version</td><td>Home tab → Create base version</td><td>Initial version snapshot recorded</td></tr>
+          <tr><td><strong>5</strong></td><td>Check-In to server</td><td>Home tab → Check-In</td><td>Component securely stored on server</td></tr>
+        </tbody>
+      </table>
+
+    </div><!-- /chapter-page -->
+
+    <div class="chapter-nav">
+      <a href="index.html">← Home</a>
+      <span style="color:var(--muted);font-size:13px">Chapter 1 of 15</span>
+      <a href="ch02-lifecycle.html">Chapter 2: Lifecycle Change Process →</a>
+    </div>
+  </div>
+
+  <footer>Octoplant e-Academy Online Manual &mdash; Chapter 1: Manual Asset Creation</footer>
+</div>
+</div>
+
+<div id="lightbox"><span id="lightbox-close">&#x2715;</span><img id="lightbox-img" src="" alt=""></div>
+<script src="assets/js/main.js"></script>
+<script>function openLightbox(img){document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').classList.add('active');}</script>
+</body>
+</html>
