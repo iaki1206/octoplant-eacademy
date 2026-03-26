@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 7: Recovery and Restore – Octoplant e-Academy</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="layout">
+<nav id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">🌿</div>
+    <h1>Octoplant<br>e-Academy</h1>
+    <p>Online Learning Manual</p>
+  </div>
+  <div class="sidebar-search"><input type="text" id="sidebar-search" placeholder="Search chapters..."></div>
+  <div class="sidebar-nav">
+    <div class="nav-section">Getting Started</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span><span class="nav-label">Home &amp; Overview</span></a>
+    <a href="ch01-asset-creation.html" class="nav-item"><span class="nav-num">1</span><span class="nav-label">Manual Asset Creation</span><span class="nav-duration">4:34</span></a>
+    <div class="nav-section">Core Tutorials</div>
+    <a href="ch02-lifecycle.html" class="nav-item"><span class="nav-num">2</span><span class="nav-label">Lifecycle Change Process</span><span class="nav-duration">4:57</span></a>
+    <a href="ch03-change-history.html" class="nav-item"><span class="nav-num">3</span><span class="nav-label">Change History</span><span class="nav-duration">3:54</span></a>
+    <a href="ch04-user-management.html" class="nav-item"><span class="nav-num">4</span><span class="nav-label">User Management</span><span class="nav-duration">5:03</span></a>
+    <a href="ch05-create-jobs.html" class="nav-item"><span class="nav-num">5</span><span class="nav-label">Create Jobs</span><span class="nav-duration">5:24</span></a>
+    <div class="nav-section">Automation &amp; Jobs</div>
+    <a href="ch06-job-trigger.html" class="nav-item"><span class="nav-num">6</span><span class="nav-label">Job Trigger &amp; Verification</span><span class="nav-duration">3:47</span></a>
+    <a href="ch07-recovery.html" class="nav-item active"><span class="nav-num">7</span><span class="nav-label">Recovery &amp; Restore</span><span class="nav-duration">5:17</span></a>
+    <a href="ch08-hub-dashboard.html" class="nav-item"><span class="nav-num">8</span><span class="nav-label">Hub &amp; Dashboard</span><span class="nav-duration">6:15</span></a>
+    <div class="nav-section">Dashboard &amp; Services</div>
+    <a href="ch09-asset-inventory.html" class="nav-item"><span class="nav-num">9</span><span class="nav-label">Asset Inventory Service</span><span class="nav-duration">3:22</span></a>
+    <a href="ch10-easy-asset-integrator.html" class="nav-item"><span class="nav-num">10</span><span class="nav-label">Easy Asset Integrator</span><span class="nav-duration">4:44</span></a>
+    <a href="ch11-supplier-workflow.html" class="nav-item"><span class="nav-num">11</span><span class="nav-label">Supplier Workflow</span><span class="nav-duration">4:46</span></a>
+    <div class="nav-section">Advanced Features</div>
+    <a href="ch12-export.html" class="nav-item"><span class="nav-num">12</span><span class="nav-label">Manual &amp; Auto Export</span><span class="nav-duration">5:18</span></a>
+    <a href="ch13-active-directory.html" class="nav-item"><span class="nav-num">13</span><span class="nav-label">Active Directory</span><span class="nav-duration">5:57</span></a>
+    <a href="ch14-library-management.html" class="nav-item"><span class="nav-num">14</span><span class="nav-label">Library Management</span><span class="nav-duration">5:31</span></a>
+    <a href="ch15-scripting.html" class="nav-item"><span class="nav-num">15</span><span class="nav-label">Scripting</span><span class="nav-duration">4:37</span></a>
+  </div>
+</nav>
+
+<div id="main">
+  <div id="topbar">
+    <div class="topbar-left">
+      <button id="sidebar-toggle">☰</button>
+      <div class="topbar-breadcrumb">Octoplant e-Academy &rsaquo; <span class="current">Chapter 7: Recovery and Restore</span></div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-progress"><span>Reading</span><div class="progress-bar"><div class="progress-fill"></div></div></div>
+      <a href="ch06-job-trigger.html" class="btn-nav">← Chapter 6: Job Trigger</a>
+      <a href="ch08-hub-dashboard.html" class="btn-nav">Next →</a>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="chapter-page">
+
+      <div class="chapter-header">
+        <div class="ch-num">Chapter 7 of 15</div>
+        <h1>Recovery and Restore</h1>
+        <p class="ch-intro">Recovery is one of Octoplant's most critical capabilities. When a device program is corrupted, accidentally overwritten, or needs to be restored to a previous state, Octoplant provides multiple recovery paths. This chapter covers all four recovery scenarios.</p>
+        <div class="ch-meta">
+          <span class="ch-badge">⏱ 5:17 min</span>
+          <span class="ch-badge">🎯 Critical</span>
+          <span class="ch-badge">📋 6 Steps</span>
+        </div>
+      </div>
+
+      <div class="video-embed">
+        <div class="video-embed-header">Tutorial Video – iOpen e-ACADEMY: Recovery and Restore</div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/T0-L7avyXrs" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+
+      
+
+      
+      <div class="section-header">
+        <div class="snum">1</div>
+        <h2>Scenario A: Restoring a Server Version from a Backup</h2>
+      </div>
+      <p>Use this when the server version is incorrect and you need to replace it with the content of a backup taken directly from the physical device.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">In the <strong>Jobs</strong> tab, identify the job result where the server version and backup differ (status: <strong>Different</strong>).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Right-click the backup entry you want to restore and select <strong>Copy backup to directory</strong>.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">In the dialog, click <strong>Next</strong>, then <strong>Replace and copy</strong> to overwrite the working directory with the backup content.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">Return to the UserClient, select the component, and click <strong>Create new version</strong>. Add a comment explaining the recovery (e.g., <code>Recovery: Restored from backup dated 2026-01-15</code>).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-content">Click <strong>Create version and Check-In</strong> to update the server version with the restored content.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">2</div>
+        <h2>Scenario B: Comparing Two Consecutive Backups</h2>
+      </div>
+      <p>Use this when you want to understand what changed on a device between two backup cycles.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">In the job results, look at the <strong>Prev. backup ↔ Backup</strong> column for a 'Different' status.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Right-click the result and select <strong>Compare previous backup with backup</strong>.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Review the differences. Based on the comparison, decide whether the latest backup is correct or whether you need to restore from the previous backup.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">3</div>
+        <h2>Scenario C: Restoring a Program Directly to a Physical Device</h2>
+      </div>
+      <p>Use this when a physical device (PLC, HMI, etc.) needs to have its program restored — for example, after a hardware replacement.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">First, copy the correct backup to the working directory using <strong>Copy backup to directory</strong> (as described in Scenario A, steps 1–3).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">In the UserClient, right-click the component and select <strong>Open with editor</strong>. The engineering software (e.g., SIMATIC Manager or TIA Portal) opens with the restored project.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">In the engineering software, use the appropriate function to load the program onto the physical device (e.g., in SIMATIC Manager: <strong>Target System → Load</strong>). The device is now restored to the state captured in the backup.</div>
+        </div><div class="callout danger">
+          <span class="callout-icon">🚫</span>
+          <div><strong>Critical Warning</strong>Ensure you are loading the correct version to the correct device. Loading the wrong program to a production device can cause equipment damage or safety incidents. Always verify the component name, version date, and device IP address before proceeding.</div>
+        </div>
+      </div>
+
+      <div class="screenshot-row">
+      <div class="screenshot-box" style="margin:0">
+        <div class="screenshot-caption">Figure 7.1 – Comparing server version with backup to identify differences</div>
+        <img src="assets/img/9_1.jpg" alt="Figure 7.1 – Comparing server version with backup to identify differences" onclick="openLightbox(this)">
+      </div>
+      <div class="screenshot-box" style="margin:0">
+        <div class="screenshot-caption">Figure 7.2 – Recovery dialog for restoring a backup to the server</div>
+        <img src="assets/img/9_2.jpg" alt="Figure 7.2 – Recovery dialog for restoring a backup to the server" onclick="openLightbox(this)">
+      </div>
+    </div>
+
+      
+      <div class="section-header">
+        <div class="snum">📋</div>
+        <h2>Summary</h2>
+      </div>
+      <table>
+        <thead><tr><th>Action</th><th>Where / How</th><th>Result</th></tr></thead>
+        <tbody><tr><td><strong>Identify Difference</strong></td><td>Jobs tab → Server version ↔ Backup column</td><td>Mismatch detected</td></tr><tr><td><strong>Copy Backup to Directory</strong></td><td>Right-click backup → Copy backup to directory</td><td>Working directory updated with backup</td></tr><tr><td><strong>Create Recovery Version</strong></td><td>Create new version → Add recovery comment</td><td>Recovery documented in history</td></tr><tr><td><strong>Check-In Recovery</strong></td><td>Create version and Check-In</td><td>Server version updated</td></tr><tr><td><strong>Restore to Device</strong></td><td>Open with editor → Load to device</td><td>Physical device program restored</td></tr></tbody></table>
+
+    </div>
+
+    <div class="chapter-nav">
+      <a href="ch06-job-trigger.html">← Chapter 6: Job Trigger</a>
+      <span style="color:var(--muted);font-size:13px">Chapter 7 of 15</span>
+      <a href="ch08-hub-dashboard.html">Chapter 8: Hub & Dashboard →</a>
+    </div>
+  </div>
+
+  <footer>Octoplant e-Academy Online Manual &mdash; Chapter 7: Recovery and Restore</footer>
+</div>
+</div>
+
+<div id="lightbox"><span id="lightbox-close">&#x2715;</span><img id="lightbox-img" src="" alt=""></div>
+<script src="assets/js/main.js"></script>
+<script>function openLightbox(img){document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').classList.add('active');}</script>
+</body>
+</html>
