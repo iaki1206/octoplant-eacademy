@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Octoplant e-Academy – Online Learning Manual</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.hero {
+  background: linear-gradient(135deg, #0d1f2d 0%, #0066b3 60%, #00a0d2 100%);
+  color: #fff;
+  padding: 60px 48px 48px;
+  border-radius: 0 0 var(--radius) var(--radius);
+  margin-bottom: 40px;
+}
+.hero h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 14px; line-height: 1.2; }
+.hero p { font-size: 1.1rem; opacity: 0.9; max-width: 640px; line-height: 1.7; margin-bottom: 24px; }
+.hero-badges { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-badge {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 0 48px 48px;
+}
+.chapter-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+}
+.chapter-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0,102,179,0.15);
+  border-color: var(--primary);
+}
+.card-thumb {
+  height: 160px;
+  background: linear-gradient(135deg, #0d1f2d, #0066b3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+.card-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,30,60,0.5);
+}
+.card-play {
+  width: 52px; height: 52px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.card-num-badge {
+  position: absolute;
+  top: 12px; left: 12px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.card-body { padding: 18px 20px 20px; flex: 1; display: flex; flex-direction: column; }
+.card-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.4; }
+.card-desc { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; margin-bottom: 14px; }
+.card-meta { display: flex; gap: 8px; flex-wrap: wrap; }
+.card-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 12px;
+  background: var(--primary-light);
+  color: var(--primary);
+}
+.card-tag.green { background: #e6f7f0; color: var(--success); }
+.card-tag.orange { background: #fff3e6; color: var(--warning); }
+.card-tag.red { background: #ffeee8; color: var(--danger); }
+.section-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  padding: 0 48px 14px;
+  margin-top: 8px;
+}
+.stats-bar {
+  display: flex;
+  gap: 24px;
+  padding: 0 48px 32px;
+  flex-wrap: wrap;
+}
+.stat-item {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px 24px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+}
+.stat-num { font-size: 2rem; font-weight: 800; color: var(--primary); }
+.stat-label { font-size: 12px; color: var(--muted); font-weight: 600; margin-top: 4px; }
+.quick-links {
+  padding: 0 48px 40px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.quick-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 20px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+  box-shadow: var(--shadow);
+}
+.quick-link:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+.quick-link .ql-icon { font-size: 20px; }
+</style>
+</head>
+<body>
+<div class="layout">
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">🌿</div>
+    <h1>Octoplant<br>e-Academy</h1>
+    <p>Online Learning Manual</p>
+  </div>
+  <div class="sidebar-search"><input type="text" id="sidebar-search" placeholder="Search chapters..."></div>
+  <div class="sidebar-nav">
+    <div class="nav-section">Getting Started</div>
+    <a href="index.html" class="nav-item active"><span class="nav-num">🏠</span><span class="nav-label">Home &amp; Overview</span></a>
+    <div class="nav-section">Core Tutorials</div>
+    <a href="ch01-asset-creation.html" class="nav-item"><span class="nav-num">1</span><span class="nav-label">Manual Asset Creation</span><span class="nav-duration">4:34</span></a>
+    <a href="ch02-lifecycle.html" class="nav-item"><span class="nav-num">2</span><span class="nav-label">Lifecycle Change Process</span><span class="nav-duration">4:57</span></a>
+    <a href="ch03-change-history.html" class="nav-item"><span class="nav-num">3</span><span class="nav-label">Change History</span><span class="nav-duration">3:54</span></a>
+    <a href="ch04-user-management.html" class="nav-item"><span class="nav-num">4</span><span class="nav-label">User Management</span><span class="nav-duration">5:03</span></a>
+    <div class="nav-section">Automation &amp; Jobs</div>
+    <a href="ch05-create-jobs.html" class="nav-item"><span class="nav-num">5</span><span class="nav-label">Create Jobs</span><span class="nav-duration">5:24</span></a>
+    <a href="ch06-job-trigger.html" class="nav-item"><span class="nav-num">6</span><span class="nav-label">Job Trigger &amp; Verification</span><span class="nav-duration">3:47</span></a>
+    <a href="ch07-recovery.html" class="nav-item"><span class="nav-num">7</span><span class="nav-label">Recovery &amp; Restore</span><span class="nav-duration">5:17</span></a>
+    <div class="nav-section">Dashboard &amp; Services</div>
+    <a href="ch08-hub-dashboard.html" class="nav-item"><span class="nav-num">8</span><span class="nav-label">Hub &amp; Dashboard</span><span class="nav-duration">6:15</span></a>
+    <a href="ch09-asset-inventory.html" class="nav-item"><span class="nav-num">9</span><span class="nav-label">Asset Inventory Service</span><span class="nav-duration">3:22</span></a>
+    <a href="ch10-easy-asset-integrator.html" class="nav-item"><span class="nav-num">10</span><span class="nav-label">Easy Asset Integrator</span><span class="nav-duration">4:44</span></a>
+    <div class="nav-section">Advanced Features</div>
+    <a href="ch11-supplier-workflow.html" class="nav-item"><span class="nav-num">11</span><span class="nav-label">Supplier Workflow</span><span class="nav-duration">4:46</span></a>
+    <a href="ch12-export.html" class="nav-item"><span class="nav-num">12</span><span class="nav-label">Manual &amp; Auto Export</span><span class="nav-duration">5:18</span></a>
+    <a href="ch13-active-directory.html" class="nav-item"><span class="nav-num">13</span><span class="nav-label">Active Directory</span><span class="nav-duration">5:57</span></a>
+    <a href="ch14-library-management.html" class="nav-item"><span class="nav-num">14</span><span class="nav-label">Library Management</span><span class="nav-duration">5:31</span></a>
+    <a href="ch15-scripting.html" class="nav-item"><span class="nav-num">15</span><span class="nav-label">Scripting</span><span class="nav-duration">4:37</span></a>
+  </div>
+</nav>
+
+<div id="main">
+  <div id="topbar">
+    <div class="topbar-left">
+      <button id="sidebar-toggle">☰</button>
+      <div class="topbar-breadcrumb">Octoplant e-Academy &rsaquo; <span class="current">Home</span></div>
+    </div>
+    <div class="topbar-right">
+      <a href="ch01-asset-creation.html" class="btn-nav" style="background:var(--primary);color:#fff;border-color:var(--primary)">Start Learning →</a>
+    </div>
+  </div>
+
+  <div id="content">
+
+    <!-- HERO -->
+    <div class="hero">
+      <h1>Octoplant e-Academy<br>Online Learning Manual</h1>
+      <p>A complete, step-by-step guide to mastering Octoplant — the leading automation data management platform. Learn how to manage assets, automate backups, recover programs, and secure your plant's data.</p>
+      <div class="hero-badges">
+        <span class="hero-badge">📚 15 Chapters</span>
+        <span class="hero-badge">🎬 15 Video Tutorials</span>
+        <span class="hero-badge">📸 21 Screenshots</span>
+        <span class="hero-badge">⏱ ~75 min Total</span>
+        <span class="hero-badge">🌐 English</span>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-bar">
+      <div class="stat-item"><div class="stat-num">15</div><div class="stat-label">Chapters</div></div>
+      <div class="stat-item"><div class="stat-num">75+</div><div class="stat-label">Step-by-Step Actions</div></div>
+      <div class="stat-item"><div class="stat-num">21</div><div class="stat-label">Screenshots</div></div>
+      <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Skill Levels</div></div>
+      <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Free to Use</div></div>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="section-title">Quick Start</div>
+    <div class="quick-links">
+      <a href="ch01-asset-creation.html" class="quick-link"><span class="ql-icon">🚀</span>Start from Chapter 1</a>
+      <a href="ch05-create-jobs.html" class="quick-link"><span class="ql-icon">⚙️</span>Set Up Automated Backups</a>
+      <a href="ch07-recovery.html" class="quick-link"><span class="ql-icon">🔄</span>Recover a Program</a>
+      <a href="ch08-hub-dashboard.html" class="quick-link"><span class="ql-icon">📊</span>Use the Hub Dashboard</a>
+      <a href="ch04-user-management.html" class="quick-link"><span class="ql-icon">👥</span>Manage Users</a>
+    </div>
+
+    <!-- CORE TUTORIALS -->
+    <div class="section-title">Core Tutorials</div>
+    <div class="chapter-grid">
+
+      <a href="ch01-asset-creation.html" class="chapter-card">
+        <div class="card-thumb">
+          <img src="assets/img/video_thumb_1.jpg" alt="Chapter 1" onerror="this.style.display='none'">
+          <div class="card-thumb-overlay"><div class="card-play">▶</div></div>
+          <div class="card-num-badge">Ch. 1</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Manual Creation of Assets</div>
+          <div class="card-desc">Learn to build the project tree structure, create components, copy project data, create a base version, and check in to the server.</div>
+          <div class="card-meta">
+            <span class="card-tag">⏱ 4:34</span>
+            <span class="card-tag green">Beginner</span>
+            <span class="card-tag">5 Steps</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="ch02-lifecycle.html" class="chapter-card">
+        <div class="card-thumb">
+          <img src="assets/img/video_thumb_2.jpg" alt="Chapter 2" onerror="this.style.display='none'">
+          <div class="card-thumb-overlay"><div class="card-play">▶</div></div>
+          <div class="card-num-badge">Ch. 2</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Lifecycle Change Process</div>
+          <div class="card-desc">Master the core Check-Out → Edit → Check-In workflow. Learn to lock components, compare versions, and document changes with comments.</div>
+          <div class="card-meta">
+            <span class="card-tag">⏱ 4:57</span>
+            <span class="card-tag green">Core</span>
+            <span class="card-tag">6 Steps</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="ch03-change-history.html" class="chapter-card">
+        <div class="card-thumb">
+          <img src="assets/img/video_thumb_3.jpg" alt="Chapter 3" onerror="this.style.display='none'">
+          <div class="card-thumb-overlay"><div class="card-play">▶</div></div>
+          <div class="card-num-badge">Ch. 3</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Change History</div>
+          <div class="card-desc">Navigate the complete audit trail of every component version. View modified elements, check out historical versions, and access master data.</div>
+          <div class="card-meta">
+            <span class="card-tag">⏱ 3:54</span>
+            <span class="card-tag green">Core</span>
+            <span class="card-tag">4 Steps</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="ch04-user-management.html" class="chapter-card">
+        <div class="card-thumb">
+          <img src="assets/img/video_thumb_4.jpg" alt="Chapter 4" onerror="this.style.display='none'">
+          <div class="card-thumb-overlay"><div class="card-play">▶</div></div>
+          <div class="card-num-badge">Ch. 4</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">User Management</div>
+          <div class="card-desc">Create users and groups, assign project tree rights and module permissions, and configure account policies in the AdminClient.</div>
+          <div class="card-meta">
+            <span class="card-tag">⏱ 5:03</span>
+            <span class="card-tag orange">Admin</span>
+            <span class="card-tag">7 Steps</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- AUTOMATION & JOBS -->
+    <div class="section-title">Automation &amp; Jobs</div>
+    <div class="chapter-grid">
+
+      <a href="ch05-create-jobs.html" class="chapter-card">
+        <div class="card-thumb">
+          <img src="assets/img/video_thumb_5.jpg" alt="Chapter 5" onerror="this.style.display='none'">
+          <div class="card-thumb-overlay"><div class="card-play">▶</div></div>
+          <div class="card-num-badge">Ch. 5</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Create Jobs – Automated Backup</div>
+          <div class="card-desc">Configure automated backup jobs with schedules, save policies, compare policies, and email notifications for any automation device.</div>
+          <div class="card-meta">
+            <span class="card-tag">⏱ 5:24</span>
+            <span class="card-tag orange">Admin</span>
+            <span class="card-tag">8 Steps</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="ch06-job-trigger.html" class="chapter-card">
+        <div class="card-thumb">
+          <img src="assets/img/video_thumb_6.jpg" alt="Chapter 6" onerror="this.style.display='none'">
+          <div class="card-thumb-overlay"><div class="card-play">▶</div></div>
+          <div class="card-num-badge">Ch. 6</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Job Trigger &amp; Verification</div>
+          <div class="card-desc">Manually trigger jobs, monitor execution in real time, interpret results (Equal / Different), compare server versions with backups, and read email reports.</div>
+          <div class="card-meta">
+            <span class="card-tag">⏱ 3:47</span>
+            <span class="card-tag">Operations</span>
+            <span class="card-tag">5 Steps</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="ch07-recovery.html" class="chapter-card">
+        <div class="card-thumb">
+          <img src="assets/img/video_thumb_7.jpg" alt="Chapter 7" onerror="this.style.display='none'">
+          <div class="card-thumb-overlay"><div class="card-play">▶</div></div>
+          <div class="card-num-badge">Ch. 7</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Recovery &amp; Restore</div>
+          <div class="card-desc">Restore server versions from backups, compare consecutive backups, and load programs directly onto physical devices after hardware replacement.</div>
+          <div class="card-meta">
+            <span class="card-tag">⏱ 5:17</span>
+            <span class="card-tag red">Critical</span>
+            <span class="card-tag">6 Steps</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- DASHBOARD & SERVICES -->
+    <div class="section-title">Dashboard &amp; Services</div>
+    <div class="chapter-grid">
+
+      <a href="ch08-hub-dashboard.html" class="chapter-card">
+        <div class="card-thumb">
+          <img src="assets/img/video_thumb_8.jpg" alt="Chapter 8" onerror="this.style.display='none'">
+          <div class="card-thumb-overlay"><div class="card-play">▶</div></div>
+          <div class="card-num-badge">Ch. 8</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Octoplant Hub &amp; Dashboard</div>
+          <div class="card-desc">Access the web-based Hub portal, navigate dashboards, filter by server, export tables to CSV, and use the slideshow display mode.</div>
+          <div class="card-meta">
+            <span class="card-tag">⏱ 6:15</span>
+            <span class="card-tag">Web</span>
+            <span class="card-tag">7 Steps</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="ch09-asset-inventory.html" class="chapter-card">
+        <div class="card-thumb">
+          <img src="assets/img/video_thumb_9.jpg" alt="Chapter 9" onerror="this.style.display='none'">
+          <div class="card-thumb-overlay"><div class="card-play">▶</div></div>
+          <div class="card-num-badge">Ch. 9</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Asset Inventory Service</div>
+          <div class="card-desc">Automatically identify device hardware and firmware, view vulnerability scores, and read CVE reports for all managed automation assets.</div>
+          <div class="card-meta">
+            <span class="card-tag">⏱ 3:22</span>
+            <span class="card-tag red">Security</span>
+            <span class="card-tag">4 Steps</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="ch10-easy-asset-integrator.html" class="chapter-card">
+        <div class="card-thumb">
+          <img src="assets/img/video_thumb_10.jpg" alt="Chapter 10" onerror="this.style.display='none'">
+          <div class="card-thumb-overlay"><div class="card-play">▶</div></div>
+          <div class="card-num-badge">Ch. 10</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Easy Asset Integrator</div>
+          <div class="card-desc">Import hundreds of assets at once using a CSV template. Learn the mandatory fields, how to update existing assets, and how default jobs are assigned.</div>
+          <div class="card-meta">
+            <span class="card-tag">⏱ 4:44</span>
+            <span class="card-tag green">Efficiency</span>
+            <span class="card-tag">5 Steps</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- ADVANCED FEATURES -->
+    <div class="section-title">Advanced Features</div>
+    <div class="chapter-grid">
+
+      <a href="ch11-supplier-workflow.html" class="chapter-card">
+        <div class="card-thumb">
+          <img src="assets/img/video_thumb_11.jpg" alt="Chapter 11" onerror="this.style.display='none'">
+          <div class="card-thumb-overlay"><div class="card-play">▶</div></div>
+          <div class="card-num-badge">Ch. 11</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Supplier Workflow</div>
+          <div class="card-desc">Export projects to external suppliers via Supplier Check-Out, and re-import their changes with full version tracking using SmartImport.</div>
+          <div class="card-meta">
+            <span class="card-tag">⏱ 4:46</span>
+            <span class="card-tag">Collaboration</span>
+            <span class="card-tag">7 Steps</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="ch12-export.html" class="chapter-card">
+        <div class="card-thumb">
+          <img src="assets/img/video_thumb_12.jpg" alt="Chapter 12" onerror="this.style.display='none'">
+          <div class="card-thumb-overlay"><div class="card-play">▶</div></div>
+          <div class="card-num-badge">Ch. 12</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Manual &amp; Automatic Export</div>
+          <div class="card-desc">Export Octoplant data to CSV, XML, or JSON using the ExportModule command-line tool, or generate quick CSV reports directly from the Hub dashboard.</div>
+          <div class="card-meta">
+            <span class="card-tag">⏱ 5:18</span>
+            <span class="card-tag">Integration</span>
+            <span class="card-tag">6 Steps</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="ch13-active-directory.html" class="chapter-card">
+        <div class="card-thumb">
+          <img src="assets/img/video_thumb_13.jpg" alt="Chapter 13" onerror="this.style.display='none'">
+          <div class="card-thumb-overlay"><div class="card-play">▶</div></div>
+          <div class="card-num-badge">Ch. 13</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Active Directory Integration</div>
+          <div class="card-desc">Connect Octoplant to your corporate Active Directory to automatically import users and enable single sign-on with domain credentials.</div>
+          <div class="card-meta">
+            <span class="card-tag">⏱ 5:57</span>
+            <span class="card-tag orange">Enterprise</span>
+            <span class="card-tag">7 Steps</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="ch14-library-management.html" class="chapter-card">
+        <div class="card-thumb">
+          <img src="assets/img/video_thumb_14.jpg" alt="Chapter 14" onerror="this.style.display='none'">
+          <div class="card-thumb-overlay"><div class="card-play">▶</div></div>
+          <div class="card-num-badge">Ch. 14</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Library Management</div>
+          <div class="card-desc">Create centralized code libraries shared across projects. Detect and resolve inconsistencies using color-coded indicators (yellow, grey, red dots).</div>
+          <div class="card-meta">
+            <span class="card-tag">⏱ 5:31</span>
+            <span class="card-tag orange">Advanced</span>
+            <span class="card-tag">6 Steps</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="ch15-scripting.html" class="chapter-card">
+        <div class="card-thumb">
+          <img src="assets/img/video_thumb_15.jpg" alt="Chapter 15" onerror="this.style.display='none'">
+          <div class="card-thumb-overlay"><div class="card-play">▶</div></div>
+          <div class="card-num-badge">Ch. 15</div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Scripting</div>
+          <div class="card-desc">Automate custom actions with event-triggered scripts. Configure script files, set triggers (e.g., Before Edit), and create custom buttons in the UserClient.</div>
+          <div class="card-meta">
+            <span class="card-tag">⏱ 4:37</span>
+            <span class="card-tag orange">Advanced</span>
+            <span class="card-tag">6 Steps</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+  </div><!-- /content -->
+
+  <footer>Octoplant e-Academy Online Manual &mdash; Based on iOpen e-ACADEMY Tutorial Series &mdash; 15 Chapters &mdash; English</footer>
+</div>
+</div>
+
+<div id="lightbox"><span id="lightbox-close">&#x2715;</span><img id="lightbox-img" src="" alt=""></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
