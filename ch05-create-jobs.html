@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 5: Create Jobs – Automated Backup Configuration – Octoplant e-Academy</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="layout">
+<nav id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">🌿</div>
+    <h1>Octoplant<br>e-Academy</h1>
+    <p>Online Learning Manual</p>
+  </div>
+  <div class="sidebar-search"><input type="text" id="sidebar-search" placeholder="Search chapters..."></div>
+  <div class="sidebar-nav">
+    <div class="nav-section">Getting Started</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span><span class="nav-label">Home &amp; Overview</span></a>
+    <a href="ch01-asset-creation.html" class="nav-item"><span class="nav-num">1</span><span class="nav-label">Manual Asset Creation</span><span class="nav-duration">4:34</span></a>
+    <div class="nav-section">Core Tutorials</div>
+    <a href="ch02-lifecycle.html" class="nav-item"><span class="nav-num">2</span><span class="nav-label">Lifecycle Change Process</span><span class="nav-duration">4:57</span></a>
+    <a href="ch03-change-history.html" class="nav-item"><span class="nav-num">3</span><span class="nav-label">Change History</span><span class="nav-duration">3:54</span></a>
+    <a href="ch04-user-management.html" class="nav-item"><span class="nav-num">4</span><span class="nav-label">User Management</span><span class="nav-duration">5:03</span></a>
+    <a href="ch05-create-jobs.html" class="nav-item active"><span class="nav-num">5</span><span class="nav-label">Create Jobs</span><span class="nav-duration">5:24</span></a>
+    <div class="nav-section">Automation &amp; Jobs</div>
+    <a href="ch06-job-trigger.html" class="nav-item"><span class="nav-num">6</span><span class="nav-label">Job Trigger &amp; Verification</span><span class="nav-duration">3:47</span></a>
+    <a href="ch07-recovery.html" class="nav-item"><span class="nav-num">7</span><span class="nav-label">Recovery &amp; Restore</span><span class="nav-duration">5:17</span></a>
+    <a href="ch08-hub-dashboard.html" class="nav-item"><span class="nav-num">8</span><span class="nav-label">Hub &amp; Dashboard</span><span class="nav-duration">6:15</span></a>
+    <div class="nav-section">Dashboard &amp; Services</div>
+    <a href="ch09-asset-inventory.html" class="nav-item"><span class="nav-num">9</span><span class="nav-label">Asset Inventory Service</span><span class="nav-duration">3:22</span></a>
+    <a href="ch10-easy-asset-integrator.html" class="nav-item"><span class="nav-num">10</span><span class="nav-label">Easy Asset Integrator</span><span class="nav-duration">4:44</span></a>
+    <a href="ch11-supplier-workflow.html" class="nav-item"><span class="nav-num">11</span><span class="nav-label">Supplier Workflow</span><span class="nav-duration">4:46</span></a>
+    <div class="nav-section">Advanced Features</div>
+    <a href="ch12-export.html" class="nav-item"><span class="nav-num">12</span><span class="nav-label">Manual &amp; Auto Export</span><span class="nav-duration">5:18</span></a>
+    <a href="ch13-active-directory.html" class="nav-item"><span class="nav-num">13</span><span class="nav-label">Active Directory</span><span class="nav-duration">5:57</span></a>
+    <a href="ch14-library-management.html" class="nav-item"><span class="nav-num">14</span><span class="nav-label">Library Management</span><span class="nav-duration">5:31</span></a>
+    <a href="ch15-scripting.html" class="nav-item"><span class="nav-num">15</span><span class="nav-label">Scripting</span><span class="nav-duration">4:37</span></a>
+  </div>
+</nav>
+
+<div id="main">
+  <div id="topbar">
+    <div class="topbar-left">
+      <button id="sidebar-toggle">☰</button>
+      <div class="topbar-breadcrumb">Octoplant e-Academy &rsaquo; <span class="current">Chapter 5: Create Jobs – Automated Backup Configuration</span></div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-progress"><span>Reading</span><div class="progress-bar"><div class="progress-fill"></div></div></div>
+      <a href="ch04-user-management.html" class="btn-nav">← Chapter 4: User Management</a>
+      <a href="ch06-job-trigger.html" class="btn-nav">Next →</a>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="chapter-page">
+
+      <div class="chapter-header">
+        <div class="ch-num">Chapter 5 of 15</div>
+        <h1>Create Jobs – Automated Backup Configuration</h1>
+        <p class="ch-intro">Jobs are the heart of Octoplant's automated backup system. A job defines how, when, and from which device Octoplant automatically reads and archives program data. This chapter walks through creating a component, then configuring a full job with schedule, save policy, compare policy, and email notifications.</p>
+        <div class="ch-meta">
+          <span class="ch-badge">⏱ 5:24 min</span>
+          <span class="ch-badge">🎯 Admin</span>
+          <span class="ch-badge">📋 8 Steps</span>
+        </div>
+      </div>
+
+      <div class="video-embed">
+        <div class="video-embed-header">Tutorial Video – iOpen e-ACADEMY: Create Jobs – Automated Backup Configuration</div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/plTyhNhXXIU" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+
+      
+
+      
+      <div class="section-header">
+        <div class="snum">1</div>
+        <h2>Prerequisite: Create and Check-In a Component</h2>
+      </div>
+      <p>Before creating a job, the target component must exist in Octoplant and be checked into the server.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Create a new component in the UserClient (see Chapter 1 for detailed instructions). For example, create a <strong>Simatic S7</strong> component named <code>S7_300_Line1</code>.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">For Siemens S7 components, you must have project data checked in before the job can read from the device. Drag the project files into the component and click <strong>Create base version and Check-In</strong>.</div>
+        </div><div class="callout info">
+          <span class="callout-icon">ℹ️</span>
+          <div><strong>Note</strong>For some component types (e.g., Image Service), you can create a job without pre-existing project data. For Siemens S7 and similar types, project data must be present.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">2</div>
+        <h2>Creating a Job in the AdminClient</h2>
+      </div>
+      <p>Jobs are created and configured in the AdminClient, not the UserClient.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Open the <strong>Octoplant AdminClient</strong> and click on <strong>Jobs</strong> in the left navigation panel.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Locate the component you want to create a job for in the Project tree on the right side.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Drag the component from the Project tree and drop it into the <strong>Jobs</strong> view on the left. A new job is automatically created for that component.</div>
+        </div><div class="callout tip">
+          <span class="callout-icon">💡</span>
+          <div><strong>Alternative</strong>You can also click the <strong>Create</strong> button in the Jobs view and then manually select the component. The drag-and-drop method is faster.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">3</div>
+        <h2>Configuring the Job</h2>
+      </div>
+      <p>With the job created, configure its settings to define how it behaves.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Enter a unique, descriptive <strong>Job name</strong> (e.g., <code>Daily_Backup_S7_300_Line1</code>).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Set the <strong>Upload type</strong> to define how data is read from the device (e.g., via PROFIBUS, Ethernet, or a specific protocol).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Enter the <strong>IP address</strong> of the physical device (e.g., <code>192.168.1.100</code>).</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">4</div>
+        <h2>Configuring the Schedule</h2>
+      </div>
+      <p>The schedule defines when the job runs automatically.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Click on the <strong>Schedule</strong> field to open the schedule configuration. The default is daily at 1:00 AM.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Modify the schedule as needed. For example, set it to run <strong>weekly on all days at 11:00 PM</strong> for a nightly backup.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Click <strong>OK</strong> to confirm the schedule.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">5</div>
+        <h2>Configuring Save and Compare Policies</h2>
+      </div>
+      <p>These policies control what is saved and what is compared after each job execution.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">In the <strong>Save policy</strong> section, select <strong>Always save backup</strong> to ensure a backup file is created in the Octoplant backup folder every time the job runs, regardless of whether changes are detected.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">In the <strong>Compare policy</strong> section, select the comparison types to perform after each backup:<br>• <strong>Server version ↔ Backup</strong>: Compares the current server version with the newly created backup<br>• <strong>Previous backup ↔ Backup</strong>: Compares the last two backups to detect changes on the device</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">6</div>
+        <h2>Configuring Email Notifications</h2>
+      </div>
+      <p>Octoplant can automatically send email reports after job execution.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Click on <strong>Global job settings</strong> to access the notification configuration.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Select the notification mode:<br>• <strong>Job specific</strong>: Sends an email about this specific job<br>• <strong>Daily</strong>: Sends a daily summary email about all configured jobs</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">In the <strong>Users to notify</strong> field, select the Octoplant users who should receive notifications. Their email addresses must be configured in User Management.</div>
+        </div><div class="callout warning">
+          <span class="callout-icon">⚠️</span>
+          <div><strong>Prerequisite</strong>Email addresses must be configured for each user in the User Management module before they can receive job notifications.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">You can also add external email addresses for recipients who do not have Octoplant accounts.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-content">Click <strong>Save</strong> to finalize the job configuration. Octoplant will now execute the job automatically according to the configured schedule.</div>
+        </div>
+      </div>
+
+      
+    <div class="screenshot-box">
+      <div class="screenshot-caption">Figure 5.1 – Jobs overview in the AdminClient</div>
+      <img src="assets/img/10.jpg" alt="Figure 5.1 – Jobs overview in the AdminClient" onclick="openLightbox(this)">
+    </div>
+
+      
+      <div class="section-header">
+        <div class="snum">📋</div>
+        <h2>Summary</h2>
+      </div>
+      <table>
+        <thead><tr><th>Action</th><th>Where / How</th><th>Result</th></tr></thead>
+        <tbody><tr><td><strong>Create Component</strong></td><td>UserClient → New component → Check-In</td><td>Component available for job assignment</td></tr><tr><td><strong>Create Job</strong></td><td>AdminClient → Jobs → Drag component</td><td>Job created for component</td></tr><tr><td><strong>Configure Job</strong></td><td>Job settings → Name, Upload type, IP address</td><td>Job parameters defined</td></tr><tr><td><strong>Set Schedule</strong></td><td>Schedule field → Choose frequency and time</td><td>Automatic execution time set</td></tr><tr><td><strong>Save Policy</strong></td><td>Always save backup</td><td>Backup created on every execution</td></tr><tr><td><strong>Compare Policy</strong></td><td>Server version ↔ Backup + Prev. backup ↔ Backup</td><td>Differences detected automatically</td></tr><tr><td><strong>Email Notifications</strong></td><td>Global job settings → Select users</td><td>Automatic reports sent after execution</td></tr></tbody></table>
+
+    </div>
+
+    <div class="chapter-nav">
+      <a href="ch04-user-management.html">← Chapter 4: User Management</a>
+      <span style="color:var(--muted);font-size:13px">Chapter 5 of 15</span>
+      <a href="ch06-job-trigger.html">Chapter 6: Job Trigger →</a>
+    </div>
+  </div>
+
+  <footer>Octoplant e-Academy Online Manual &mdash; Chapter 5: Create Jobs – Automated Backup Configuration</footer>
+</div>
+</div>
+
+<div id="lightbox"><span id="lightbox-close">&#x2715;</span><img id="lightbox-img" src="" alt=""></div>
+<script src="assets/js/main.js"></script>
+<script>function openLightbox(img){document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').classList.add('active');}</script>
+</body>
+</html>
