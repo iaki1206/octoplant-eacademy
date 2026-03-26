@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 13: Active Directory Integration – Octoplant e-Academy</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="layout">
+<nav id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">🌿</div>
+    <h1>Octoplant<br>e-Academy</h1>
+    <p>Online Learning Manual</p>
+  </div>
+  <div class="sidebar-search"><input type="text" id="sidebar-search" placeholder="Search chapters..."></div>
+  <div class="sidebar-nav">
+    <div class="nav-section">Getting Started</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span><span class="nav-label">Home &amp; Overview</span></a>
+    <a href="ch01-asset-creation.html" class="nav-item"><span class="nav-num">1</span><span class="nav-label">Manual Asset Creation</span><span class="nav-duration">4:34</span></a>
+    <div class="nav-section">Core Tutorials</div>
+    <a href="ch02-lifecycle.html" class="nav-item"><span class="nav-num">2</span><span class="nav-label">Lifecycle Change Process</span><span class="nav-duration">4:57</span></a>
+    <a href="ch03-change-history.html" class="nav-item"><span class="nav-num">3</span><span class="nav-label">Change History</span><span class="nav-duration">3:54</span></a>
+    <a href="ch04-user-management.html" class="nav-item"><span class="nav-num">4</span><span class="nav-label">User Management</span><span class="nav-duration">5:03</span></a>
+    <a href="ch05-create-jobs.html" class="nav-item"><span class="nav-num">5</span><span class="nav-label">Create Jobs</span><span class="nav-duration">5:24</span></a>
+    <div class="nav-section">Automation &amp; Jobs</div>
+    <a href="ch06-job-trigger.html" class="nav-item"><span class="nav-num">6</span><span class="nav-label">Job Trigger &amp; Verification</span><span class="nav-duration">3:47</span></a>
+    <a href="ch07-recovery.html" class="nav-item"><span class="nav-num">7</span><span class="nav-label">Recovery &amp; Restore</span><span class="nav-duration">5:17</span></a>
+    <a href="ch08-hub-dashboard.html" class="nav-item"><span class="nav-num">8</span><span class="nav-label">Hub &amp; Dashboard</span><span class="nav-duration">6:15</span></a>
+    <div class="nav-section">Dashboard &amp; Services</div>
+    <a href="ch09-asset-inventory.html" class="nav-item"><span class="nav-num">9</span><span class="nav-label">Asset Inventory Service</span><span class="nav-duration">3:22</span></a>
+    <a href="ch10-easy-asset-integrator.html" class="nav-item"><span class="nav-num">10</span><span class="nav-label">Easy Asset Integrator</span><span class="nav-duration">4:44</span></a>
+    <a href="ch11-supplier-workflow.html" class="nav-item"><span class="nav-num">11</span><span class="nav-label">Supplier Workflow</span><span class="nav-duration">4:46</span></a>
+    <div class="nav-section">Advanced Features</div>
+    <a href="ch12-export.html" class="nav-item"><span class="nav-num">12</span><span class="nav-label">Manual &amp; Auto Export</span><span class="nav-duration">5:18</span></a>
+    <a href="ch13-active-directory.html" class="nav-item active"><span class="nav-num">13</span><span class="nav-label">Active Directory</span><span class="nav-duration">5:57</span></a>
+    <a href="ch14-library-management.html" class="nav-item"><span class="nav-num">14</span><span class="nav-label">Library Management</span><span class="nav-duration">5:31</span></a>
+    <a href="ch15-scripting.html" class="nav-item"><span class="nav-num">15</span><span class="nav-label">Scripting</span><span class="nav-duration">4:37</span></a>
+  </div>
+</nav>
+
+<div id="main">
+  <div id="topbar">
+    <div class="topbar-left">
+      <button id="sidebar-toggle">☰</button>
+      <div class="topbar-breadcrumb">Octoplant e-Academy &rsaquo; <span class="current">Chapter 13: Active Directory Integration</span></div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-progress"><span>Reading</span><div class="progress-bar"><div class="progress-fill"></div></div></div>
+      <a href="ch12-export.html" class="btn-nav">← Chapter 12: Export</a>
+      <a href="ch14-library-management.html" class="btn-nav">Next →</a>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="chapter-page">
+
+      <div class="chapter-header">
+        <div class="ch-num">Chapter 13 of 15</div>
+        <h1>Active Directory Integration</h1>
+        <p class="ch-intro">Octoplant can synchronize with your organization's Active Directory (AD) to automatically import users and allow them to log in with their domain credentials. This chapter covers the complete AD configuration process.</p>
+        <div class="ch-meta">
+          <span class="ch-badge">⏱ 5:57 min</span>
+          <span class="ch-badge">🎯 Enterprise</span>
+          <span class="ch-badge">📋 7 Steps</span>
+        </div>
+      </div>
+
+      <div class="video-embed">
+        <div class="video-embed-header">Tutorial Video – iOpen e-ACADEMY: Active Directory Integration</div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/-gZdbUOe0-8" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+
+      
+
+      
+      <div class="section-header">
+        <div class="snum">1</div>
+        <h2>Configuring the AD Connection</h2>
+      </div>
+      <p>All AD configuration is done in the AdminClient's User Management module.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Open the <strong>Octoplant AdminClient</strong> and navigate to <strong>User Management → Synchronization</strong>.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Enter the <strong>AD server IP address</strong>, <strong>port number</strong> (typically 389 for LDAP or 636 for LDAPS), and the <strong>credentials</strong> of an AD service account with read access.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Use the built-in <strong>AD Explorer</strong> tool to browse your Active Directory structure and identify the correct <strong>root paths</strong> for the user groups and admin groups you want to synchronize.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">Copy the root paths into the corresponding fields in the Synchronization settings.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-content">Click <strong>Test connection</strong> to verify that Octoplant can communicate with the AD server. A success message confirms the connection.</div>
+        </div><div class="callout warning">
+          <span class="callout-icon">⚠️</span>
+          <div><strong>Connection Test</strong>Always perform the connection test before attempting a user import. A failed test indicates incorrect settings (wrong IP, port, or credentials) that must be corrected first.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">2</div>
+        <h2>Importing Users from Active Directory</h2>
+      </div>
+      <p>With the connection verified, you can import users from AD into Octoplant.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Click <strong>Manual import</strong> to immediately import all users from the configured AD groups into Octoplant.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">After import, review the newly created user accounts. You can modify their properties (e.g., password settings, group assignments) as needed.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Configure <strong>Automatic daily import</strong> to keep Octoplant synchronized with AD automatically. New AD users will be imported, and removed users will be deactivated.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">3</div>
+        <h2>Setting Authorization Policies</h2>
+      </div>
+      <p>Configure how imported AD users authenticate in Octoplant.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">In the user properties, set the <strong>authorization policy</strong> to allow login via <strong>domain password</strong> or <strong>operating system credentials</strong>.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">With this setting, users can log into Octoplant using the same password they use for Windows — no separate Octoplant password required.</div>
+        </div>
+      </div>
+
+      
+
+      
+      <div class="section-header">
+        <div class="snum">📋</div>
+        <h2>Summary</h2>
+      </div>
+      <table>
+        <thead><tr><th>Action</th><th>Where / How</th><th>Result</th></tr></thead>
+        <tbody><tr><td><strong>Open Synchronization</strong></td><td>AdminClient → User Management → Synchronization</td><td>AD configuration interface</td></tr><tr><td><strong>Enter AD Settings</strong></td><td>IP, port, credentials, root paths</td><td>Connection parameters configured</td></tr><tr><td><strong>Test Connection</strong></td><td>Test connection button</td><td>Successful AD communication confirmed</td></tr><tr><td><strong>Manual Import</strong></td><td>Manual import button</td><td>AD users imported into Octoplant</td></tr><tr><td><strong>Auto Import</strong></td><td>Configure automatic daily import</td><td>Users synchronized daily</td></tr><tr><td><strong>Auth Policy</strong></td><td>User properties → Authorization policy</td><td>Domain login enabled</td></tr></tbody></table>
+
+    </div>
+
+    <div class="chapter-nav">
+      <a href="ch12-export.html">← Chapter 12: Export</a>
+      <span style="color:var(--muted);font-size:13px">Chapter 13 of 15</span>
+      <a href="ch14-library-management.html">Chapter 14: Library Management →</a>
+    </div>
+  </div>
+
+  <footer>Octoplant e-Academy Online Manual &mdash; Chapter 13: Active Directory Integration</footer>
+</div>
+</div>
+
+<div id="lightbox"><span id="lightbox-close">&#x2715;</span><img id="lightbox-img" src="" alt=""></div>
+<script src="assets/js/main.js"></script>
+<script>function openLightbox(img){document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').classList.add('active');}</script>
+</body>
+</html>
