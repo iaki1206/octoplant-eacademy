@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 12: Manual and Automatic Data Export – Octoplant e-Academy</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="layout">
+<nav id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">🌿</div>
+    <h1>Octoplant<br>e-Academy</h1>
+    <p>Online Learning Manual</p>
+  </div>
+  <div class="sidebar-search"><input type="text" id="sidebar-search" placeholder="Search chapters..."></div>
+  <div class="sidebar-nav">
+    <div class="nav-section">Getting Started</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span><span class="nav-label">Home &amp; Overview</span></a>
+    <a href="ch01-asset-creation.html" class="nav-item"><span class="nav-num">1</span><span class="nav-label">Manual Asset Creation</span><span class="nav-duration">4:34</span></a>
+    <div class="nav-section">Core Tutorials</div>
+    <a href="ch02-lifecycle.html" class="nav-item"><span class="nav-num">2</span><span class="nav-label">Lifecycle Change Process</span><span class="nav-duration">4:57</span></a>
+    <a href="ch03-change-history.html" class="nav-item"><span class="nav-num">3</span><span class="nav-label">Change History</span><span class="nav-duration">3:54</span></a>
+    <a href="ch04-user-management.html" class="nav-item"><span class="nav-num">4</span><span class="nav-label">User Management</span><span class="nav-duration">5:03</span></a>
+    <a href="ch05-create-jobs.html" class="nav-item"><span class="nav-num">5</span><span class="nav-label">Create Jobs</span><span class="nav-duration">5:24</span></a>
+    <div class="nav-section">Automation &amp; Jobs</div>
+    <a href="ch06-job-trigger.html" class="nav-item"><span class="nav-num">6</span><span class="nav-label">Job Trigger &amp; Verification</span><span class="nav-duration">3:47</span></a>
+    <a href="ch07-recovery.html" class="nav-item"><span class="nav-num">7</span><span class="nav-label">Recovery &amp; Restore</span><span class="nav-duration">5:17</span></a>
+    <a href="ch08-hub-dashboard.html" class="nav-item"><span class="nav-num">8</span><span class="nav-label">Hub &amp; Dashboard</span><span class="nav-duration">6:15</span></a>
+    <div class="nav-section">Dashboard &amp; Services</div>
+    <a href="ch09-asset-inventory.html" class="nav-item"><span class="nav-num">9</span><span class="nav-label">Asset Inventory Service</span><span class="nav-duration">3:22</span></a>
+    <a href="ch10-easy-asset-integrator.html" class="nav-item"><span class="nav-num">10</span><span class="nav-label">Easy Asset Integrator</span><span class="nav-duration">4:44</span></a>
+    <a href="ch11-supplier-workflow.html" class="nav-item"><span class="nav-num">11</span><span class="nav-label">Supplier Workflow</span><span class="nav-duration">4:46</span></a>
+    <div class="nav-section">Advanced Features</div>
+    <a href="ch12-export.html" class="nav-item active"><span class="nav-num">12</span><span class="nav-label">Manual &amp; Auto Export</span><span class="nav-duration">5:18</span></a>
+    <a href="ch13-active-directory.html" class="nav-item"><span class="nav-num">13</span><span class="nav-label">Active Directory</span><span class="nav-duration">5:57</span></a>
+    <a href="ch14-library-management.html" class="nav-item"><span class="nav-num">14</span><span class="nav-label">Library Management</span><span class="nav-duration">5:31</span></a>
+    <a href="ch15-scripting.html" class="nav-item"><span class="nav-num">15</span><span class="nav-label">Scripting</span><span class="nav-duration">4:37</span></a>
+  </div>
+</nav>
+
+<div id="main">
+  <div id="topbar">
+    <div class="topbar-left">
+      <button id="sidebar-toggle">☰</button>
+      <div class="topbar-breadcrumb">Octoplant e-Academy &rsaquo; <span class="current">Chapter 12: Manual and Automatic Data Export</span></div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-progress"><span>Reading</span><div class="progress-bar"><div class="progress-fill"></div></div></div>
+      <a href="ch11-supplier-workflow.html" class="btn-nav">← Chapter 11: Supplier Workflow</a>
+      <a href="ch13-active-directory.html" class="btn-nav">Next →</a>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="chapter-page">
+
+      <div class="chapter-header">
+        <div class="ch-num">Chapter 12 of 15</div>
+        <h1>Manual and Automatic Data Export</h1>
+        <p class="ch-intro">Octoplant provides two methods for exporting data: the ExportModule (for flexible, format-rich exports) and the octoplant Hub (for quick CSV reports from dashboards). This chapter covers both methods.</p>
+        <div class="ch-meta">
+          <span class="ch-badge">⏱ 5:18 min</span>
+          <span class="ch-badge">🎯 Integration</span>
+          <span class="ch-badge">📋 6 Steps</span>
+        </div>
+      </div>
+
+      <div class="video-embed">
+        <div class="video-embed-header">Tutorial Video – iOpen e-ACADEMY: Manual and Automatic Data Export</div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/6rKXdyODbRo" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+
+      
+
+      
+      <div class="section-header">
+        <div class="snum">1</div>
+        <h2>Method 1: Exporting via the ExportModule</h2>
+      </div>
+      <p>The ExportModule is a command-line tool that exports Octoplant data to CSV, XML, or JSON formats. It offers the most flexibility and is suitable for integration with other systems.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Create a <strong>parameter file</strong> (a text file with a <code>.ini</code> or <code>.xml</code> extension) that defines the export configuration. The parameter file specifies:<br>• The <strong>export format</strong> (CSV, XML, or JSON)<br>• The <strong>data scope</strong> (e.g., project tree, change history, job results)<br>• The <strong>output file path</strong><br>• Any optional filters or parameters</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Open a <strong>Command Prompt</strong> (cmd.exe) on the Octoplant server or client machine.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Run the ExportModule with the parameter file:<br><code>ExportModule.exe /parameterfile:C:\path\to\config.ini</code></div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">The data is exported to the specified output file. Open it in Excel, a database, or any other tool for further analysis.</div>
+        </div><div class="callout tip">
+          <span class="callout-icon">💡</span>
+          <div><strong>Automation</strong>The ExportModule command can be added to a Windows Task Scheduler job or a batch script to run automatically on a schedule, enabling fully automated reporting.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">2</div>
+        <h2>Method 2: Exporting from the Octoplant Hub</h2>
+      </div>
+      <p>The Hub provides a simpler, browser-based export option for any dashboard table.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">Log into the <strong>octoplant Hub</strong> and navigate to the dashboard containing the data you want to export.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">Apply any server filters or table filters as needed.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">Click the <strong>CSV Export</strong> button in the top-right corner of the table. The file is saved to your Downloads folder.</div>
+        </div>
+      </div>
+      <div class="section-header">
+        <div class="snum">3</div>
+        <h2>Choosing the Right Method</h2>
+      </div>
+      <p>Both methods have their use cases. Here is a comparison to help you choose:</p>
+      <div class="steps">
+      </div>
+
+      
+
+      
+      <div class="section-header">
+        <div class="snum">📋</div>
+        <h2>Summary</h2>
+      </div>
+      <table>
+        <thead><tr><th>Action</th><th>Where / How</th><th>Result</th></tr></thead>
+        <tbody><tr><td><strong>ExportModule</strong></td><td>Command line with parameter file</td><td>CSV, XML, or JSON output</td></tr><tr><td><strong>Hub Export</strong></td><td>Dashboard → CSV Export button</td><td>CSV output from dashboard data</td></tr><tr><td><strong>ExportModule Formats</strong></td><td>CSV, XML, JSON</td><td>Flexible for system integration</td></tr><tr><td><strong>Hub Export Formats</strong></td><td>CSV only</td><td>Simple, browser-based</td></tr><tr><td><strong>Automation</strong></td><td>ExportModule via Task Scheduler</td><td>Scheduled automatic exports</td></tr></tbody></table>
+
+    </div>
+
+    <div class="chapter-nav">
+      <a href="ch11-supplier-workflow.html">← Chapter 11: Supplier Workflow</a>
+      <span style="color:var(--muted);font-size:13px">Chapter 12 of 15</span>
+      <a href="ch13-active-directory.html">Chapter 13: Active Directory →</a>
+    </div>
+  </div>
+
+  <footer>Octoplant e-Academy Online Manual &mdash; Chapter 12: Manual and Automatic Data Export</footer>
+</div>
+</div>
+
+<div id="lightbox"><span id="lightbox-close">&#x2715;</span><img id="lightbox-img" src="" alt=""></div>
+<script src="assets/js/main.js"></script>
+<script>function openLightbox(img){document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').classList.add('active');}</script>
+</body>
+</html>
