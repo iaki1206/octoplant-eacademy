@@ -63,19 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ===== SIDEBAR SEARCH =====
-  const searchInput = document.getElementById('sidebar-search');
-  if (searchInput) {
-    searchInput.addEventListener('input', function () {
-      const query = this.value.toLowerCase();
-      document.querySelectorAll('.nav-item').forEach(item => {
-        const text = item.textContent.toLowerCase();
-        item.style.display = text.includes(query) ? '' : 'none';
-      });
-      document.querySelectorAll('.nav-section').forEach(section => {
-        section.style.display = '';
-      });
-    });
-  }
+  // Full-text deep search is handled by search.js (loaded separately).
+  // This old simple chapter-title filter has been replaced.
 
   // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
