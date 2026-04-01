@@ -1,327 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 16: OT Backup Tests - Octoplant e-Academy</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/search.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 16: OT Backup Tests – Octoplant e-Academy</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/search.css">
+<style>
+/* ===== RESPONSIVE SCREENSHOT STYLES ===== */
+.screenshot-box {
+  margin: 24px 0;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.screenshot-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: zoom-in;
+  transition: opacity 0.2s;
+}
+.screenshot-box img:hover { opacity: 0.92; }
+.screenshot-caption {
+  padding: 10px 16px;
+  font-size: 12.5px;
+  color: var(--muted);
+  background: #f7f9fc;
+  border-top: 1px solid var(--border);
+  line-height: 1.5;
+}
+.screenshot-caption strong { color: var(--primary-dark); }
+
+/* ===== CRITICAL STEP BOX ===== */
+.critical-step {
+  background: #fff8e1;
+  border: 2px solid #f59e0b;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.critical-step .cs-label {
+  display: inline-block;
+  background: #f59e0b;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.critical-step h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #92400e;
+  margin-bottom: 8px;
+}
+.critical-step p { color: #78350f; font-size: 14px; margin: 0; }
+
+/* ===== PHASE STEPS ===== */
+.phase-list { margin: 20px 0; }
+.phase-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.phase-item:last-child { border-bottom: none; }
+.phase-num {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+}
+.phase-body h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.phase-body p { font-size: 13.5px; color: var(--muted); margin: 0; line-height: 1.55; }
+</style>
 </head>
 <body>
-    <!-- Sidebar Navigation -->
-    <nav class="sidebar">
-        <div class="sidebar-header">
-            <div class="logo">
-                <img src="assets/img/octoplant-logo.png" alt="Octoplant Logo" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwYjE0MCIvPjx0ZXh0IHg9IjUwIiB5PSI1NSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjQwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TzwvdGV4dD48L3N2Zz4='">
-                <div>
-                    <h2>Octoplant</h2>
-                    <p>e-Academy</p>
-                </div>
-            </div>
-            <div class="manual-subtitle">ONLINE LEARNING MANUAL</div>
-        </div>
+<div class="layout">
 
-        <div class="search-container">
-            <input type="text" id="sidebar-search" placeholder="Search all content...">
-            <button id="search-close-btn" class="search-close-btn" aria-label="Close search" title="Close search">✕</button>
-        </div>
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">🌿</div>
+    <h1>Octoplant<br>e-Academy</h1>
+    <p>Online Learning Manual</p>
+  </div>
+  <div class="sidebar-search"><input type="text" id="sidebar-search" placeholder="Search all content..."></div>
+  <div class="sidebar-nav">
+    <div class="nav-section">Getting Started</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span><span class="nav-label">Home &amp; Overview</span></a>
+    <div class="nav-section">Core Tutorials</div>
+    <a href="ch01-asset-creation.html" class="nav-item"><span class="nav-num">1</span><span class="nav-label">Manual Asset Creation</span><span class="nav-duration">4:34</span></a>
+    <a href="ch02-lifecycle.html" class="nav-item"><span class="nav-num">2</span><span class="nav-label">Lifecycle Change Process</span><span class="nav-duration">4:57</span></a>
+    <a href="ch03-change-history.html" class="nav-item"><span class="nav-num">3</span><span class="nav-label">Change History</span><span class="nav-duration">3:54</span></a>
+    <a href="ch04-user-management.html" class="nav-item"><span class="nav-num">4</span><span class="nav-label">User Management</span><span class="nav-duration">5:03</span></a>
+    <div class="nav-section">Automation &amp; Jobs</div>
+    <a href="ch05-create-jobs.html" class="nav-item"><span class="nav-num">5</span><span class="nav-label">Create Jobs</span><span class="nav-duration">5:24</span></a>
+    <a href="ch06-job-trigger.html" class="nav-item"><span class="nav-num">6</span><span class="nav-label">Job Trigger &amp; Verification</span><span class="nav-duration">3:47</span></a>
+    <a href="ch07-recovery.html" class="nav-item"><span class="nav-num">7</span><span class="nav-label">Recovery &amp; Restore</span><span class="nav-duration">5:17</span></a>
+    <div class="nav-section">Dashboard &amp; Services</div>
+    <a href="ch08-hub-dashboard.html" class="nav-item"><span class="nav-num">8</span><span class="nav-label">Hub &amp; Dashboard</span><span class="nav-duration">6:15</span></a>
+    <a href="ch09-asset-inventory.html" class="nav-item"><span class="nav-num">9</span><span class="nav-label">Asset Inventory Service</span><span class="nav-duration">3:22</span></a>
+    <a href="ch10-easy-asset-integrator.html" class="nav-item"><span class="nav-num">10</span><span class="nav-label">Easy Asset Integrator</span><span class="nav-duration">4:44</span></a>
+    <div class="nav-section">Advanced Features</div>
+    <a href="ch11-supplier-workflow.html" class="nav-item"><span class="nav-num">11</span><span class="nav-label">Supplier Workflow</span><span class="nav-duration">4:46</span></a>
+    <a href="ch12-export.html" class="nav-item"><span class="nav-num">12</span><span class="nav-label">Manual &amp; Auto Export</span><span class="nav-duration">5:18</span></a>
+    <a href="ch13-active-directory.html" class="nav-item"><span class="nav-num">13</span><span class="nav-label">Active Directory</span><span class="nav-duration">5:57</span></a>
+    <a href="ch14-library-management.html" class="nav-item"><span class="nav-num">14</span><span class="nav-label">Library Management</span><span class="nav-duration">5:31</span></a>
+    <a href="ch15-scripting.html" class="nav-item"><span class="nav-num">15</span><span class="nav-label">Scripting</span><span class="nav-duration">4:37</span></a>
+    <a href="ch16-ot-backup-tests.html" class="nav-item active"><span class="nav-num">16</span><span class="nav-label">OT Backup Tests</span><span class="nav-duration">Doc</span></a>
+  </div>
+</nav>
 
-        <div class="sidebar-menu">
-            <div class="menu-section">
-                <h3>GETTING STARTED</h3>
-                <a href="index.html" class="menu-item">
-                    <span class="menu-icon">🏠</span>
-                    <span class="menu-text">Home & Overview</span>
-                </a>
-            </div>
-
-            <div class="menu-section">
-                <h3>CORE TUTORIALS</h3>
-                <a href="ch01-asset-creation.html" class="menu-item">
-                    <span class="menu-number">1</span>
-                    <span class="menu-text">Manual Asset Creation</span>
-                    <span class="menu-duration">4:34</span>
-                </a>
-                <a href="ch02-lifecycle.html" class="menu-item">
-                    <span class="menu-number">2</span>
-                    <span class="menu-text">Lifecycle Change Process</span>
-                    <span class="menu-duration">4:57</span>
-                </a>
-                <a href="ch03-change-history.html" class="menu-item">
-                    <span class="menu-number">3</span>
-                    <span class="menu-text">Change History</span>
-                    <span class="menu-duration">3:54</span>
-                </a>
-                <a href="ch04-user-management.html" class="menu-item">
-                    <span class="menu-number">4</span>
-                    <span class="menu-text">User Management</span>
-                    <span class="menu-duration">5:03</span>
-                </a>
-            </div>
-
-            <div class="menu-section">
-                <h3>AUTOMATION & JOBS</h3>
-                <a href="ch05-create-jobs.html" class="menu-item">
-                    <span class="menu-number">5</span>
-                    <span class="menu-text">Create Jobs</span>
-                    <span class="menu-duration">5:24</span>
-                </a>
-                <a href="ch06-job-trigger.html" class="menu-item">
-                    <span class="menu-number">6</span>
-                    <span class="menu-text">Job Trigger & Verification</span>
-                    <span class="menu-duration">3:47</span>
-                </a>
-                <a href="ch07-recovery.html" class="menu-item">
-                    <span class="menu-number">7</span>
-                    <span class="menu-text">Recovery & Restore</span>
-                    <span class="menu-duration">5:17</span>
-                </a>
-            </div>
-
-            <div class="menu-section">
-                <h3>DASHBOARD & SERVICES</h3>
-                <a href="ch08-hub-dashboard.html" class="menu-item">
-                    <span class="menu-number">8</span>
-                    <span class="menu-text">Hub & Dashboard</span>
-                    <span class="menu-duration">6:15</span>
-                </a>
-                <a href="ch09-asset-inventory.html" class="menu-item">
-                    <span class="menu-number">9</span>
-                    <span class="menu-text">Asset Inventory Service</span>
-                    <span class="menu-duration">3:22</span>
-                </a>
-                <a href="ch10-easy-asset-integrator.html" class="menu-item">
-                    <span class="menu-number">10</span>
-                    <span class="menu-text">Easy Asset Integrator</span>
-                    <span class="menu-duration">4:44</span>
-                </a>
-            </div>
-
-            <div class="menu-section">
-                <h3>ADVANCED FEATURES</h3>
-                <a href="ch11-supplier-workflow.html" class="menu-item">
-                    <span class="menu-number">11</span>
-                    <span class="menu-text">Supplier Workflow</span>
-                    <span class="menu-duration">4:46</span>
-                </a>
-                <a href="ch12-export.html" class="menu-item">
-                    <span class="menu-number">12</span>
-                    <span class="menu-text">Manual & Auto Export</span>
-                    <span class="menu-duration">5:18</span>
-                </a>
-                <a href="ch13-active-directory.html" class="menu-item">
-                    <span class="menu-number">13</span>
-                    <span class="menu-text">Active Directory</span>
-                    <span class="menu-duration">5:57</span>
-                </a>
-                <a href="ch14-library-management.html" class="menu-item">
-                    <span class="menu-number">14</span>
-                    <span class="menu-text">Library Management</span>
-                    <span class="menu-duration">5:31</span>
-                </a>
-                <a href="ch15-scripting.html" class="menu-item">
-                    <span class="menu-number">15</span>
-                    <span class="menu-text">Scripting</span>
-                    <span class="menu-duration">4:37</span>
-                </a>
-                <a href="ch16-ot-backup-tests.html" class="menu-item active">
-                    <span class="menu-number">16</span>
-                    <span class="menu-text">OT Backup Tests</span>
-                    <span class="menu-duration">Doc</span>
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="content">
-        <div class="progress-container">
-            <div class="progress-bar" id="reading-progress"></div>
-        </div>
-
-        <header class="chapter-header">
-            <div class="chapter-meta">
-                <span class="badge badge-admin">Operations</span>
-                <span class="chapter-number">Chapter 16</span>
-            </div>
-            <h1>OT Backup Tests & Recovery Procedures</h1>
-            <p class="chapter-description">Learn the standard operating procedures for conducting regular OT backup tests, ensuring recovery readiness, and documenting the process in SAP.</p>
-        </header>
-
-        <div class="chapter-content">
-            <section class="content-section">
-                <h2>1. Objective and Purpose</h2>
-                <p>For many components of our production systems, we create backups that are archived in our central backup management tool (Octoplant). The primary purpose of this process is to ensure regular training of the recovery procedure and to verify that the available backups are functional and can be successfully restored in an emergency.</p>
-                
-                <div class="callout callout-info">
-                    <div class="callout-icon">ℹ️</div>
-                    <div class="callout-content">
-                        <strong>Scope of Application</strong><br>
-                        This procedure applies initially only to the sites of Dorsten, Hildesheim, and Knetzgau.
-                    </div>
-                </div>
-            </section>
-
-            <section class="content-section">
-                <h2>2. Preparation of the Recovery Tests</h2>
-                <p>The recovery tests are intended to ensure that, in the event of a disruption—for example, a PLC failure—we can quickly restore the system to an operational state. The goal is not to pose a sustained risk to production or cause major downtime, as this would contradict the very purpose of the backup strategy.</p>
-                
-                <h3>2.1 Personnel Requirements</h3>
-                <p>The personnel performing the recovery tests must possess the necessary qualifications to carry out the tests. They must also be familiar with troubleshooting the respective components and have experience operating the associated machines.</p>
-
-                <h3>2.2 Component Requirements</h3>
-                <p>Recovery tests should only be performed on components for which spare parts are available on-site in the event of a defect. Furthermore, the site must have full access permissions. For example, in the case of a Siemens PLC, any general or safety passwords must be known and available to the personnel conducting the test.</p>
-
-                <h3>2.3 Machine Availability Requirements</h3>
-                <p>A time window of at least two hours must be planned for performing the recovery tests, even though the process will typically take significantly less time. In practice, this means that tests should only be conducted during maintenance shifts or sufficiently long planned system downtimes.</p>
-            </section>
-
-            <section class="content-section">
-                <h2>3. Execution of the Recovery Tests</h2>
-                <p>The execution depends heavily on the specific component and therefore cannot be defined in detail for all components. Based on the personnel requirements defined above, the general procedure should already be known to the employee performing the test.</p>
-                
-                <p>It is important that different types of components (e.g., S7‑300, S7‑1500, frequency converters from various systems) are tested regularly to ensure broad coverage of the plant's technology stack.</p>
-
-                <div class="step-box">
-                    <div class="step-header">
-                        <span class="step-badge">CRITICAL STEP</span>
-                        <h3>Create a Live Backup First</h3>
-                    </div>
-                    <div class="step-content">
-                        <p>Before beginning any work, a backup must <strong>always</strong> be created from the live system and stored securely. This ensures that, in case any issues arise during the test, the machine can be restored to its exact previous state immediately.</p>
-                    </div>
-                </div>
-
-                <p>The decision regarding which backup version to use for the test lies with the performing person. Possible options include:</p>
-                <ul>
-                    <li>The latest available backup</li>
-                    <li>A backup from a specific date</li>
-                    <li>An older backup specifically chosen for testing purposes</li>
-                </ul>
-
-                <div class="callout callout-warning">
-                    <div class="callout-icon">⚠️</div>
-                    <div class="callout-content">
-                        <strong>Post-Test Verification</strong><br>
-                        After completing the test, it must be ensured that the component and, if applicable, the machine have been restored to a fully operational state. Furthermore, the startup of the machine or component must be checked once again to verify proper functioning.
-                    </div>
-                </div>
-            </section>
-
-            <section class="content-section">
-                <h2>4. Documentation in SAP</h2>
-                <p>The execution of the recovery test must be documented thoroughly. The documentation must include:</p>
-                <ul>
-                    <li>Date of the test</li>
-                    <li>Name of the person performing the test</li>
-                    <li>Specific component tested</li>
-                    <li>Backup version used</li>
-                    <li>Any anomalies or issues encountered</li>
-                </ul>
-
-                <p>For this purpose, a monthly maintenance order must be created in SAP by the site, through which the documentation is completed. The maintenance order must be created at a one‑month interval and should be prepared in a manner similar to the examples shown below.</p>
-
-                <figure class="screenshot-container">
-                    <img src="assets/img/backup_test_image1.png" alt="SAP Order Management System showing monthly backup test orders" class="screenshot zoomable">
-                    <figcaption>Figure 1: Display of tests via processes with reference to technical locations, test dates, and tester assignment in SAP.</figcaption>
-                </figure>
-
-                <figure class="screenshot-container">
-                    <img src="assets/img/backup_test_image2.png" alt="SAP Process Overview for Backup Tests" class="screenshot zoomable">
-                    <figcaption>Figure 2: Detailed process overview for the preventive maintenance order for Octoplant backups.</figcaption>
-                </figure>
-            </section>
-
-            <section class="content-section">
-                <h2>Summary: OT Backup Test Workflow</h2>
-                <table class="summary-table">
-                    <thead>
-                        <tr>
-                            <th>Phase</th>
-                            <th>Action</th>
-                            <th>Requirements / Details</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>1. Preparation</strong></td>
-                            <td>Schedule test window</td>
-                            <td>Minimum 2 hours during maintenance shift or planned downtime.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>2. Verification</strong></td>
-                            <td>Check prerequisites</td>
-                            <td>Qualified personnel, spare parts available, full access/passwords known.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>3. Safety</strong></td>
-                            <td>Create live backup</td>
-                            <td><strong>Mandatory:</strong> Create and store a backup of the current live system before proceeding.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>4. Execution</strong></td>
-                            <td>Perform recovery</td>
-                            <td>Restore selected backup version to the component.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>5. Validation</strong></td>
-                            <td>Verify operation</td>
-                            <td>Ensure component/machine is fully operational and check startup sequence.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>6. Documentation</strong></td>
-                            <td>Log in SAP</td>
-                            <td>Record date, name, component, version, and anomalies in the monthly SAP maintenance order.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </div>
-
-        <div class="chapter-navigation">
-            <a href="ch15-scripting.html" class="nav-btn prev-btn">
-                <span class="nav-label">Previous Chapter</span>
-                <span class="nav-title">15. Scripting</span>
-            </a>
-            <a href="index.html" class="nav-btn next-btn">
-                <span class="nav-label">Return to</span>
-                <span class="nav-title">Home & Overview</span>
-            </a>
-        </div>
-    </main>
-
-    <!-- Lightbox for images -->
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-        <div id="lightbox-caption"></div>
+<div id="main">
+  <div id="topbar">
+    <div class="topbar-left">
+      <button id="sidebar-toggle">☰</button>
+      <div class="topbar-breadcrumb">Octoplant e-Academy &rsaquo; <span class="current">Chapter 16: OT Backup Tests</span></div>
     </div>
-
-    <!-- Search Overlay -->
-    <div id="search-overlay" class="search-overlay">
-        <div class="search-modal">
-            <div class="search-header">
-                <input type="text" id="modal-search-input" placeholder="Search all chapters, steps, and tables..." autocomplete="off">
-                <button id="modal-close-btn" class="search-close-btn">✕</button>
-            </div>
-            <div class="search-results-info" id="search-results-info"></div>
-            <div class="search-results" id="search-results">
-                <div class="search-empty-state">
-                    <p>Type to start searching...</p>
-                    <div class="search-hints">
-                        <span>Try searching for:</span>
-                        <span class="search-hint-tag">check-in</span>
-                        <span class="search-hint-tag">backup</span>
-                        <span class="search-hint-tag">restore</span>
-                        <span class="search-hint-tag">active directory</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="topbar-right">
+      <div class="topbar-progress"><span>Reading</span><div class="progress-bar"><div class="progress-fill"></div></div></div>
+      <a href="ch15-scripting.html" class="btn-nav">← Prev</a>
+      <a href="index.html" class="btn-nav">Home</a>
     </div>
+  </div>
 
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/search.js"></script>
+  <div id="content">
+    <div class="chapter-page">
+
+      <div class="chapter-header">
+        <div class="ch-num">Chapter 16 of 16</div>
+        <h1>OT Backup Tests &amp; Recovery Procedures</h1>
+        <p class="ch-intro">This chapter describes the standard operating procedure for conducting regular OT (Operational Technology) backup tests. The goal is to verify that backups stored in Octoplant are functional and can be successfully restored in an emergency — and to train personnel in the recovery process.</p>
+        <div class="ch-meta">
+          <span class="ch-badge">📄 Document-Based</span>
+          <span class="ch-badge">🎯 Operations</span>
+          <span class="ch-badge">📋 6 Phases</span>
+        </div>
+      </div>
+
+      <!-- OVERVIEW -->
+      <h2>Overview</h2>
+      <p>For many components of our production systems, we create backups that are archived in Octoplant — our central backup management tool. The primary purpose of this procedure is twofold:</p>
+      <ol style="margin: 12px 0 12px 24px; line-height: 2;">
+        <li>To ensure regular <strong>training of the recovery procedure</strong> so that personnel are prepared in an emergency.</li>
+        <li>To verify that the <strong>available backups are functional</strong> and can be successfully restored.</li>
+      </ol>
+
+      <div class="callout info">
+        <strong>Scope of Application</strong>
+        This procedure currently applies to the following production sites: <strong>Dorsten</strong>, <strong>Hildesheim</strong>, and <strong>Knetzgau</strong>.
+      </div>
+
+      <!-- SECTION 1 -->
+      <h2>1. Preparation of the Recovery Tests</h2>
+      <p>Recovery tests are designed to ensure that, in the event of a disruption — for example, a PLC failure — the system can be quickly restored to an operational state. The tests must be planned carefully to avoid posing any sustained risk to production or causing unnecessary downtime, as this would contradict the purpose of the backup strategy.</p>
+
+      <h3>1.1 Personnel Requirements</h3>
+      <p>The personnel performing the recovery tests must possess the necessary qualifications. Specifically, they must:</p>
+      <ul style="margin: 10px 0 10px 24px; line-height: 2;">
+        <li>Be familiar with <strong>troubleshooting</strong> the respective components.</li>
+        <li>Have experience <strong>operating the associated machines</strong>.</li>
+        <li>Know all required <strong>access credentials and passwords</strong> (e.g., Siemens PLC general or safety passwords).</li>
+      </ul>
+
+      <h3>1.2 Component Requirements</h3>
+      <p>Recovery tests should only be performed on components for which <strong>spare parts are available on-site</strong> in the event of a defect. The site must also have full access permissions to the component. For example, in the case of a Siemens PLC, any general or safety passwords must be known and available to the personnel conducting the test.</p>
+
+      <h3>1.3 Time Window Requirements</h3>
+      <p>A time window of <strong>at least two hours</strong> must be planned for performing the recovery tests, even though the process will typically take significantly less time. In practice, tests should only be conducted during:</p>
+      <ul style="margin: 10px 0 10px 24px; line-height: 2;">
+        <li><strong>Maintenance shifts</strong>, or</li>
+        <li>Sufficiently long <strong>planned system downtimes</strong>.</li>
+      </ul>
+
+      <!-- SECTION 2 -->
+      <h2>2. Execution of the Recovery Tests</h2>
+      <p>The exact execution steps depend heavily on the specific component being tested and therefore cannot be defined in detail for all components. Based on the personnel requirements above, the general procedure should already be known to the employee performing the test.</p>
+
+      <p>It is important that <strong>different types of components</strong> are tested regularly — for example: S7-300, S7-1500, frequency converters from various systems — to ensure broad coverage of the plant's technology stack.</p>
+
+      <div class="critical-step">
+        <span class="cs-label">⚠ Critical Step — Do Not Skip</span>
+        <h3>Always Create a Live Backup Before Starting</h3>
+        <p>Before beginning any recovery test, a backup <strong>must always</strong> be created from the live system and stored securely. This ensures that, in case any issues arise during the test, the machine can be immediately restored to its exact previous state.</p>
+      </div>
+
+      <h3>2.1 Selecting the Backup Version</h3>
+      <p>The decision regarding which backup version to use for the test lies with the performing person. Possible options include:</p>
+      <div class="phase-list">
+        <div class="phase-item">
+          <div class="phase-num">A</div>
+          <div class="phase-body">
+            <h4>Latest Available Backup</h4>
+            <p>Use the most recent backup stored in Octoplant. This tests the most up-to-date data and is the most realistic scenario for an emergency recovery.</p>
+          </div>
+        </div>
+        <div class="phase-item">
+          <div class="phase-num">B</div>
+          <div class="phase-body">
+            <h4>Backup from a Specific Date</h4>
+            <p>Select a backup from a particular date — for example, after a known-good configuration was established. Useful for verifying historical restore points.</p>
+          </div>
+        </div>
+        <div class="phase-item">
+          <div class="phase-num">C</div>
+          <div class="phase-body">
+            <h4>Older Backup for Testing Purposes</h4>
+            <p>An older backup specifically chosen to test the full restore process, including any migration or compatibility steps that may be required.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout warning">
+        <strong>Post-Test Verification — Mandatory</strong>
+        After completing the test, it must be ensured that the component and, if applicable, the machine have been <strong>fully restored to an operational state</strong>. The startup of the machine or component must be checked once again to verify proper functioning before handing it back to production.
+      </div>
+
+      <!-- SECTION 3 -->
+      <h2>3. Documentation in SAP</h2>
+      <p>Every recovery test must be fully documented. The documentation must include the following information:</p>
+      <ul style="margin: 10px 0 10px 24px; line-height: 2;">
+        <li><strong>Date</strong> of the test</li>
+        <li><strong>Name</strong> of the person performing the test</li>
+        <li><strong>Component</strong> tested (type, designation, location)</li>
+        <li><strong>Backup version</strong> used (date/label)</li>
+        <li><strong>Anomalies or issues</strong> encountered during the test</li>
+      </ul>
+
+      <p>For this purpose, a <strong>monthly maintenance order</strong> must be created in SAP by the site. The order must be created at a one-month interval and should be prepared in a manner similar to the examples shown below.</p>
+
+      <!-- SCREENSHOT 1 -->
+      <div class="screenshot-box">
+        <img src="assets/img/backup_test_image1.png"
+             alt="SAP Order Management: List of monthly backup test orders with technical location, date, and assigned tester"
+             loading="lazy">
+        <div class="screenshot-caption">
+          <strong>Figure 1 — SAP Order Overview:</strong> Monthly preventive maintenance orders for Octoplant backup tests, showing the technical location, scheduled test date, and the assigned responsible person for each site.
+        </div>
+      </div>
+
+      <!-- SCREENSHOT 2 -->
+      <div class="screenshot-box">
+        <img src="assets/img/backup_test_image2.png"
+             alt="SAP Process Detail: Preventive maintenance order for Octoplant backup test with task list and completion status"
+             loading="lazy">
+        <div class="screenshot-caption">
+          <strong>Figure 2 — SAP Order Detail:</strong> Detailed view of a preventive maintenance order for an Octoplant backup test, including the task description, required actions, and completion confirmation fields.
+        </div>
+      </div>
+
+      <!-- SUMMARY TABLE -->
+      <h2>Summary: Complete OT Backup Test Workflow</h2>
+      <p>The following table summarises the six phases of the OT backup test procedure from preparation through to documentation:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Action</th>
+            <th>Key Requirements</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Preparation</strong></td>
+            <td>Schedule a test time window</td>
+            <td>Minimum 2 hours; during maintenance shift or planned downtime only.</td>
+          </tr>
+          <tr>
+            <td><strong>2. Verification</strong></td>
+            <td>Confirm all prerequisites are met</td>
+            <td>Qualified personnel, spare parts on-site, full access credentials available.</td>
+          </tr>
+          <tr>
+            <td><strong>3. Safety Backup</strong></td>
+            <td>Create a live backup of the current system</td>
+            <td><strong>Mandatory.</strong> Store the live backup securely in Octoplant before proceeding.</td>
+          </tr>
+          <tr>
+            <td><strong>4. Execution</strong></td>
+            <td>Restore the selected backup version</td>
+            <td>Choose: latest, date-specific, or older test backup. Follow component-specific restore procedure.</td>
+          </tr>
+          <tr>
+            <td><strong>5. Validation</strong></td>
+            <td>Verify full operational status</td>
+            <td>Confirm the component and machine start up correctly and function normally.</td>
+          </tr>
+          <tr>
+            <td><strong>6. Documentation</strong></td>
+            <td>Record the test in SAP</td>
+            <td>Log date, name, component, backup version, and any anomalies in the monthly SAP maintenance order.</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div><!-- /chapter-page -->
+  </div><!-- /content -->
+
+  <div class="chapter-nav">
+    <a href="ch15-scripting.html">← Chapter 15: Scripting</a>
+    <a href="index.html">🏠 Home &amp; Overview</a>
+  </div>
+
+  <footer>Octoplant e-Academy Online Manual &mdash; Based on iOpen e-ACADEMY Tutorial Series &mdash; 16 Chapters &mdash; English</footer>
+</div><!-- /main -->
+
+</div><!-- /layout -->
+
+<div id="lightbox"><span id="lightbox-close">&#x2715;</span><img id="lightbox-img" src="" alt=""></div>
+
+<!-- Search Overlay -->
+<div id="search-overlay" class="search-overlay" style="display:none;">
+  <div class="search-modal">
+    <div class="search-header">
+      <input type="text" id="modal-search-input" placeholder="Search all chapters, steps, and tables..." autocomplete="off">
+      <button id="modal-close-btn">✕</button>
+    </div>
+    <div class="search-results-info" id="search-results-info"></div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/search.js"></script>
+<script>
+// Make screenshot images zoomable via lightbox
+document.querySelectorAll('.screenshot-box img').forEach(img => {
+  img.style.cursor = 'zoom-in';
+  img.addEventListener('click', () => {
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    if (lb && lbImg) {
+      lbImg.src = img.src;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+});
+</script>
 </body>
 </html>
