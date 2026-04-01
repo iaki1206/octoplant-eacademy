@@ -9,7 +9,1624 @@
 // figure caption, and callout box across all 15 chapters.
 // It is embedded here so the search works with zero server-side code.
 
-const SEARCH_INDEX = [{"chapter": "1", "title": "Manual Asset Creation", "level": "Beginner", "file": "ch01-asset-creation.html", "section": "Manual Creation of Assets", "anchor": "", "content": "Manual Creation of Assets In Octoplant, an asset (also called a component ) is the fundamental unit of project data. This chapter walks you through the complete process of manually creating assets from scratch — building the project tree structure, creating components, populating them with data, and securely uploading them to the server.", "preview": "Manual Creation of Assets In Octoplant, an asset (also called a component ) is the fundamental unit of project data. This chapter walks you through the complete process of manually creating assets from scratch — building the project tree structure, c", "tags": []}, {"chapter": "1", "title": "Manual Asset Creation", "level": "Beginner", "file": "ch01-asset-creation.html", "section": "What You Will Learn", "anchor": "", "content": "What You Will Learn Before adding assets to Octoplant, you need to understand what a component is. A component is a directory in the Windows file system that Octoplant has assigned special properties to. It acts as a container for your project data — for example, a PLC program, an HMI project, or any other automation file. The manual asset creation process follows five sequential steps that take a project from your local PC to the secure Octoplant server archive, where it becomes available to all authorized users.", "preview": "What You Will Learn Before adding assets to Octoplant, you need to understand what a component is. A component is a directory in the Windows file system that Octoplant has assigned special properties to. It acts as a container for your project data —", "tags": []}, {"chapter": "1", "title": "Manual Asset Creation", "level": "Beginner", "file": "ch01-asset-creation.html", "section": "Create Structure", "anchor": "", "content": "Create Structure Add directories in the Project tree", "preview": "Create Structure Add directories in the Project tree", "tags": []}, {"chapter": "1", "title": "Manual Asset Creation", "level": "Beginner", "file": "ch01-asset-creation.html", "section": "Create Component", "anchor": "", "content": "Create Component Right-click → New component", "preview": "Create Component Right-click → New component", "tags": []}, {"chapter": "1", "title": "Manual Asset Creation", "level": "Beginner", "file": "ch01-asset-creation.html", "section": "Copy Data", "anchor": "", "content": "Copy Data Paste project files into component", "preview": "Copy Data Paste project files into component", "tags": []}, {"chapter": "1", "title": "Manual Asset Creation", "level": "Beginner", "file": "ch01-asset-creation.html", "section": "Base Version", "anchor": "", "content": "Base Version Create the initial version", "preview": "Base Version Create the initial version", "tags": []}, {"chapter": "1", "title": "Manual Asset Creation", "level": "Beginner", "file": "ch01-asset-creation.html", "section": "Check-In", "anchor": "", "content": "Check-In Upload to server archive", "preview": "Check-In Upload to server archive", "tags": []}, {"chapter": "1", "title": "Manual Asset Creation", "level": "Beginner", "file": "ch01-asset-creation.html", "section": "Step 1: Create the Project Structure", "anchor": "", "content": "Step 1: Create the Project Structure The first step is to build a logical folder structure in the Octoplant Project tree . This structure mirrors how your automation project is organized — for example, by plant area, machine type, or production line. A well-planned structure makes it easy for all users to find and manage assets. Open the Octoplant UserClient on your PC. The main window displays the Project tree on the left side. In the Project tree, right-click on the root node or an existing directory where you want to add a new folder. From the context menu, select \"New directory\" . A dialog box appears prompting you to enter the directory name. Type a descriptive name for the directory (e.g., Line_01 , Conveyor_Belt , or PLC_Programs ) and click OK . Repeat steps 2–4 to create any additional sub-directories needed to match your plant's logical structure. 💡 Best Practice Plan your directory structure before creating it in Octoplant. A logical hierarchy (e.g., Plant → Line → Machine →", "preview": "Step 1: Create the Project Structure The first step is to build a logical folder structure in the Octoplant Project tree . This structure mirrors how your automation project is organized — for example, by plant area, machine type, or production line.", "tags": ["step", "step", "step", "step", "step", "tip"]}, {"chapter": "1", "title": "Manual Asset Creation", "level": "Beginner", "file": "ch01-asset-creation.html", "section": "Step 2: Create a New Component", "anchor": "", "content": "Step 2: Create a New Component Once the directory structure is in place, you can create the actual components (assets) within the appropriate directories. Each component corresponds to one automation project or device program. Right-click on the directory where you want to create the new component in the Project tree. From the context menu, select \"New component\" . The component creation dialog opens. Enter a name for the component. This name will appear in the Project tree and should clearly identify the device or program (e.g., PLC_Conveyor_01 ). Select the appropriate component type from the dropdown list. The component type determines which comparator Octoplant uses to detect changes. Choose the type that matches your project data: • Simatic S7 for STEP 7 / TIA Portal projects • WinCC for WinCC HMI projects • TwinCAT for Beckhoff TwinCAT projects • General for any other file type Click OK to create the component. It will appear in the Project tree under the selected directory.", "preview": "Step 2: Create a New Component Once the directory structure is in place, you can create the actual components (assets) within the appropriate directories. Each component corresponds to one automation project or device program. Right-click on the dire", "tags": ["step", "step", "step", "step", "step"]}, {"chapter": "1", "title": "Manual Asset Creation", "level": "Beginner", "file": "ch01-asset-creation.html", "section": "Step 3: Copy Project Data into the Component", "anchor": "", "content": "Step 3: Copy Project Data into the Component After creating the component, you need to populate it with the actual project files from your local PC. Octoplant components are stored as directories on your file system, so you can use Windows Explorer to copy files directly into them. Open Windows Explorer and navigate to the location of your existing project files (e.g., a STEP 7 project folder on your local drive). Copy the project files or folder ( Ctrl+C ). Navigate to the Octoplant component directory. This is typically located at the path defined in your Octoplant client settings (e.g., C:\\Octoplant\\WorkDir\\[ComponentName] ). Paste the project files into the component directory ( Ctrl+V ). The files are now inside the component's working directory. ℹ️ Tip from the Tutorial You can also use example data to test the process. The video demonstrates copying a sample STEP 7 project into the newly created component to verify the workflow before using real production data.", "preview": "Step 3: Copy Project Data into the Component After creating the component, you need to populate it with the actual project files from your local PC. Octoplant components are stored as directories on your file system, so you can use Windows Explorer t", "tags": ["step", "step", "step", "step", "info"]}, {"chapter": "1", "title": "Manual Asset Creation", "level": "Beginner", "file": "ch01-asset-creation.html", "section": "Step 4: Create a Base Version", "anchor": "", "content": "Step 4: Create a Base Version Before a component can be uploaded to the server, you must create its base version . The base version is the initial snapshot of the component — it serves as the starting point for all future version comparisons and change tracking. In the Octoplant UserClient, select the component you just created and populated in the Project tree. Navigate to the Home tab in the menu bar and click \"Create base version\" . Alternatively, right-click the component and select this option from the context menu. A dialog appears confirming the base version creation. Click OK to proceed. The component now has its first version recorded locally. ⚠️ Important The base version must be created before the Check-In step. Without a base version, Octoplant cannot establish a reference point for future comparisons. The base version cannot be deleted from the server once it has been checked in.", "preview": "Step 4: Create a Base Version Before a component can be uploaded to the server, you must create its base version . The base version is the initial snapshot of the component — it serves as the starting point for all future version comparisons and chan", "tags": ["step", "step", "step", "warning"]}, {"chapter": "1", "title": "Manual Asset Creation", "level": "Beginner", "file": "ch01-asset-creation.html", "section": "Step 5: Check-In to the Server", "anchor": "", "content": "Step 5: Check-In to the Server The final step is to upload the component and its base version to the Octoplant server archive. Once checked in, the component is securely stored on the server and becomes accessible to all authorized users — even if the local copy is later deleted. Ensure you have an active connection to the Octoplant server (the connection indicator above the Project tree should be green/active). Select the component in the Project tree. In the Home tab, click the \"Check-In\" button. The Check-In dialog opens, showing the component ready for upload. Add a comment in the provided field to describe what this initial version contains (e.g., \"Initial upload – Conveyor PLC program v1.0\"). Click \"Check-In and close\" . Octoplant uploads the component to the server. A confirmation message appears when the upload is complete. ✅ Result After a successful Check-In, the component is stored in the server archive. Even if you delete the local copy, the component will still appear in t", "preview": "Step 5: Check-In to the Server The final step is to upload the component and its base version to the Octoplant server archive. Once checked in, the component is securely stored on the server and becomes accessible to all authorized users — even if th", "tags": ["step", "step", "step", "step", "step", "info"]}, {"chapter": "1", "title": "Manual Asset Creation", "level": "Beginner", "file": "ch01-asset-creation.html", "section": "Summary", "anchor": "", "content": "Summary Action Where Result Create directory structure Project tree → Right-click → New directory Logical folder hierarchy created Create component Project tree → Right-click → New component Empty component container created Copy project data Windows Explorer → Paste into component folder Project files inside component Create base version Home tab → Create base version Initial version snapshot recorded Check-In to server Home tab → Check-In Component securely stored on server", "preview": "Summary Action Where Result Create directory structure Project tree → Right-click → New directory Logical folder hierarchy created Create component Project tree → Right-click → New component Empty component container created Copy project data Windows", "tags": []}, {"chapter": "2", "title": "Lifecycle Change Process", "level": "Core", "file": "ch02-lifecycle.html", "section": "Lifecycle Change Process of a Component", "anchor": "", "content": "Lifecycle Change Process of a Component The lifecycle change process is the core daily workflow in Octoplant. This chapter covers the complete Check-Out → Edit → Check-In cycle, including locking components, comparing versions, and creating new versions with change comments.", "preview": "Lifecycle Change Process of a Component The lifecycle change process is the core daily workflow in Octoplant. This chapter covers the complete Check-Out → Edit → Check-In cycle, including locking components, comparing versions, and creating new versi", "tags": []}, {"chapter": "2", "title": "Lifecycle Change Process", "level": "Core", "file": "ch02-lifecycle.html", "section": "Check-Out", "anchor": "", "content": "Check-Out Copy component from server to local", "preview": "Check-Out Copy component from server to local", "tags": []}, {"chapter": "2", "title": "Lifecycle Change Process", "level": "Core", "file": "ch02-lifecycle.html", "section": "Lock", "anchor": "", "content": "Lock Prevent conflicts from other users", "preview": "Lock Prevent conflicts from other users", "tags": []}, {"chapter": "2", "title": "Lifecycle Change Process", "level": "Core", "file": "ch02-lifecycle.html", "section": "Edit", "anchor": "", "content": "Edit Modify in engineering editor", "preview": "Edit Modify in engineering editor", "tags": []}, {"chapter": "2", "title": "Lifecycle Change Process", "level": "Core", "file": "ch02-lifecycle.html", "section": "Compare", "anchor": "", "content": "Compare Review differences before versioning", "preview": "Compare Review differences before versioning", "tags": []}, {"chapter": "2", "title": "Lifecycle Change Process", "level": "Core", "file": "ch02-lifecycle.html", "section": "New Version", "anchor": "", "content": "New Version Create version with comments", "preview": "New Version Create version with comments", "tags": []}, {"chapter": "2", "title": "Lifecycle Change Process", "level": "Core", "file": "ch02-lifecycle.html", "section": "Check-In", "anchor": "", "content": "Check-In Upload new version to server", "preview": "Check-In Upload new version to server", "tags": []}, {"chapter": "2", "title": "Lifecycle Change Process", "level": "Core", "file": "ch02-lifecycle.html", "section": "Step 1: Check-Out the Component", "anchor": "", "content": "Step 1: Check-Out the Component Before you can edit a component, you must check it out from the server to your local machine. Components that exist only on the server appear grayed out in the Project tree. Select the component in the Project tree . If it appears gray, it is only on the server and must be checked out first. In the Home tab, click the Check-Out button. The Check-Out dialog opens. In the Check-Out dialog, verify the correct component is listed in the Selected components area. Activate the Lock for other users checkbox. This prevents other users from checking in conflicting changes while you are working. ⚠️ Lock Recommendation Always lock the component when you intend to make changes. This avoids version conflicts in team environments. Select the lifecycle state Under development to signal to other users that this component is actively being modified. Click Check-Out and close . The component's icon changes from gray to colored, indicating it is now available locally.", "preview": "Step 1: Check-Out the Component Before you can edit a component, you must check it out from the server to your local machine. Components that exist only on the server appear grayed out in the Project tree. Select the component in the Project tree . I", "tags": ["step", "step", "step", "step", "warning", "step", "step"]}, {"chapter": "2", "title": "Lifecycle Change Process", "level": "Core", "file": "ch02-lifecycle.html", "section": "Step 2: Edit the Component", "anchor": "", "content": "Step 2: Edit the Component With the component checked out locally, you can open it in the appropriate engineering editor and make your modifications. Select the checked-out component in the Project tree. In the Home tab, click Open with editor (or press F4 ). The associated engineering software launches automatically. Make your changes in the editor and save the project before closing the editor. 💡 Visual Indicator After saving changes in the editor, a pencil icon appears next to the component in the Project tree, indicating that the local version differs from the server version.", "preview": "Step 2: Edit the Component With the component checked out locally, you can open it in the appropriate engineering editor and make your modifications. Select the checked-out component in the Project tree. In the Home tab, click Open with editor (or pr", "tags": ["step", "step", "step", "tip"]}, {"chapter": "2", "title": "Lifecycle Change Process", "level": "Core", "file": "ch02-lifecycle.html", "section": "Step 3: Create a New Version and Check-In", "anchor": "", "content": "Step 3: Create a New Version and Check-In After editing, you must create a new version to formally record your changes. Octoplant will automatically compare your local files with the server version and display all differences. Select the modified component in the Project tree. In the Home tab, click Create new version . Octoplant compares the local working directory with the last server version. The Create new version dialog opens, showing a Difference tree with all detected changes. Review the differences carefully. In the Add comments field, enter a clear description of what was changed and why (e.g., CR-1001: Adjusted motor speed setpoint from 1200 to 1000 RPM ). If a change reason is mandatory, you must fill it in before proceeding. ⚠️ Mandatory Comments Your administrator may configure change comments as mandatory. In this case, you cannot proceed without entering a comment. Always write meaningful comments — they are the primary documentation of your changes. Click Create version", "preview": "Step 3: Create a New Version and Check-In After editing, you must create a new version to formally record your changes. Octoplant will automatically compare your local files with the server version and display all differences. Select the modified com", "tags": ["step", "step", "step", "step", "warning", "step"]}, {"chapter": "2", "title": "Lifecycle Change Process", "level": "Core", "file": "ch02-lifecycle.html", "section": "Summary", "anchor": "", "content": "Summary Action Where / How Result Check-Out Home tab → Check-Out Component available locally Lock Component Check-Out dialog → Lock for other users Other users cannot check in Edit in Editor Home tab → Open with editor (F4) Changes saved locally Create New Version Home tab → Create new version Differences reviewed and documented Check-In Create version dialog → Create version and Check-In New version on server, component unlocked", "preview": "Summary Action Where / How Result Check-Out Home tab → Check-Out Component available locally Lock Component Check-Out dialog → Lock for other users Other users cannot check in Edit in Editor Home tab → Open with editor (F4) Changes saved locally Crea", "tags": []}, {"chapter": "3", "title": "Change History", "level": "Core", "file": "ch03-change-history.html", "section": "Explanation of Change History", "anchor": "", "content": "Explanation of Change History The Change History is Octoplant's complete audit trail — a chronological record of every version ever created for a component. This chapter explains how to read the change history, navigate between versions, view modified elements, and use the history for compliance and troubleshooting.", "preview": "Explanation of Change History The Change History is Octoplant's complete audit trail — a chronological record of every version ever created for a component. This chapter explains how to read the change history, navigate between versions, view modifie", "tags": []}, {"chapter": "3", "title": "Change History", "level": "Core", "file": "ch03-change-history.html", "section": "Accessing the Change History", "anchor": "", "content": "Accessing the Change History The Change History is accessible from the Component details panel whenever a component is selected in the Project tree. In the Project tree , select any component that has been checked in at least once. In the central panel, click the Change history tab. A list of all versions appears, showing version number, date, user, and comment. To customize which columns are displayed, right-click on any column header and check/uncheck the columns you want to see (e.g., Change reason, Duration, File size).", "preview": "Accessing the Change History The Change History is accessible from the Component details panel whenever a component is selected in the Project tree. In the Project tree , select any component that has been checked in at least once. In the central pan", "tags": ["step", "step", "step"]}, {"chapter": "3", "title": "Change History", "level": "Core", "file": "ch03-change-history.html", "section": "Checking Out Specific Versions", "anchor": "", "content": "Checking Out Specific Versions You can check out any specific historical version of a component, not just the latest one. This is useful for comparing or restoring older states. In the Home tab, click Check-Out . The Check-Out dialog opens. In the dialog, expand the component to see all available versions. Select the specific version(s) you want to retrieve locally. Click Check-Out and close . The selected versions are copied to your local archive. The latest version is always placed in the working directory. ℹ️ Working Directory Only the most recent checked-out version is placed in the working directory (the folder you can edit). Older versions are stored in the local archive for reference and comparison only.", "preview": "Checking Out Specific Versions You can check out any specific historical version of a component, not just the latest one. This is useful for comparing or restoring older states. In the Home tab, click Check-Out . The Check-Out dialog opens. In the di", "tags": ["step", "step", "step", "info"]}, {"chapter": "3", "title": "Change History", "level": "Core", "file": "ch03-change-history.html", "section": "Viewing Modified Elements", "anchor": "", "content": "Viewing Modified Elements For each version in the Change History, you can see exactly which elements were modified — down to the individual program block or data point. In the Change history tab, click on a specific version to select it. The Modified elements table below the version list updates to show all elements that changed in that version, including the type of change (added, modified, deleted). Click on any modified element to see more detail about the specific change.", "preview": "Viewing Modified Elements For each version in the Change History, you can see exactly which elements were modified — down to the individual program block or data point. In the Change history tab, click on a specific version to select it. The Modified", "tags": ["step", "step", "step"]}, {"chapter": "3", "title": "Change History", "level": "Core", "file": "ch03-change-history.html", "section": "Viewing Component Details and Master Data", "anchor": "", "content": "Viewing Component Details and Master Data The Details tab provides additional metadata about the component that can be used for searching and documentation. With a component selected, click the Details tab in the central panel. Review the Component ID — a unique identifier assigned by Octoplant that can be used to reference this component in reports and exports. View or edit the Master data fields. These are custom metadata fields (e.g., IP address, location, responsible engineer) that can be used to search for components across the entire project tree.", "preview": "Viewing Component Details and Master Data The Details tab provides additional metadata about the component that can be used for searching and documentation. With a component selected, click the Details tab in the central panel. Review the Component I", "tags": ["step", "step", "step"]}, {"chapter": "3", "title": "Change History", "level": "Core", "file": "ch03-change-history.html", "section": "Summary", "anchor": "", "content": "Summary Action Where / How Result Access Change History Select component → Change history tab Full version list displayed Customize Columns Right-click column header → Select columns Relevant data visible Check Out Specific Version Home tab → Check-Out → Select version Historical version available locally View Modified Elements Change history → Select version Exact changes per version shown View Master Data Details tab Component metadata and ID visible", "preview": "Summary Action Where / How Result Access Change History Select component → Change history tab Full version list displayed Customize Columns Right-click column header → Select columns Relevant data visible Check Out Specific Version Home tab → Check-O", "tags": []}, {"chapter": "4", "title": "User Management", "level": "Admin", "file": "ch04-user-management.html", "section": "User Management", "anchor": "", "content": "User Management Octoplant's user management system allows administrators to control who can access which components and perform which actions. This chapter covers creating groups, adding users, assigning rights, and setting account policies — all from the AdminClient.", "preview": "User Management Octoplant's user management system allows administrators to control who can access which components and perform which actions. This chapter covers creating groups, adding users, assigning rights, and setting account policies — all fro", "tags": []}, {"chapter": "4", "title": "User Management", "level": "Admin", "file": "ch04-user-management.html", "section": "Opening User Management in the AdminClient", "anchor": "", "content": "Opening User Management in the AdminClient All user management tasks are performed in the Octoplant AdminClient, which requires administrator privileges. Open the Octoplant AdminClient on your PC and log in with administrator credentials. In the left navigation panel, click on User Management . The user management interface opens, showing existing users and groups.", "preview": "Opening User Management in the AdminClient All user management tasks are performed in the Octoplant AdminClient, which requires administrator privileges. Open the Octoplant AdminClient on your PC and log in with administrator credentials. In the left", "tags": ["step", "step"]}, {"chapter": "4", "title": "User Management", "level": "Admin", "file": "ch04-user-management.html", "section": "Creating a New Group", "anchor": "", "content": "Creating a New Group It is best practice in Octoplant to assign rights to groups rather than individual users. This makes permission management much more efficient. In the User Management module, click the New group button (or right-click in the groups panel and select New group). Enter a descriptive name for the group (e.g., Development_Engineers , Operators_Line1 ). Click OK to create the group. 💡 Best Practice Create groups that reflect your organizational structure or job roles. Assign rights to groups, then add users to groups. This way, when a user changes roles, you only need to change their group membership.", "preview": "Creating a New Group It is best practice in Octoplant to assign rights to groups rather than individual users. This makes permission management much more efficient. In the User Management module, click the New group button (or right-click in the grou", "tags": ["step", "step", "step", "tip"]}, {"chapter": "4", "title": "User Management", "level": "Admin", "file": "ch04-user-management.html", "section": "Creating a New User", "anchor": "", "content": "Creating a New User With the group created, you can now add individual users and assign them to the appropriate groups. Click the New user button in the User Management module. Enter the user's username , full name , and email address . The email address is required for job notification emails. Set an initial password for the user. You can optionally check Force password change on next login to require the user to set their own password. In the Groups section, assign the user to one or more groups by clicking Add to group and selecting the appropriate group(s). If your organization uses Active Directory, you can enable Login via Windows credentials to allow the user to log in with their domain password. Click Save to create the user account.", "preview": "Creating a New User With the group created, you can now add individual users and assign them to the appropriate groups. Click the New user button in the User Management module. Enter the user's username , full name , and email address . The email add", "tags": ["step", "step", "step", "step", "step", "step"]}, {"chapter": "4", "title": "User Management", "level": "Admin", "file": "ch04-user-management.html", "section": "Assigning Access Rights to Groups", "anchor": "", "content": "Assigning Access Rights to Groups Rights in Octoplant are assigned at two levels: at the project tree level (which components a group can access) and at the feature level (which functions they can use). Select the group you want to configure in the groups list. In the Project tree rights section, navigate to the directory or component and assign the appropriate rights: Check-Out , Check-In , Create component , Delete , etc. In the Module rights section, grant or restrict access to AdminClient modules and UserClient features as needed. Click Save to apply the rights. ⚠️ Superadministrator The built-in Superadministrator account and the Administrators group cannot be deleted. Be careful when modifying their rights, as this could lock you out of the system.", "preview": "Assigning Access Rights to Groups Rights in Octoplant are assigned at two levels: at the project tree level (which components a group can access) and at the feature level (which functions they can use). Select the group you want to configure in the g", "tags": ["step", "step", "step", "step", "warning"]}, {"chapter": "4", "title": "User Management", "level": "Admin", "file": "ch04-user-management.html", "section": "Summary", "anchor": "", "content": "Summary Action Where / How Result Open User Management AdminClient → User Management User and group list visible Create Group New group button → Enter name Group created for role-based access Create User New user button → Fill details User account created Assign to Group User properties → Add to group User inherits group rights Set Project Rights Group → Project tree rights Access to specific components defined Set Module Rights Group → Module rights Feature access configured", "preview": "Summary Action Where / How Result Open User Management AdminClient → User Management User and group list visible Create Group New group button → Enter name Group created for role-based access Create User New user button → Fill details User account cr", "tags": []}, {"chapter": "5", "title": "Create Jobs – Automated Backup", "level": "Admin", "file": "ch05-create-jobs.html", "section": "Create Jobs – Automated Backup Configuration", "anchor": "", "content": "Create Jobs – Automated Backup Configuration Jobs are the heart of Octoplant's automated backup system. A job defines how, when, and from which device Octoplant automatically reads and archives program data. This chapter walks through creating a component, then configuring a full job with schedule, save policy, compare policy, and email notifications.", "preview": "Create Jobs – Automated Backup Configuration Jobs are the heart of Octoplant's automated backup system. A job defines how, when, and from which device Octoplant automatically reads and archives program data. This chapter walks through creating a comp", "tags": []}, {"chapter": "5", "title": "Create Jobs – Automated Backup", "level": "Admin", "file": "ch05-create-jobs.html", "section": "Prerequisite: Create and Check-In a Component", "anchor": "", "content": "Prerequisite: Create and Check-In a Component Before creating a job, the target component must exist in Octoplant and be checked into the server. Create a new component in the UserClient (see Chapter 1 for detailed instructions). For example, create a Simatic S7 component named S7_300_Line1 . For Siemens S7 components, you must have project data checked in before the job can read from the device. Drag the project files into the component and click Create base version and Check-In . ℹ️ Note For some component types (e.g., Image Service), you can create a job without pre-existing project data. For Siemens S7 and similar types, project data must be present.", "preview": "Prerequisite: Create and Check-In a Component Before creating a job, the target component must exist in Octoplant and be checked into the server. Create a new component in the UserClient (see Chapter 1 for detailed instructions). For example, create ", "tags": ["step", "step", "info"]}, {"chapter": "5", "title": "Create Jobs – Automated Backup", "level": "Admin", "file": "ch05-create-jobs.html", "section": "Creating a Job in the AdminClient", "anchor": "", "content": "Creating a Job in the AdminClient Jobs are created and configured in the AdminClient, not the UserClient. Open the Octoplant AdminClient and click on Jobs in the left navigation panel. Locate the component you want to create a job for in the Project tree on the right side. Drag the component from the Project tree and drop it into the Jobs view on the left. A new job is automatically created for that component. 💡 Alternative You can also click the Create button in the Jobs view and then manually select the component. The drag-and-drop method is faster.", "preview": "Creating a Job in the AdminClient Jobs are created and configured in the AdminClient, not the UserClient. Open the Octoplant AdminClient and click on Jobs in the left navigation panel. Locate the component you want to create a job for in the Project ", "tags": ["step", "step", "step", "tip"]}, {"chapter": "5", "title": "Create Jobs – Automated Backup", "level": "Admin", "file": "ch05-create-jobs.html", "section": "Configuring the Job", "anchor": "", "content": "Configuring the Job With the job created, configure its settings to define how it behaves. Enter a unique, descriptive Job name (e.g., Daily_Backup_S7_300_Line1 ). Set the Upload type to define how data is read from the device (e.g., via PROFIBUS, Ethernet, or a specific protocol). Enter the IP address of the physical device (e.g., 192.168.1.100 ).", "preview": "Configuring the Job With the job created, configure its settings to define how it behaves. Enter a unique, descriptive Job name (e.g., Daily_Backup_S7_300_Line1 ). Set the Upload type to define how data is read from the device (e.g., via PROFIBUS, Et", "tags": ["step", "step", "step"]}, {"chapter": "5", "title": "Create Jobs – Automated Backup", "level": "Admin", "file": "ch05-create-jobs.html", "section": "Configuring the Schedule", "anchor": "", "content": "Configuring the Schedule The schedule defines when the job runs automatically. Click on the Schedule field to open the schedule configuration. The default is daily at 1:00 AM. Modify the schedule as needed. For example, set it to run weekly on all days at 11:00 PM for a nightly backup. Click OK to confirm the schedule.", "preview": "Configuring the Schedule The schedule defines when the job runs automatically. Click on the Schedule field to open the schedule configuration. The default is daily at 1:00 AM. Modify the schedule as needed. For example, set it to run weekly on all da", "tags": ["step", "step", "step"]}, {"chapter": "5", "title": "Create Jobs – Automated Backup", "level": "Admin", "file": "ch05-create-jobs.html", "section": "Configuring Save and Compare Policies", "anchor": "", "content": "Configuring Save and Compare Policies These policies control what is saved and what is compared after each job execution. In the Save policy section, select Always save backup to ensure a backup file is created in the Octoplant backup folder every time the job runs, regardless of whether changes are detected. In the Compare policy section, select the comparison types to perform after each backup: • Server version ↔ Backup : Compares the current server version with the newly created backup • Previous backup ↔ Backup : Compares the last two backups to detect changes on the device", "preview": "Configuring Save and Compare Policies These policies control what is saved and what is compared after each job execution. In the Save policy section, select Always save backup to ensure a backup file is created in the Octoplant backup folder every ti", "tags": ["step", "step"]}, {"chapter": "5", "title": "Create Jobs – Automated Backup", "level": "Admin", "file": "ch05-create-jobs.html", "section": "Configuring Email Notifications", "anchor": "", "content": "Configuring Email Notifications Octoplant can automatically send email reports after job execution. Click on Global job settings to access the notification configuration. Select the notification mode: • Job specific : Sends an email about this specific job • Daily : Sends a daily summary email about all configured jobs In the Users to notify field, select the Octoplant users who should receive notifications. Their email addresses must be configured in User Management. ⚠️ Prerequisite Email addresses must be configured for each user in the User Management module before they can receive job notifications. You can also add external email addresses for recipients who do not have Octoplant accounts. Click Save to finalize the job configuration. Octoplant will now execute the job automatically according to the configured schedule.", "preview": "Configuring Email Notifications Octoplant can automatically send email reports after job execution. Click on Global job settings to access the notification configuration. Select the notification mode: • Job specific : Sends an email about this specif", "tags": ["step", "step", "step", "warning", "step", "step"]}, {"chapter": "5", "title": "Create Jobs – Automated Backup", "level": "Admin", "file": "ch05-create-jobs.html", "section": "Summary", "anchor": "", "content": "Summary Action Where / How Result Create Component UserClient → New component → Check-In Component available for job assignment Create Job AdminClient → Jobs → Drag component Job created for component Configure Job Job settings → Name, Upload type, IP address Job parameters defined Set Schedule Schedule field → Choose frequency and time Automatic execution time set Save Policy Always save backup Backup created on every execution Compare Policy Server version ↔ Backup + Prev. backup ↔ Backup Differences detected automatically Email Notifications Global job settings → Select users Automatic reports sent after execution", "preview": "Summary Action Where / How Result Create Component UserClient → New component → Check-In Component available for job assignment Create Job AdminClient → Jobs → Drag component Job created for component Configure Job Job settings → Name, Upload type, I", "tags": []}, {"chapter": "6", "title": "Job Trigger & Verification", "level": "Operations", "file": "ch06-job-trigger.html", "section": "Job Trigger and Verification", "anchor": "", "content": "Job Trigger and Verification Once jobs are configured, you need to know how to manually trigger them, monitor their execution, and interpret the results. This chapter covers manual job execution, reading job results, comparing server versions with backups, and understanding email reports.", "preview": "Job Trigger and Verification Once jobs are configured, you need to know how to manually trigger them, monitor their execution, and interpret the results. This chapter covers manual job execution, reading job results, comparing server versions with ba", "tags": []}, {"chapter": "6", "title": "Job Trigger & Verification", "level": "Operations", "file": "ch06-job-trigger.html", "section": "Manually Triggering a Job", "anchor": "", "content": "Manually Triggering a Job While jobs run automatically on schedule, you can also trigger them manually at any time — for example, after making changes to a device. In the UserClient , select the component associated with the job in the Project tree. Navigate to the Jobs tab in the menu bar. Click the Execute jobs once button. The job starts immediately. Click the Show progress information button (which becomes active during execution) to monitor the real-time execution status.", "preview": "Manually Triggering a Job While jobs run automatically on schedule, you can also trigger them manually at any time — for example, after making changes to a device. In the UserClient , select the component associated with the job in the Project tree. ", "tags": ["step", "step", "step", "step"]}, {"chapter": "6", "title": "Job Trigger & Verification", "level": "Operations", "file": "ch06-job-trigger.html", "section": "Reading Job Results", "anchor": "", "content": "Reading Job Results After a job completes, the results are available in both the AdminClient and UserClient. In the Jobs tab of the UserClient, select the component and review the job history table. Look at the Server version ↔ Backup column: • Equal : The backup matches the server version — no changes detected • Different, with warning : The backup differs from the server version — a change was detected on the device Look at the Prev. backup ↔ Backup column to see if the device program changed since the last backup. ⚠️ Not Present Warning If a previous backup was unavailable for comparison (e.g., first run), you will see a 'Not present, with warning' status. This is normal for the first execution.", "preview": "Reading Job Results After a job completes, the results are available in both the AdminClient and UserClient. In the Jobs tab of the UserClient, select the component and review the job history table. Look at the Server version ↔ Backup column: • Equal", "tags": ["step", "step", "step", "warning"]}, {"chapter": "6", "title": "Job Trigger & Verification", "level": "Operations", "file": "ch06-job-trigger.html", "section": "Comparing Server Version with Backup", "anchor": "", "content": "Comparing Server Version with Backup When a 'Different' status appears, you should investigate the differences before deciding how to proceed. In the job results, right-click on the result row that shows a 'Different' status. Select Compare server version with backup from the context menu. A detailed comparison window opens. Review the side-by-side Difference tree to understand exactly what changed on the device. Based on this analysis, decide whether the device change was authorized or unexpected.", "preview": "Comparing Server Version with Backup When a 'Different' status appears, you should investigate the differences before deciding how to proceed. In the job results, right-click on the result row that shows a 'Different' status. Select Compare server ve", "tags": ["step", "step", "step"]}, {"chapter": "6", "title": "Job Trigger & Verification", "level": "Operations", "file": "ch06-job-trigger.html", "section": "Understanding Email Reports", "anchor": "", "content": "Understanding Email Reports If email notifications are configured, Octoplant sends automated reports after job execution. Open the notification email in your email client. The email contains a summary of all job results. Download the attached CSV file for a detailed breakdown of all differences detected across all monitored components. Use the CSV data to create reports, track trends, or integrate with other systems.", "preview": "Understanding Email Reports If email notifications are configured, Octoplant sends automated reports after job execution. Open the notification email in your email client. The email contains a summary of all job results. Download the attached CSV fil", "tags": ["step", "step", "step"]}, {"chapter": "6", "title": "Job Trigger & Verification", "level": "Operations", "file": "ch06-job-trigger.html", "section": "Summary", "anchor": "", "content": "Summary Action Where / How Result Manual Trigger Jobs tab → Execute jobs once Job runs immediately Monitor Progress Show progress information button Real-time execution status Read Results Jobs tab → Job history table Equal / Different status per component Compare Differences Right-click result → Compare server version with backup Detailed difference tree Email Report Automated email with CSV attachment Full job summary for all components", "preview": "Summary Action Where / How Result Manual Trigger Jobs tab → Execute jobs once Job runs immediately Monitor Progress Show progress information button Real-time execution status Read Results Jobs tab → Job history table Equal / Different status per com", "tags": []}, {"chapter": "7", "title": "Recovery & Restore", "level": "Critical", "file": "ch07-recovery.html", "section": "Recovery and Restore", "anchor": "", "content": "Recovery and Restore Recovery is one of Octoplant's most critical capabilities. When a device program is corrupted, accidentally overwritten, or needs to be restored to a previous state, Octoplant provides multiple recovery paths. This chapter covers all four recovery scenarios.", "preview": "Recovery and Restore Recovery is one of Octoplant's most critical capabilities. When a device program is corrupted, accidentally overwritten, or needs to be restored to a previous state, Octoplant provides multiple recovery paths. This chapter covers", "tags": []}, {"chapter": "7", "title": "Recovery & Restore", "level": "Critical", "file": "ch07-recovery.html", "section": "Scenario A: Restoring a Server Version from a Backup", "anchor": "", "content": "Scenario A: Restoring a Server Version from a Backup Use this when the server version is incorrect and you need to replace it with the content of a backup taken directly from the physical device. In the Jobs tab, identify the job result where the server version and backup differ (status: Different ). Right-click the backup entry you want to restore and select Copy backup to directory . In the dialog, click Next , then Replace and copy to overwrite the working directory with the backup content. Return to the UserClient, select the component, and click Create new version . Add a comment explaining the recovery (e.g., Recovery: Restored from backup dated 2026-01-15 ). Click Create version and Check-In to update the server version with the restored content.", "preview": "Scenario A: Restoring a Server Version from a Backup Use this when the server version is incorrect and you need to replace it with the content of a backup taken directly from the physical device. In the Jobs tab, identify the job result where the ser", "tags": ["step", "step", "step", "step", "step"]}, {"chapter": "7", "title": "Recovery & Restore", "level": "Critical", "file": "ch07-recovery.html", "section": "Scenario B: Comparing Two Consecutive Backups", "anchor": "", "content": "Scenario B: Comparing Two Consecutive Backups Use this when you want to understand what changed on a device between two backup cycles. In the job results, look at the Prev. backup ↔ Backup column for a 'Different' status. Right-click the result and select Compare previous backup with backup . Review the differences. Based on the comparison, decide whether the latest backup is correct or whether you need to restore from the previous backup.", "preview": "Scenario B: Comparing Two Consecutive Backups Use this when you want to understand what changed on a device between two backup cycles. In the job results, look at the Prev. backup ↔ Backup column for a 'Different' status. Right-click the result and s", "tags": ["step", "step", "step"]}, {"chapter": "7", "title": "Recovery & Restore", "level": "Critical", "file": "ch07-recovery.html", "section": "Scenario C: Restoring a Program Directly to a Physical Device", "anchor": "", "content": "Scenario C: Restoring a Program Directly to a Physical Device Use this when a physical device (PLC, HMI, etc.) needs to have its program restored — for example, after a hardware replacement. First, copy the correct backup to the working directory using Copy backup to directory (as described in Scenario A, steps 1–3). In the UserClient, right-click the component and select Open with editor . The engineering software (e.g., SIMATIC Manager or TIA Portal) opens with the restored project. In the engineering software, use the appropriate function to load the program onto the physical device (e.g., in SIMATIC Manager: Target System → Load ). The device is now restored to the state captured in the backup. 🚫 Critical Warning Ensure you are loading the correct version to the correct device. Loading the wrong program to a production device can cause equipment damage or safety incidents. Always verify the component name, version date, and device IP address before proceeding.", "preview": "Scenario C: Restoring a Program Directly to a Physical Device Use this when a physical device (PLC, HMI, etc.) needs to have its program restored — for example, after a hardware replacement. First, copy the correct backup to the working directory usi", "tags": ["step", "step", "step"]}, {"chapter": "7", "title": "Recovery & Restore", "level": "Critical", "file": "ch07-recovery.html", "section": "Summary", "anchor": "", "content": "Summary Action Where / How Result Identify Difference Jobs tab → Server version ↔ Backup column Mismatch detected Copy Backup to Directory Right-click backup → Copy backup to directory Working directory updated with backup Create Recovery Version Create new version → Add recovery comment Recovery documented in history Check-In Recovery Create version and Check-In Server version updated Restore to Device Open with editor → Load to device Physical device program restored", "preview": "Summary Action Where / How Result Identify Difference Jobs tab → Server version ↔ Backup column Mismatch detected Copy Backup to Directory Right-click backup → Copy backup to directory Working directory updated with backup Create Recovery Version Cre", "tags": []}, {"chapter": "8", "title": "Hub & Dashboard", "level": "Web", "file": "ch08-hub-dashboard.html", "section": "Octoplant Hub and Dashboard", "anchor": "", "content": "Octoplant Hub and Dashboard The octoplant Hub is a web-based portal that provides a centralized overview of all your automation assets, backup status, and system health — accessible from any browser. This chapter covers logging in, navigating dashboards, selecting servers, and exporting data.", "preview": "Octoplant Hub and Dashboard The octoplant Hub is a web-based portal that provides a centralized overview of all your automation assets, backup status, and system health — accessible from any browser. This chapter covers logging in, navigating dashboa", "tags": []}, {"chapter": "8", "title": "Hub & Dashboard", "level": "Web", "file": "ch08-hub-dashboard.html", "section": "Logging into the Octoplant Hub", "anchor": "", "content": "Logging into the Octoplant Hub The octoplant Hub is accessed via a web browser using the server URL configured by your administrator. Open a web browser and navigate to the Hub URL. The format is: https://[ServerName]:443 (the port may differ based on your configuration). On the login screen, enter your username . If your organization uses a domain, use the format [Domain]/[Username] . Enter your password . Click the eye icon to toggle password visibility if needed. Click Login . The Hub dashboard opens.", "preview": "Logging into the Octoplant Hub The octoplant Hub is accessed via a web browser using the server URL configured by your administrator. Open a web browser and navigate to the Hub URL. The format is: https://[ServerName]:443 (the port may differ based o", "tags": ["step", "step", "step", "step"]}, {"chapter": "8", "title": "Hub & Dashboard", "level": "Web", "file": "ch08-hub-dashboard.html", "section": "Navigating the User Menu", "anchor": "", "content": "Navigating the User Menu The user menu provides quick access to account settings and system information. Click the user icon in the top-right corner of the Hub. From the dropdown menu you can: view the current username and Hub version, start a slideshow (for display screens in control rooms), change your password , or log out .", "preview": "Navigating the User Menu The user menu provides quick access to account settings and system information. Click the user icon in the top-right corner of the Hub. From the dropdown menu you can: view the current username and Hub version, start a slides", "tags": ["step", "step"]}, {"chapter": "8", "title": "Hub & Dashboard", "level": "Web", "file": "ch08-hub-dashboard.html", "section": "Selecting Servers for Dashboard Views", "anchor": "", "content": "Selecting Servers for Dashboard Views The Hub can display data from multiple Octoplant servers. You can filter dashboards to show data from specific servers. At the top of any dashboard, locate the Server selection area. Click the arrow on the right side of the server selection to open the dropdown. Select All servers or choose one or more specific servers. The charts and key figures update immediately to reflect your selection.", "preview": "Selecting Servers for Dashboard Views The Hub can display data from multiple Octoplant servers. You can filter dashboards to show data from specific servers. At the top of any dashboard, locate the Server selection area. Click the arrow on the right ", "tags": ["step", "step", "step"]}, {"chapter": "8", "title": "Hub & Dashboard", "level": "Web", "file": "ch08-hub-dashboard.html", "section": "Exporting Dashboard Data to CSV", "anchor": "", "content": "Exporting Dashboard Data to CSV Any table displayed in the Hub can be exported to a CSV file for further analysis in Excel or other tools. Navigate to the dashboard containing the table you want to export. Apply any filters you need (the export respects active filters). Click the CSV Export button (download icon) in the top-right corner of the table. The CSV Export dialog shows the export progress. The file is saved to your browser's Downloads folder. ℹ️ Export Limit A maximum of 50,000 entries can be written to a single CSV file. If the table has more entries, use filters to narrow down the data before exporting.", "preview": "Exporting Dashboard Data to CSV Any table displayed in the Hub can be exported to a CSV file for further analysis in Excel or other tools. Navigate to the dashboard containing the table you want to export. Apply any filters you need (the export respe", "tags": ["step", "step", "step", "step", "info"]}, {"chapter": "8", "title": "Hub & Dashboard", "level": "Web", "file": "ch08-hub-dashboard.html", "section": "Summary", "anchor": "", "content": "Summary Action Where / How Result Login Browser → Hub URL → Enter credentials Dashboard accessible User Menu User icon (top-right) Account settings and logout Server Selection Dashboard → Server selection dropdown Filtered view per server CSV Export Table → CSV Export button Data downloaded to CSV file", "preview": "Summary Action Where / How Result Login Browser → Hub URL → Enter credentials Dashboard accessible User Menu User icon (top-right) Account settings and logout Server Selection Dashboard → Server selection dropdown Filtered view per server CSV Export ", "tags": []}, {"chapter": "9", "title": "Asset Inventory Service", "level": "Security", "file": "ch09-asset-inventory.html", "section": "Asset Inventory Service", "anchor": "", "content": "Asset Inventory Service The Asset Inventory Service is a security-focused feature that automatically identifies device information and vulnerability data for all managed assets. This chapter shows how to access device details, read vulnerability reports, and interpret CVE risk scores.", "preview": "Asset Inventory Service The Asset Inventory Service is a security-focused feature that automatically identifies device information and vulnerability data for all managed assets. This chapter shows how to access device details, read vulnerability repo", "tags": []}, {"chapter": "9", "title": "Asset Inventory Service", "level": "Security", "file": "ch09-asset-inventory.html", "section": "Triggering Asset Identification via Check-In", "anchor": "", "content": "Triggering Asset Identification via Check-In The Asset Inventory Service is automatically populated when components are checked into the server. Octoplant reads the CPU configuration from the project data. In the UserClient, select a component (e.g., a Simatic S7 component) and perform a Check-In with project data. Octoplant automatically reads the CPU configuration from the project data and registers it in the Asset Inventory Service.", "preview": "Triggering Asset Identification via Check-In The Asset Inventory Service is automatically populated when components are checked into the server. Octoplant reads the CPU configuration from the project data. In the UserClient, select a component (e.g.,", "tags": ["step", "step"]}, {"chapter": "9", "title": "Asset Inventory Service", "level": "Security", "file": "ch09-asset-inventory.html", "section": "Accessing the Asset Inventory Dashboard", "anchor": "", "content": "Accessing the Asset Inventory Dashboard The Asset Inventory Service is accessible from the octoplant Hub. Log into the octoplant Hub (see Chapter 8). Navigate to the Asset Inventory Service dashboard. A list of all managed assets appears, showing: Name, IP address, Risk level (Low / Medium / High), Device type, Vendor. A color-coded donut chart provides an overview of the vulnerability distribution across all assets.", "preview": "Accessing the Asset Inventory Dashboard The Asset Inventory Service is accessible from the octoplant Hub. Log into the octoplant Hub (see Chapter 8). Navigate to the Asset Inventory Service dashboard. A list of all managed assets appears, showing: Na", "tags": ["step", "step", "step"]}, {"chapter": "9", "title": "Asset Inventory Service", "level": "Security", "file": "ch09-asset-inventory.html", "section": "Viewing Device Information", "anchor": "", "content": "Viewing Device Information Click on any asset to see its full technical profile. Click on an asset in the list to open its Device Information page. Review the comprehensive device details: network configuration, hardware information (including rack slots and module assignments), and installed firmware/software versions.", "preview": "Viewing Device Information Click on any asset to see its full technical profile. Click on an asset in the list to open its Device Information page. Review the comprehensive device details: network configuration, hardware information (including rack s", "tags": ["step", "step"]}, {"chapter": "9", "title": "Asset Inventory Service", "level": "Security", "file": "ch09-asset-inventory.html", "section": "Reading Vulnerability Reports", "anchor": "", "content": "Reading Vulnerability Reports The vulnerability report provides a detailed security assessment for each device. From the Asset Inventory dashboard, click on the risk level (e.g., 'Medium') next to a specific asset. The detailed risk report opens, showing: overall Risk Score , a Radar Chart visualizing risk across categories (Vulnerability, Threat, Criticality), and a breakdown of each category. Scroll down to the Insights section to see a list of Full Match CVEs (Common Vulnerabilities and Exposures). Each CVE entry shows its score, title, and date identified. ℹ️ CVE Information CVE data is sourced from the National Vulnerability Database (NVD). Octoplant matches your device's firmware version against known CVEs to identify potential security risks. Click on any CVE entry to see more details and recommended mitigations.", "preview": "Reading Vulnerability Reports The vulnerability report provides a detailed security assessment for each device. From the Asset Inventory dashboard, click on the risk level (e.g., 'Medium') next to a specific asset. The detailed risk report opens, sho", "tags": ["step", "step", "step", "info", "step"]}, {"chapter": "9", "title": "Asset Inventory Service", "level": "Security", "file": "ch09-asset-inventory.html", "section": "Summary", "anchor": "", "content": "Summary Action Where / How Result Trigger Identification Check-In component with project data CPU configuration registered Access Dashboard Hub → Asset Inventory Service All assets listed with risk levels View Device Info Click asset → Device Information Full hardware and network profile Read CVE Report Click risk level → Insights section Specific vulnerabilities listed", "preview": "Summary Action Where / How Result Trigger Identification Check-In component with project data CPU configuration registered Access Dashboard Hub → Asset Inventory Service All assets listed with risk levels View Device Info Click asset → Device Informa", "tags": []}, {"chapter": "10", "title": "Easy Asset Integrator", "level": "Efficiency", "file": "ch10-easy-asset-integrator.html", "section": "Easy Asset Integrator", "anchor": "", "content": "Easy Asset Integrator The Easy Asset Integrator allows you to import large numbers of assets into Octoplant at once using a simple CSV file — eliminating the need to create each component manually. This is the fastest way to onboard an entire plant's worth of devices.", "preview": "Easy Asset Integrator The Easy Asset Integrator allows you to import large numbers of assets into Octoplant at once using a simple CSV file — eliminating the need to create each component manually. This is the fastest way to onboard an entire plant's", "tags": []}, {"chapter": "10", "title": "Easy Asset Integrator", "level": "Efficiency", "file": "ch10-easy-asset-integrator.html", "section": "Download the CSV Template", "anchor": "", "content": "Download the CSV Template The Easy Asset Integrator uses a standardized CSV template. Always start by downloading the template from Octoplant to ensure correct formatting. In the UserClient , navigate to the Extras tab. Click Easy Asset Integrator . The dialog opens. Click Download template to save the CSV template to your computer.", "preview": "Download the CSV Template The Easy Asset Integrator uses a standardized CSV template. Always start by downloading the template from Octoplant to ensure correct formatting. In the UserClient , navigate to the Extras tab. Click Easy Asset Integrator . ", "tags": ["step", "step", "step"]}, {"chapter": "10", "title": "Easy Asset Integrator", "level": "Efficiency", "file": "ch10-easy-asset-integrator.html", "section": "Fill in the CSV Template", "anchor": "", "content": "Fill in the CSV Template Open the template in Microsoft Excel or any spreadsheet application and fill in your asset data. Open the downloaded CSV file in Microsoft Excel . Replace the example data with your actual asset information. Each row represents one asset. Ensure the three mandatory columns are filled for every row: • Name : The component name (e.g., PLC_Line1_Conveyor ) • Directory : The path in the Project tree (e.g., Plant_A/Line_1 ) • Component type : The Octoplant component type (e.g., Simatic S7 ) 🚫 Mandatory Fields If any of the three mandatory columns (Name, Directory, Component type) are missing or incorrect for any row, the import will fail for that asset. Double-check all entries before importing. Save the file in CSV format (not XLSX).", "preview": "Fill in the CSV Template Open the template in Microsoft Excel or any spreadsheet application and fill in your asset data. Open the downloaded CSV file in Microsoft Excel . Replace the example data with your actual asset information. Each row represen", "tags": ["step", "step", "step", "step"]}, {"chapter": "10", "title": "Easy Asset Integrator", "level": "Efficiency", "file": "ch10-easy-asset-integrator.html", "section": "Import the CSV File", "anchor": "", "content": "Import the CSV File With the CSV file prepared, import it into Octoplant to automatically create all components. In the Easy Asset Integrator dialog, click Import CSV and select your prepared file. Octoplant processes the file and creates all components in the Project tree according to the specified directories. Review the import results. Successfully created components show an Imported status. Any errors are highlighted for correction.", "preview": "Import the CSV File With the CSV file prepared, import it into Octoplant to automatically create all components. In the Easy Asset Integrator dialog, click Import CSV and select your prepared file. Octoplant processes the file and creates all compone", "tags": ["step", "step", "step"]}, {"chapter": "10", "title": "Easy Asset Integrator", "level": "Efficiency", "file": "ch10-easy-asset-integrator.html", "section": "Updating Existing Assets", "anchor": "", "content": "Updating Existing Assets To update an already-imported asset, you need to modify the CSV and re-import it. Re-open the original CSV file. For assets you want to update, delete the value in the 'Imported' status column . This signals to Octoplant that these are existing entries to be updated, not new ones. Make your changes to the asset data in the CSV. Save and re-import the CSV. Octoplant applies the updates to the existing components.", "preview": "Updating Existing Assets To update an already-imported asset, you need to modify the CSV and re-import it. Re-open the original CSV file. For assets you want to update, delete the value in the 'Imported' status column . This signals to Octoplant that", "tags": ["step", "step", "step", "step"]}, {"chapter": "10", "title": "Easy Asset Integrator", "level": "Efficiency", "file": "ch10-easy-asset-integrator.html", "section": "Default Job Configurations", "anchor": "", "content": "Default Job Configurations After import, Octoplant automatically assigns default job configurations to the new components. After a successful import, navigate to the Jobs section in the AdminClient. Review the automatically created jobs for the imported components. Default configurations are applied based on the component type. Edit the job configurations as needed (see Chapter 5 for detailed job configuration instructions).", "preview": "Default Job Configurations After import, Octoplant automatically assigns default job configurations to the new components. After a successful import, navigate to the Jobs section in the AdminClient. Review the automatically created jobs for the impor", "tags": ["step", "step", "step"]}, {"chapter": "10", "title": "Easy Asset Integrator", "level": "Efficiency", "file": "ch10-easy-asset-integrator.html", "section": "Summary", "anchor": "", "content": "Summary Action Where / How Result Download Template Extras → Easy Asset Integrator → Download template CSV template saved Fill Template Excel → Fill Name, Directory, Component type Asset data prepared Import CSV Easy Asset Integrator → Import CSV Components created in Project tree Update Assets Delete 'Imported' status → Re-import Existing assets updated Review Jobs AdminClient → Jobs Default jobs assigned to new components", "preview": "Summary Action Where / How Result Download Template Extras → Easy Asset Integrator → Download template CSV template saved Fill Template Excel → Fill Name, Directory, Component type Asset data prepared Import CSV Easy Asset Integrator → Import CSV Com", "tags": []}, {"chapter": "11", "title": "Supplier Workflow", "level": "Advanced", "file": "ch11-supplier-workflow.html", "section": "Supplier Workflow – External Collaboration", "anchor": "", "content": "Supplier Workflow – External Collaboration When an external supplier needs to modify a project, Octoplant's Supplier Workflow provides a secure, traceable process for exporting the project, having the supplier make changes, and re-importing the results with full version tracking.", "preview": "Supplier Workflow – External Collaboration When an external supplier needs to modify a project, Octoplant's Supplier Workflow provides a secure, traceable process for exporting the project, having the supplier make changes, and re-importing the resul", "tags": []}, {"chapter": "11", "title": "Supplier Workflow", "level": "Advanced", "file": "ch11-supplier-workflow.html", "section": "Supplier Check-Out: Exporting the Project", "anchor": "", "content": "Supplier Check-Out: Exporting the Project The Supplier Check-Out function packages the project files for export to an external supplier who does not have direct access to the Octoplant server. Select the component in the Project tree and click Check-Out in the Home tab. In the Check-Out dialog, move the component to the Selected components area. Activate the Supplier Check-Out (user-defined target directory) checkbox. Activate Lock for other users — this is strongly recommended to prevent conflicting changes while the supplier is working. Optionally activate Compressed to create a ZIP archive, and Use project tree directory structure when exporting multiple components. Click the ... button to select the export target directory. Click Check-Out and close . The exported package contains the project files plus three automatically generated files: • SupplierChangeReason.txt — for the supplier to document change reasons • SupplierComment.txt — for general comments • SupplierDeliveryNote.vdo", "preview": "Supplier Check-Out: Exporting the Project The Supplier Check-Out function packages the project files for export to an external supplier who does not have direct access to the Octoplant server. Select the component in the Project tree and click Check-", "tags": ["step", "step", "step", "step", "step", "step", "step"]}, {"chapter": "11", "title": "Supplier Workflow", "level": "Advanced", "file": "ch11-supplier-workflow.html", "section": "SmartImport: Re-Importing Supplier Changes", "anchor": "", "content": "SmartImport: Re-Importing Supplier Changes When the supplier returns the modified project, use SmartImport to re-integrate the changes with full comparison and version tracking. In the Home tab, click SmartImport for supplier projects . In the SmartImport dialog, click Add and select the directory containing the supplier's returned files (must contain the .vdog-sdn file). Activate the Import checkbox for the projects you want to import. Select the comparison type to review the supplier's changes: • Supplier data ↔ Original version (recommended): Shows what the supplier changed • Supplier data ↔ Working directory : Compares with your current local files Select the import action: Create versions and Check-In (recommended) to immediately create a new version and upload it to the server. Click Import . Octoplant creates a new version documenting the supplier's changes and uploads it to the server.", "preview": "SmartImport: Re-Importing Supplier Changes When the supplier returns the modified project, use SmartImport to re-integrate the changes with full comparison and version tracking. In the Home tab, click SmartImport for supplier projects . In the SmartI", "tags": ["step", "step", "step", "step", "step", "step"]}, {"chapter": "11", "title": "Supplier Workflow", "level": "Advanced", "file": "ch11-supplier-workflow.html", "section": "Summary", "anchor": "", "content": "Summary Action Where / How Result Supplier Check-Out Home tab → Check-Out → Enable Supplier Check-Out Project package exported with delivery note Lock Component Check-Out dialog → Lock for other users Concurrent changes prevented Supplier Works Supplier edits files and fills in change documents Modified project returned SmartImport Home tab → SmartImport for supplier projects → Add directory Changes imported and compared Create Version SmartImport → Create versions and Check-In Supplier changes versioned on server", "preview": "Summary Action Where / How Result Supplier Check-Out Home tab → Check-Out → Enable Supplier Check-Out Project package exported with delivery note Lock Component Check-Out dialog → Lock for other users Concurrent changes prevented Supplier Works Suppl", "tags": []}, {"chapter": "12", "title": "Manual & Auto Export", "level": "Advanced", "file": "ch12-export.html", "section": "Manual and Automatic Data Export", "anchor": "", "content": "Manual and Automatic Data Export Octoplant provides two methods for exporting data: the ExportModule (for flexible, format-rich exports) and the octoplant Hub (for quick CSV reports from dashboards). This chapter covers both methods.", "preview": "Manual and Automatic Data Export Octoplant provides two methods for exporting data: the ExportModule (for flexible, format-rich exports) and the octoplant Hub (for quick CSV reports from dashboards). This chapter covers both methods.", "tags": []}, {"chapter": "12", "title": "Manual & Auto Export", "level": "Advanced", "file": "ch12-export.html", "section": "Method 1: Exporting via the ExportModule", "anchor": "", "content": "Method 1: Exporting via the ExportModule The ExportModule is a command-line tool that exports Octoplant data to CSV, XML, or JSON formats. It offers the most flexibility and is suitable for integration with other systems. Create a parameter file (a text file with a .ini or .xml extension) that defines the export configuration. The parameter file specifies: • The export format (CSV, XML, or JSON) • The data scope (e.g., project tree, change history, job results) • The output file path • Any optional filters or parameters Open a Command Prompt (cmd.exe) on the Octoplant server or client machine. Run the ExportModule with the parameter file: ExportModule.exe /parameterfile:C:\\path\\to\\config.ini The data is exported to the specified output file. Open it in Excel, a database, or any other tool for further analysis. 💡 Automation The ExportModule command can be added to a Windows Task Scheduler job or a batch script to run automatically on a schedule, enabling fully automated reporting.", "preview": "Method 1: Exporting via the ExportModule The ExportModule is a command-line tool that exports Octoplant data to CSV, XML, or JSON formats. It offers the most flexibility and is suitable for integration with other systems. Create a parameter file (a t", "tags": ["step", "step", "step", "step", "tip"]}, {"chapter": "12", "title": "Manual & Auto Export", "level": "Advanced", "file": "ch12-export.html", "section": "Method 2: Exporting from the Octoplant Hub", "anchor": "", "content": "Method 2: Exporting from the Octoplant Hub The Hub provides a simpler, browser-based export option for any dashboard table. Log into the octoplant Hub and navigate to the dashboard containing the data you want to export. Apply any server filters or table filters as needed. Click the CSV Export button in the top-right corner of the table. The file is saved to your Downloads folder.", "preview": "Method 2: Exporting from the Octoplant Hub The Hub provides a simpler, browser-based export option for any dashboard table. Log into the octoplant Hub and navigate to the dashboard containing the data you want to export. Apply any server filters or t", "tags": ["step", "step", "step"]}, {"chapter": "12", "title": "Manual & Auto Export", "level": "Advanced", "file": "ch12-export.html", "section": "Choosing the Right Method", "anchor": "", "content": "Choosing the Right Method Both methods have their use cases. Here is a comparison to help you choose:", "preview": "Choosing the Right Method Both methods have their use cases. Here is a comparison to help you choose:", "tags": []}, {"chapter": "12", "title": "Manual & Auto Export", "level": "Advanced", "file": "ch12-export.html", "section": "Summary", "anchor": "", "content": "Summary Action Where / How Result ExportModule Command line with parameter file CSV, XML, or JSON output Hub Export Dashboard → CSV Export button CSV output from dashboard data ExportModule Formats CSV, XML, JSON Flexible for system integration Hub Export Formats CSV only Simple, browser-based Automation ExportModule via Task Scheduler Scheduled automatic exports", "preview": "Summary Action Where / How Result ExportModule Command line with parameter file CSV, XML, or JSON output Hub Export Dashboard → CSV Export button CSV output from dashboard data ExportModule Formats CSV, XML, JSON Flexible for system integration Hub E", "tags": []}, {"chapter": "13", "title": "Active Directory Integration", "level": "Admin", "file": "ch13-active-directory.html", "section": "Active Directory Integration", "anchor": "", "content": "Active Directory Integration Octoplant can synchronize with your organization's Active Directory (AD) to automatically import users and allow them to log in with their domain credentials. This chapter covers the complete AD configuration process.", "preview": "Active Directory Integration Octoplant can synchronize with your organization's Active Directory (AD) to automatically import users and allow them to log in with their domain credentials. This chapter covers the complete AD configuration process.", "tags": []}, {"chapter": "13", "title": "Active Directory Integration", "level": "Admin", "file": "ch13-active-directory.html", "section": "Configuring the AD Connection", "anchor": "", "content": "Configuring the AD Connection All AD configuration is done in the AdminClient's User Management module. Open the Octoplant AdminClient and navigate to User Management → Synchronization . Enter the AD server IP address , port number (typically 389 for LDAP or 636 for LDAPS), and the credentials of an AD service account with read access. Use the built-in AD Explorer tool to browse your Active Directory structure and identify the correct root paths for the user groups and admin groups you want to synchronize. Copy the root paths into the corresponding fields in the Synchronization settings. Click Test connection to verify that Octoplant can communicate with the AD server. A success message confirms the connection. ⚠️ Connection Test Always perform the connection test before attempting a user import. A failed test indicates incorrect settings (wrong IP, port, or credentials) that must be corrected first.", "preview": "Configuring the AD Connection All AD configuration is done in the AdminClient's User Management module. Open the Octoplant AdminClient and navigate to User Management → Synchronization . Enter the AD server IP address , port number (typically 389 for", "tags": ["step", "step", "step", "step", "step", "warning"]}, {"chapter": "13", "title": "Active Directory Integration", "level": "Admin", "file": "ch13-active-directory.html", "section": "Importing Users from Active Directory", "anchor": "", "content": "Importing Users from Active Directory With the connection verified, you can import users from AD into Octoplant. Click Manual import to immediately import all users from the configured AD groups into Octoplant. After import, review the newly created user accounts. You can modify their properties (e.g., password settings, group assignments) as needed. Configure Automatic daily import to keep Octoplant synchronized with AD automatically. New AD users will be imported, and removed users will be deactivated.", "preview": "Importing Users from Active Directory With the connection verified, you can import users from AD into Octoplant. Click Manual import to immediately import all users from the configured AD groups into Octoplant. After import, review the newly created ", "tags": ["step", "step", "step"]}, {"chapter": "13", "title": "Active Directory Integration", "level": "Admin", "file": "ch13-active-directory.html", "section": "Setting Authorization Policies", "anchor": "", "content": "Setting Authorization Policies Configure how imported AD users authenticate in Octoplant. In the user properties, set the authorization policy to allow login via domain password or operating system credentials . With this setting, users can log into Octoplant using the same password they use for Windows — no separate Octoplant password required.", "preview": "Setting Authorization Policies Configure how imported AD users authenticate in Octoplant. In the user properties, set the authorization policy to allow login via domain password or operating system credentials . With this setting, users can log into ", "tags": ["step", "step"]}, {"chapter": "13", "title": "Active Directory Integration", "level": "Admin", "file": "ch13-active-directory.html", "section": "Summary", "anchor": "", "content": "Summary Action Where / How Result Open Synchronization AdminClient → User Management → Synchronization AD configuration interface Enter AD Settings IP, port, credentials, root paths Connection parameters configured Test Connection Test connection button Successful AD communication confirmed Manual Import Manual import button AD users imported into Octoplant Auto Import Configure automatic daily import Users synchronized daily Auth Policy User properties → Authorization policy Domain login enabled", "preview": "Summary Action Where / How Result Open Synchronization AdminClient → User Management → Synchronization AD configuration interface Enter AD Settings IP, port, credentials, root paths Connection parameters configured Test Connection Test connection but", "tags": []}, {"chapter": "14", "title": "Library Management", "level": "Advanced", "file": "ch14-library-management.html", "section": "Library Management", "anchor": "", "content": "Library Management Library Management allows you to create centralized code libraries (e.g., standard function blocks) that are shared across multiple projects. Octoplant automatically detects inconsistencies between library versions and project copies, helping you maintain code quality and consistency.", "preview": "Library Management Library Management allows you to create centralized code libraries (e.g., standard function blocks) that are shared across multiple projects. Octoplant automatically detects inconsistencies between library versions and project copi", "tags": []}, {"chapter": "14", "title": "Library Management", "level": "Advanced", "file": "ch14-library-management.html", "section": "Creating a Library Component", "anchor": "", "content": "Creating a Library Component A library in Octoplant is a special component that serves as the master source for shared code blocks. In the UserClient, create a new component with the appropriate type for your library (e.g., Simatic S7 Library ). Add the library's program blocks to the component and check it into the server.", "preview": "Creating a Library Component A library in Octoplant is a special component that serves as the master source for shared code blocks. In the UserClient, create a new component with the appropriate type for your library (e.g., Simatic S7 Library ). Add ", "tags": ["step", "step"]}, {"chapter": "14", "title": "Library Management", "level": "Advanced", "file": "ch14-library-management.html", "section": "Linking Projects to the Library", "anchor": "", "content": "Linking Projects to the Library Projects that use the library must be explicitly linked to it in their component configuration. Select a project component in the Project tree and open its component properties . In the properties, assign the library component as a standard library for this project. Repeat for all projects that should use this library.", "preview": "Linking Projects to the Library Projects that use the library must be explicitly linked to it in their component configuration. Select a project component in the Project tree and open its component properties . In the properties, assign the library c", "tags": ["step", "step", "step"]}, {"chapter": "14", "title": "Library Management", "level": "Advanced", "file": "ch14-library-management.html", "section": "Understanding Inconsistency Indicators", "anchor": "", "content": "Understanding Inconsistency Indicators The Library Management view uses color-coded dots to indicate the relationship status between library blocks and project copies. Open the Library Management view in the UserClient. Interpret the color-coded indicators: • Yellow dot : A block in the library has been updated — the project's copy is outdated • Grey dot : A block has been deleted from the library — the project still has the old copy • Red dot : A block in the project has been modified independently — it no longer matches the library version 💡 Maintaining Consistency Regularly check the Library Management view to identify and resolve inconsistencies. This ensures all projects use the latest, approved versions of shared code blocks. For each inconsistency, decide whether to update the project to match the library or to accept the project's local modification.", "preview": "Understanding Inconsistency Indicators The Library Management view uses color-coded dots to indicate the relationship status between library blocks and project copies. Open the Library Management view in the UserClient. Interpret the color-coded indi", "tags": ["step", "step", "tip", "step"]}, {"chapter": "14", "title": "Library Management", "level": "Advanced", "file": "ch14-library-management.html", "section": "Summary", "anchor": "", "content": "Summary Action Where / How Result Create Library New component → Library type → Check-In Central library available on server Link Projects Component properties → Assign standard library Projects linked to library Yellow Dot Library block updated Project copy is outdated Grey Dot Library block deleted Project has orphaned block Red Dot Project block modified independently Divergence from library standard", "preview": "Summary Action Where / How Result Create Library New component → Library type → Check-In Central library available on server Link Projects Component properties → Assign standard library Projects linked to library Yellow Dot Library block updated Proj", "tags": []}, {"chapter": "15", "title": "Scripting & Automation", "level": "Advanced", "file": "ch15-scripting.html", "section": "Scripting – Automation and Custom Actions", "anchor": "", "content": "Scripting – Automation and Custom Actions Octoplant's scripting feature allows you to automate custom actions — such as running validation checks, sending notifications, or executing external tools — triggered by events like opening a component for editing or clicking a custom button.", "preview": "Scripting – Automation and Custom Actions Octoplant's scripting feature allows you to automate custom actions — such as running validation checks, sending notifications, or executing external tools — triggered by events like opening a component for e", "tags": []}, {"chapter": "15", "title": "Scripting & Automation", "level": "Advanced", "file": "ch15-scripting.html", "section": "Preparing Script Files", "anchor": "", "content": "Preparing Script Files A complete Octoplant script package consists of three files that must be prepared before configuration. Create a .script file containing the script code (the logic to execute). Obtain or compile the .exe application file that executes the script. Download the scripting package from my.auvesy-mdt.com . Create a matching .ini file that configures which component types the script applies to. Optionally, include an image file if you want to create a custom button with an icon.", "preview": "Preparing Script Files A complete Octoplant script package consists of three files that must be prepared before configuration. Create a .script file containing the script code (the logic to execute). Obtain or compile the .exe application file that e", "tags": ["step", "step", "step", "step"]}, {"chapter": "15", "title": "Scripting & Automation", "level": "Advanced", "file": "ch15-scripting.html", "section": "Configuring Scripts in the AdminClient", "anchor": "", "content": "Configuring Scripts in the AdminClient Scripts are registered and configured in the AdminClient's Script Management module. Open the AdminClient and navigate to Script management . Copy the prepared script files to the appropriate directory: • Client-side scripts : Executed on the user's PC • Server-side scripts : Executed on the Octoplant server In Scripting settings , enable scripting functionality globally.", "preview": "Configuring Scripts in the AdminClient Scripts are registered and configured in the AdminClient's Script Management module. Open the AdminClient and navigate to Script management . Copy the prepared script files to the appropriate directory: • Client", "tags": ["step", "step", "step"]}, {"chapter": "15", "title": "Scripting & Automation", "level": "Advanced", "file": "ch15-scripting.html", "section": "Configuring Script Triggers", "anchor": "", "content": "Configuring Script Triggers Scripts can be triggered by specific events in the Octoplant workflow. In the script configuration, set the trigger event . For example, the Before Edit event triggers the script whenever a user opens a component for editing. Configure the trigger to apply to specific component types using the .ini file.", "preview": "Configuring Script Triggers Scripts can be triggered by specific events in the Octoplant workflow. In the script configuration, set the trigger event . For example, the Before Edit event triggers the script whenever a user opens a component for editi", "tags": ["step", "step"]}, {"chapter": "15", "title": "Scripting & Automation", "level": "Advanced", "file": "ch15-scripting.html", "section": "Creating a Custom Button", "anchor": "", "content": "Creating a Custom Button You can add a custom button to the Extras tab in the UserClient to allow users to run scripts on demand. Include the image file for the button icon in the script package. Configure the button in the script settings. The button will appear in the Extras tab of the UserClient. Users can click the button to manually trigger the script on the selected component. 💡 Online Help For more scripting examples and advanced usage, navigate to Help → Online help in the UserClient or AdminClient. The documentation includes sample scripts for common automation scenarios.", "preview": "Creating a Custom Button You can add a custom button to the Extras tab in the UserClient to allow users to run scripts on demand. Include the image file for the button icon in the script package. Configure the button in the script settings. The butto", "tags": ["step", "step", "step", "tip"]}, {"chapter": "15", "title": "Scripting & Automation", "level": "Advanced", "file": "ch15-scripting.html", "section": "Summary", "anchor": "", "content": "Summary Action Where / How Result Prepare Files .script + .exe + .ini files Script package ready Register in AdminClient Script management → Copy files to directory Script registered in Octoplant Enable Scripting Scripting settings → Enable globally Scripting functionality active Set Trigger Script config → Before Edit event Script runs on specified event Custom Button Extras tab → Custom button Manual script execution available", "preview": "Summary Action Where / How Result Prepare Files .script + .exe + .ini files Script package ready Register in AdminClient Script management → Copy files to directory Script registered in Octoplant Enable Scripting Scripting settings → Enable globally ", "tags": []}];
+const SEARCH_INDEX = [
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "SECTION",
+    "heading": "What You Will Learn",
+    "content": ""
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "SECTION",
+    "heading": "Create Structure",
+    "content": "Add directories in the Project tree"
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "SECTION",
+    "heading": "Create Component",
+    "content": "Right-click → New component"
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "SECTION",
+    "heading": "Copy Data",
+    "content": "Paste project files into component"
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "SECTION",
+    "heading": "Base Version",
+    "content": "Create the initial version"
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "SECTION",
+    "heading": "Check-In",
+    "content": "Upload to server archive"
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "STEP",
+    "heading": "Step 1: Create the Project Structure",
+    "content": ""
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "STEP",
+    "heading": "Step 2: Create a New Component",
+    "content": ""
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "STEP",
+    "heading": "Step 3: Copy Project Data into the Component",
+    "content": ""
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "STEP",
+    "heading": "Step 4: Create a Base Version",
+    "content": ""
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "STEP",
+    "heading": "Step 5: Check-In to the Server",
+    "content": ""
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": ""
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "INFO",
+    "heading": "Best Practice",
+    "content": "💡 Best Practice Plan your directory structure before creating it in Octoplant. A logical hierarchy (e.g., Plant → Line → Machine → Component) makes it much easier to locate assets and assign access rights later."
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "INFO",
+    "heading": "Tip from the Tutorial",
+    "content": "ℹ️ Tip from the Tutorial You can also use example data to test the process. The video demonstrates copying a sample STEP 7 project into the newly created component to verify the workflow before using real production data."
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "WARNING",
+    "heading": "Important",
+    "content": "⚠️ Important The base version must be created before the Check-In step. Without a base version, Octoplant cannot establish a reference point for future comparisons. The base version cannot be deleted from the server once it has been checked in."
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "INFO",
+    "heading": "Result",
+    "content": "✅ Result After a successful Check-In, the component is stored in the server archive. Even if you delete the local copy, the component will still appear in the Project tree (shown in gray) and can be retrieved at any time by any authorized user using the Check-Out function."
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "1 | Create directory structure | Project tree → Right-click → New directory | Logical folder hierarchy created"
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "2 | Create component | Project tree → Right-click → New component | Empty component container created"
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "3 | Copy project data | Windows Explorer → Paste into component folder | Project files inside component"
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "4 | Create base version | Home tab → Create base version | Initial version snapshot recorded"
+  },
+  {
+    "file": "ch01-asset-creation.html",
+    "chapter": "Ch. 1 Manual Asset Creation",
+    "level": "Beginner",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "5 | Check-In to server | Home tab → Check-In | Component securely stored on server"
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "SECTION",
+    "heading": "Check-Out",
+    "content": "Copy component from server to local"
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "SECTION",
+    "heading": "Lock",
+    "content": "Prevent conflicts from other users"
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "SECTION",
+    "heading": "Edit",
+    "content": "Modify in engineering editor"
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "SECTION",
+    "heading": "Compare",
+    "content": "Review differences before versioning"
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "SECTION",
+    "heading": "New Version",
+    "content": "Create version with comments"
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "SECTION",
+    "heading": "Check-In",
+    "content": "Upload new version to server"
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "STEP",
+    "heading": "Step 1: Check-Out the Component",
+    "content": ""
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "STEP",
+    "heading": "Step 2: Edit the Component",
+    "content": ""
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "STEP",
+    "heading": "Step 3: Create a New Version and Check-In",
+    "content": ""
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": ""
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "WARNING",
+    "heading": "Lock Recommendation",
+    "content": "⚠️ Lock Recommendation Always lock the component when you intend to make changes. This avoids version conflicts in team environments."
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "INFO",
+    "heading": "Visual Indicator",
+    "content": "💡 Visual Indicator After saving changes in the editor, a pencil icon appears next to the component in the Project tree, indicating that the local version differs from the server version."
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "WARNING",
+    "heading": "Mandatory Comments",
+    "content": "⚠️ Mandatory Comments Your administrator may configure change comments as mandatory. In this case, you cannot proceed without entering a comment. Always write meaningful comments — they are the primary documentation of your changes."
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Check-Out | Home tab → Check-Out | Component available locally"
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Lock Component | Check-Out dialog → Lock for other users | Other users cannot check in"
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Edit in Editor | Home tab → Open with editor (F4) | Changes saved locally"
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Create New Version | Home tab → Create new version | Differences reviewed and documented"
+  },
+  {
+    "file": "ch02-lifecycle.html",
+    "chapter": "Ch. 2 Lifecycle Change Process",
+    "level": "Core",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Check-In | Create version dialog → Create version and Check-In | New version on server, component unlocked"
+  },
+  {
+    "file": "ch03-change-history.html",
+    "chapter": "Ch. 3 Change History",
+    "level": "Core",
+    "type": "SECTION",
+    "heading": "Accessing the Change History",
+    "content": ""
+  },
+  {
+    "file": "ch03-change-history.html",
+    "chapter": "Ch. 3 Change History",
+    "level": "Core",
+    "type": "SECTION",
+    "heading": "Checking Out Specific Versions",
+    "content": ""
+  },
+  {
+    "file": "ch03-change-history.html",
+    "chapter": "Ch. 3 Change History",
+    "level": "Core",
+    "type": "SECTION",
+    "heading": "Viewing Modified Elements",
+    "content": ""
+  },
+  {
+    "file": "ch03-change-history.html",
+    "chapter": "Ch. 3 Change History",
+    "level": "Core",
+    "type": "SECTION",
+    "heading": "Viewing Component Details and Master Data",
+    "content": ""
+  },
+  {
+    "file": "ch03-change-history.html",
+    "chapter": "Ch. 3 Change History",
+    "level": "Core",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": ""
+  },
+  {
+    "file": "ch03-change-history.html",
+    "chapter": "Ch. 3 Change History",
+    "level": "Core",
+    "type": "INFO",
+    "heading": "Working Directory",
+    "content": "ℹ️ Working Directory Only the most recent checked-out version is placed in the working directory (the folder you can edit). Older versions are stored in the local archive for reference and comparison only."
+  },
+  {
+    "file": "ch03-change-history.html",
+    "chapter": "Ch. 3 Change History",
+    "level": "Core",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Access Change History | Select component → Change history tab | Full version list displayed"
+  },
+  {
+    "file": "ch03-change-history.html",
+    "chapter": "Ch. 3 Change History",
+    "level": "Core",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Customize Columns | Right-click column header → Select columns | Relevant data visible"
+  },
+  {
+    "file": "ch03-change-history.html",
+    "chapter": "Ch. 3 Change History",
+    "level": "Core",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Check Out Specific Version | Home tab → Check-Out → Select version | Historical version available locally"
+  },
+  {
+    "file": "ch03-change-history.html",
+    "chapter": "Ch. 3 Change History",
+    "level": "Core",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "View Modified Elements | Change history → Select version | Exact changes per version shown"
+  },
+  {
+    "file": "ch03-change-history.html",
+    "chapter": "Ch. 3 Change History",
+    "level": "Core",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "View Master Data | Details tab | Component metadata and ID visible"
+  },
+  {
+    "file": "ch04-user-management.html",
+    "chapter": "Ch. 4 User Management",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Opening User Management in the AdminClient",
+    "content": ""
+  },
+  {
+    "file": "ch04-user-management.html",
+    "chapter": "Ch. 4 User Management",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Creating a New Group",
+    "content": ""
+  },
+  {
+    "file": "ch04-user-management.html",
+    "chapter": "Ch. 4 User Management",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Creating a New User",
+    "content": ""
+  },
+  {
+    "file": "ch04-user-management.html",
+    "chapter": "Ch. 4 User Management",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Assigning Access Rights to Groups",
+    "content": ""
+  },
+  {
+    "file": "ch04-user-management.html",
+    "chapter": "Ch. 4 User Management",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": ""
+  },
+  {
+    "file": "ch04-user-management.html",
+    "chapter": "Ch. 4 User Management",
+    "level": "Admin",
+    "type": "INFO",
+    "heading": "Best Practice",
+    "content": "💡 Best Practice Create groups that reflect your organizational structure or job roles. Assign rights to groups, then add users to groups. This way, when a user changes roles, you only need to change their group membership."
+  },
+  {
+    "file": "ch04-user-management.html",
+    "chapter": "Ch. 4 User Management",
+    "level": "Admin",
+    "type": "WARNING",
+    "heading": "Superadministrator",
+    "content": "⚠️ Superadministrator The built-in Superadministrator account and the Administrators group cannot be deleted. Be careful when modifying their rights, as this could lock you out of the system."
+  },
+  {
+    "file": "ch04-user-management.html",
+    "chapter": "Ch. 4 User Management",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Open User Management | AdminClient → User Management | User and group list visible"
+  },
+  {
+    "file": "ch04-user-management.html",
+    "chapter": "Ch. 4 User Management",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Create Group | New group button → Enter name | Group created for role-based access"
+  },
+  {
+    "file": "ch04-user-management.html",
+    "chapter": "Ch. 4 User Management",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Create User | New user button → Fill details | User account created"
+  },
+  {
+    "file": "ch04-user-management.html",
+    "chapter": "Ch. 4 User Management",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Assign to Group | User properties → Add to group | User inherits group rights"
+  },
+  {
+    "file": "ch04-user-management.html",
+    "chapter": "Ch. 4 User Management",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Set Project Rights | Group → Project tree rights | Access to specific components defined"
+  },
+  {
+    "file": "ch04-user-management.html",
+    "chapter": "Ch. 4 User Management",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Set Module Rights | Group → Module rights | Feature access configured"
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "INFO",
+    "heading": "Prerequisite: Create and Check-In a Component",
+    "content": ""
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Creating a Job in the AdminClient",
+    "content": ""
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Configuring the Job",
+    "content": ""
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Configuring the Schedule",
+    "content": ""
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Configuring Save and Compare Policies",
+    "content": ""
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Configuring Email Notifications",
+    "content": ""
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": ""
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "INFO",
+    "heading": "Note",
+    "content": "ℹ️ Note For some component types (e.g., Image Service), you can create a job without pre-existing project data. For Siemens S7 and similar types, project data must be present."
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "INFO",
+    "heading": "Alternative",
+    "content": "💡 Alternative You can also click the Create button in the Jobs view and then manually select the component. The drag-and-drop method is faster."
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "WARNING",
+    "heading": "Prerequisite",
+    "content": "⚠️ Prerequisite Email addresses must be configured for each user in the User Management module before they can receive job notifications."
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Create Component | UserClient → New component → Check-In | Component available for job assignment"
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Create Job | AdminClient → Jobs → Drag component | Job created for component"
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Configure Job | Job settings → Name, Upload type, IP address | Job parameters defined"
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Set Schedule | Schedule field → Choose frequency and time | Automatic execution time set"
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Save Policy | Always save backup | Backup created on every execution"
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Compare Policy | Server version ↔ Backup + Prev. backup ↔ Backup | Differences detected automatically"
+  },
+  {
+    "file": "ch05-create-jobs.html",
+    "chapter": "Ch. 5 Create Jobs – Automated Backup",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Email Notifications | Global job settings → Select users | Automatic reports sent after execution"
+  },
+  {
+    "file": "ch06-job-trigger.html",
+    "chapter": "Ch. 6 Job Trigger & Verification",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "Manually Triggering a Job",
+    "content": ""
+  },
+  {
+    "file": "ch06-job-trigger.html",
+    "chapter": "Ch. 6 Job Trigger & Verification",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "Reading Job Results",
+    "content": ""
+  },
+  {
+    "file": "ch06-job-trigger.html",
+    "chapter": "Ch. 6 Job Trigger & Verification",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "Comparing Server Version with Backup",
+    "content": ""
+  },
+  {
+    "file": "ch06-job-trigger.html",
+    "chapter": "Ch. 6 Job Trigger & Verification",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "Understanding Email Reports",
+    "content": ""
+  },
+  {
+    "file": "ch06-job-trigger.html",
+    "chapter": "Ch. 6 Job Trigger & Verification",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": ""
+  },
+  {
+    "file": "ch06-job-trigger.html",
+    "chapter": "Ch. 6 Job Trigger & Verification",
+    "level": "Operations",
+    "type": "WARNING",
+    "heading": "Not Present Warning",
+    "content": "⚠️ Not Present Warning If a previous backup was unavailable for comparison (e.g., first run), you will see a 'Not present, with warning' status. This is normal for the first execution."
+  },
+  {
+    "file": "ch06-job-trigger.html",
+    "chapter": "Ch. 6 Job Trigger & Verification",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Manual Trigger | Jobs tab → Execute jobs once | Job runs immediately"
+  },
+  {
+    "file": "ch06-job-trigger.html",
+    "chapter": "Ch. 6 Job Trigger & Verification",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Monitor Progress | Show progress information button | Real-time execution status"
+  },
+  {
+    "file": "ch06-job-trigger.html",
+    "chapter": "Ch. 6 Job Trigger & Verification",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Read Results | Jobs tab → Job history table | Equal / Different status per component"
+  },
+  {
+    "file": "ch06-job-trigger.html",
+    "chapter": "Ch. 6 Job Trigger & Verification",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Compare Differences | Right-click result → Compare server version with backup | Detailed difference tree"
+  },
+  {
+    "file": "ch06-job-trigger.html",
+    "chapter": "Ch. 6 Job Trigger & Verification",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Email Report | Automated email with CSV attachment | Full job summary for all components"
+  },
+  {
+    "file": "ch07-recovery.html",
+    "chapter": "Ch. 7 Recovery & Restore",
+    "level": "Critical",
+    "type": "SECTION",
+    "heading": "Scenario A: Restoring a Server Version from a Backup",
+    "content": ""
+  },
+  {
+    "file": "ch07-recovery.html",
+    "chapter": "Ch. 7 Recovery & Restore",
+    "level": "Critical",
+    "type": "SECTION",
+    "heading": "Scenario B: Comparing Two Consecutive Backups",
+    "content": ""
+  },
+  {
+    "file": "ch07-recovery.html",
+    "chapter": "Ch. 7 Recovery & Restore",
+    "level": "Critical",
+    "type": "SECTION",
+    "heading": "Scenario C: Restoring a Program Directly to a Physical Device",
+    "content": ""
+  },
+  {
+    "file": "ch07-recovery.html",
+    "chapter": "Ch. 7 Recovery & Restore",
+    "level": "Critical",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": ""
+  },
+  {
+    "file": "ch07-recovery.html",
+    "chapter": "Ch. 7 Recovery & Restore",
+    "level": "Critical",
+    "type": "INFO",
+    "heading": "Critical Warning",
+    "content": "🚫 Critical Warning Ensure you are loading the correct version to the correct device. Loading the wrong program to a production device can cause equipment damage or safety incidents. Always verify the component name, version date, and device IP address before proceeding."
+  },
+  {
+    "file": "ch07-recovery.html",
+    "chapter": "Ch. 7 Recovery & Restore",
+    "level": "Critical",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Identify Difference | Jobs tab → Server version ↔ Backup column | Mismatch detected"
+  },
+  {
+    "file": "ch07-recovery.html",
+    "chapter": "Ch. 7 Recovery & Restore",
+    "level": "Critical",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Copy Backup to Directory | Right-click backup → Copy backup to directory | Working directory updated with backup"
+  },
+  {
+    "file": "ch07-recovery.html",
+    "chapter": "Ch. 7 Recovery & Restore",
+    "level": "Critical",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Create Recovery Version | Create new version → Add recovery comment | Recovery documented in history"
+  },
+  {
+    "file": "ch07-recovery.html",
+    "chapter": "Ch. 7 Recovery & Restore",
+    "level": "Critical",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Check-In Recovery | Create version and Check-In | Server version updated"
+  },
+  {
+    "file": "ch07-recovery.html",
+    "chapter": "Ch. 7 Recovery & Restore",
+    "level": "Critical",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Restore to Device | Open with editor → Load to device | Physical device program restored"
+  },
+  {
+    "file": "ch08-hub-dashboard.html",
+    "chapter": "Ch. 8 Octoplant Hub & Dashboard",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "Logging into the Octoplant Hub",
+    "content": ""
+  },
+  {
+    "file": "ch08-hub-dashboard.html",
+    "chapter": "Ch. 8 Octoplant Hub & Dashboard",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "Navigating the User Menu",
+    "content": ""
+  },
+  {
+    "file": "ch08-hub-dashboard.html",
+    "chapter": "Ch. 8 Octoplant Hub & Dashboard",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "Selecting Servers for Dashboard Views",
+    "content": ""
+  },
+  {
+    "file": "ch08-hub-dashboard.html",
+    "chapter": "Ch. 8 Octoplant Hub & Dashboard",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "Exporting Dashboard Data to CSV",
+    "content": ""
+  },
+  {
+    "file": "ch08-hub-dashboard.html",
+    "chapter": "Ch. 8 Octoplant Hub & Dashboard",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": ""
+  },
+  {
+    "file": "ch08-hub-dashboard.html",
+    "chapter": "Ch. 8 Octoplant Hub & Dashboard",
+    "level": "Operations",
+    "type": "INFO",
+    "heading": "Export Limit",
+    "content": "ℹ️ Export Limit A maximum of 50,000 entries can be written to a single CSV file. If the table has more entries, use filters to narrow down the data before exporting."
+  },
+  {
+    "file": "ch08-hub-dashboard.html",
+    "chapter": "Ch. 8 Octoplant Hub & Dashboard",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Login | Browser → Hub URL → Enter credentials | Dashboard accessible"
+  },
+  {
+    "file": "ch08-hub-dashboard.html",
+    "chapter": "Ch. 8 Octoplant Hub & Dashboard",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "User Menu | User icon (top-right) | Account settings and logout"
+  },
+  {
+    "file": "ch08-hub-dashboard.html",
+    "chapter": "Ch. 8 Octoplant Hub & Dashboard",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Server Selection | Dashboard → Server selection dropdown | Filtered view per server"
+  },
+  {
+    "file": "ch08-hub-dashboard.html",
+    "chapter": "Ch. 8 Octoplant Hub & Dashboard",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "CSV Export | Table → CSV Export button | Data downloaded to CSV file"
+  },
+  {
+    "file": "ch09-asset-inventory.html",
+    "chapter": "Ch. 9 Asset Inventory Service",
+    "level": "Security",
+    "type": "SECTION",
+    "heading": "Triggering Asset Identification via Check-In",
+    "content": ""
+  },
+  {
+    "file": "ch09-asset-inventory.html",
+    "chapter": "Ch. 9 Asset Inventory Service",
+    "level": "Security",
+    "type": "SECTION",
+    "heading": "Accessing the Asset Inventory Dashboard",
+    "content": ""
+  },
+  {
+    "file": "ch09-asset-inventory.html",
+    "chapter": "Ch. 9 Asset Inventory Service",
+    "level": "Security",
+    "type": "INFO",
+    "heading": "Viewing Device Information",
+    "content": ""
+  },
+  {
+    "file": "ch09-asset-inventory.html",
+    "chapter": "Ch. 9 Asset Inventory Service",
+    "level": "Security",
+    "type": "SECTION",
+    "heading": "Reading Vulnerability Reports",
+    "content": ""
+  },
+  {
+    "file": "ch09-asset-inventory.html",
+    "chapter": "Ch. 9 Asset Inventory Service",
+    "level": "Security",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": ""
+  },
+  {
+    "file": "ch09-asset-inventory.html",
+    "chapter": "Ch. 9 Asset Inventory Service",
+    "level": "Security",
+    "type": "INFO",
+    "heading": "CVE Information",
+    "content": "ℹ️ CVE Information CVE data is sourced from the National Vulnerability Database (NVD). Octoplant matches your device's firmware version against known CVEs to identify potential security risks."
+  },
+  {
+    "file": "ch09-asset-inventory.html",
+    "chapter": "Ch. 9 Asset Inventory Service",
+    "level": "Security",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Trigger Identification | Check-In component with project data | CPU configuration registered"
+  },
+  {
+    "file": "ch09-asset-inventory.html",
+    "chapter": "Ch. 9 Asset Inventory Service",
+    "level": "Security",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Access Dashboard | Hub → Asset Inventory Service | All assets listed with risk levels"
+  },
+  {
+    "file": "ch09-asset-inventory.html",
+    "chapter": "Ch. 9 Asset Inventory Service",
+    "level": "Security",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "View Device Info | Click asset → Device Information | Full hardware and network profile"
+  },
+  {
+    "file": "ch09-asset-inventory.html",
+    "chapter": "Ch. 9 Asset Inventory Service",
+    "level": "Security",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Read CVE Report | Click risk level → Insights section | Specific vulnerabilities listed"
+  },
+  {
+    "file": "ch10-easy-asset-integrator.html",
+    "chapter": "Ch. 10 Easy Asset Integrator",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Download the CSV Template",
+    "content": ""
+  },
+  {
+    "file": "ch10-easy-asset-integrator.html",
+    "chapter": "Ch. 10 Easy Asset Integrator",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Fill in the CSV Template",
+    "content": ""
+  },
+  {
+    "file": "ch10-easy-asset-integrator.html",
+    "chapter": "Ch. 10 Easy Asset Integrator",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Import the CSV File",
+    "content": ""
+  },
+  {
+    "file": "ch10-easy-asset-integrator.html",
+    "chapter": "Ch. 10 Easy Asset Integrator",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Updating Existing Assets",
+    "content": ""
+  },
+  {
+    "file": "ch10-easy-asset-integrator.html",
+    "chapter": "Ch. 10 Easy Asset Integrator",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Default Job Configurations",
+    "content": ""
+  },
+  {
+    "file": "ch10-easy-asset-integrator.html",
+    "chapter": "Ch. 10 Easy Asset Integrator",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": ""
+  },
+  {
+    "file": "ch10-easy-asset-integrator.html",
+    "chapter": "Ch. 10 Easy Asset Integrator",
+    "level": "Admin",
+    "type": "INFO",
+    "heading": "Mandatory Fields",
+    "content": "🚫 Mandatory Fields If any of the three mandatory columns (Name, Directory, Component type) are missing or incorrect for any row, the import will fail for that asset. Double-check all entries before importing."
+  },
+  {
+    "file": "ch10-easy-asset-integrator.html",
+    "chapter": "Ch. 10 Easy Asset Integrator",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Download Template | Extras → Easy Asset Integrator → Download template | CSV template saved"
+  },
+  {
+    "file": "ch10-easy-asset-integrator.html",
+    "chapter": "Ch. 10 Easy Asset Integrator",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Fill Template | Excel → Fill Name, Directory, Component type | Asset data prepared"
+  },
+  {
+    "file": "ch10-easy-asset-integrator.html",
+    "chapter": "Ch. 10 Easy Asset Integrator",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Import CSV | Easy Asset Integrator → Import CSV | Components created in Project tree"
+  },
+  {
+    "file": "ch10-easy-asset-integrator.html",
+    "chapter": "Ch. 10 Easy Asset Integrator",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Update Assets | Delete 'Imported' status → Re-import | Existing assets updated"
+  },
+  {
+    "file": "ch10-easy-asset-integrator.html",
+    "chapter": "Ch. 10 Easy Asset Integrator",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Review Jobs | AdminClient → Jobs | Default jobs assigned to new components"
+  },
+  {
+    "file": "ch11-supplier-workflow.html",
+    "chapter": "Ch. 11 Supplier Workflow",
+    "level": "Advanced",
+    "type": "SECTION",
+    "heading": "Supplier Check-Out: Exporting the Project",
+    "content": ""
+  },
+  {
+    "file": "ch11-supplier-workflow.html",
+    "chapter": "Ch. 11 Supplier Workflow",
+    "level": "Advanced",
+    "type": "SECTION",
+    "heading": "SmartImport: Re-Importing Supplier Changes",
+    "content": ""
+  },
+  {
+    "file": "ch11-supplier-workflow.html",
+    "chapter": "Ch. 11 Supplier Workflow",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": ""
+  },
+  {
+    "file": "ch11-supplier-workflow.html",
+    "chapter": "Ch. 11 Supplier Workflow",
+    "level": "Advanced",
+    "type": "INFO",
+    "heading": "Critical File",
+    "content": "🚫 Critical File The SupplierDeliveryNote.vdog-sdn file is required for the SmartImport process. If the supplier deletes it, the re-import cannot be completed. Instruct your supplier to keep all files intact."
+  },
+  {
+    "file": "ch11-supplier-workflow.html",
+    "chapter": "Ch. 11 Supplier Workflow",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Supplier Check-Out | Home tab → Check-Out → Enable Supplier Check-Out | Project package exported with delivery note"
+  },
+  {
+    "file": "ch11-supplier-workflow.html",
+    "chapter": "Ch. 11 Supplier Workflow",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Lock Component | Check-Out dialog → Lock for other users | Concurrent changes prevented"
+  },
+  {
+    "file": "ch11-supplier-workflow.html",
+    "chapter": "Ch. 11 Supplier Workflow",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Supplier Works | Supplier edits files and fills in change documents | Modified project returned"
+  },
+  {
+    "file": "ch11-supplier-workflow.html",
+    "chapter": "Ch. 11 Supplier Workflow",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "SmartImport | Home tab → SmartImport for supplier projects → Add directory | Changes imported and compared"
+  },
+  {
+    "file": "ch11-supplier-workflow.html",
+    "chapter": "Ch. 11 Supplier Workflow",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Create Version | SmartImport → Create versions and Check-In | Supplier changes versioned on server"
+  },
+  {
+    "file": "ch12-export.html",
+    "chapter": "Ch. 12 Manual & Automatic Export",
+    "level": "Advanced",
+    "type": "SECTION",
+    "heading": "Method 1: Exporting via the ExportModule",
+    "content": ""
+  },
+  {
+    "file": "ch12-export.html",
+    "chapter": "Ch. 12 Manual & Automatic Export",
+    "level": "Advanced",
+    "type": "SECTION",
+    "heading": "Method 2: Exporting from the Octoplant Hub",
+    "content": ""
+  },
+  {
+    "file": "ch12-export.html",
+    "chapter": "Ch. 12 Manual & Automatic Export",
+    "level": "Advanced",
+    "type": "SECTION",
+    "heading": "Choosing the Right Method",
+    "content": ""
+  },
+  {
+    "file": "ch12-export.html",
+    "chapter": "Ch. 12 Manual & Automatic Export",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": ""
+  },
+  {
+    "file": "ch12-export.html",
+    "chapter": "Ch. 12 Manual & Automatic Export",
+    "level": "Advanced",
+    "type": "INFO",
+    "heading": "Automation",
+    "content": "💡 Automation The ExportModule command can be added to a Windows Task Scheduler job or a batch script to run automatically on a schedule, enabling fully automated reporting."
+  },
+  {
+    "file": "ch12-export.html",
+    "chapter": "Ch. 12 Manual & Automatic Export",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "ExportModule | Command line with parameter file | CSV, XML, or JSON output"
+  },
+  {
+    "file": "ch12-export.html",
+    "chapter": "Ch. 12 Manual & Automatic Export",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Hub Export | Dashboard → CSV Export button | CSV output from dashboard data"
+  },
+  {
+    "file": "ch12-export.html",
+    "chapter": "Ch. 12 Manual & Automatic Export",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "ExportModule Formats | CSV, XML, JSON | Flexible for system integration"
+  },
+  {
+    "file": "ch12-export.html",
+    "chapter": "Ch. 12 Manual & Automatic Export",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Hub Export Formats | CSV only | Simple, browser-based"
+  },
+  {
+    "file": "ch12-export.html",
+    "chapter": "Ch. 12 Manual & Automatic Export",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Automation | ExportModule via Task Scheduler | Scheduled automatic exports"
+  },
+  {
+    "file": "ch13-active-directory.html",
+    "chapter": "Ch. 13 Active Directory Integration",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Configuring the AD Connection",
+    "content": ""
+  },
+  {
+    "file": "ch13-active-directory.html",
+    "chapter": "Ch. 13 Active Directory Integration",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Importing Users from Active Directory",
+    "content": ""
+  },
+  {
+    "file": "ch13-active-directory.html",
+    "chapter": "Ch. 13 Active Directory Integration",
+    "level": "Admin",
+    "type": "SECTION",
+    "heading": "Setting Authorization Policies",
+    "content": ""
+  },
+  {
+    "file": "ch13-active-directory.html",
+    "chapter": "Ch. 13 Active Directory Integration",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": ""
+  },
+  {
+    "file": "ch13-active-directory.html",
+    "chapter": "Ch. 13 Active Directory Integration",
+    "level": "Admin",
+    "type": "WARNING",
+    "heading": "Connection Test",
+    "content": "⚠️ Connection Test Always perform the connection test before attempting a user import. A failed test indicates incorrect settings (wrong IP, port, or credentials) that must be corrected first."
+  },
+  {
+    "file": "ch13-active-directory.html",
+    "chapter": "Ch. 13 Active Directory Integration",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Open Synchronization | AdminClient → User Management → Synchronization | AD configuration interface"
+  },
+  {
+    "file": "ch13-active-directory.html",
+    "chapter": "Ch. 13 Active Directory Integration",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Enter AD Settings | IP, port, credentials, root paths | Connection parameters configured"
+  },
+  {
+    "file": "ch13-active-directory.html",
+    "chapter": "Ch. 13 Active Directory Integration",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Test Connection | Test connection button | Successful AD communication confirmed"
+  },
+  {
+    "file": "ch13-active-directory.html",
+    "chapter": "Ch. 13 Active Directory Integration",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Manual Import | Manual import button | AD users imported into Octoplant"
+  },
+  {
+    "file": "ch13-active-directory.html",
+    "chapter": "Ch. 13 Active Directory Integration",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Auto Import | Configure automatic daily import | Users synchronized daily"
+  },
+  {
+    "file": "ch13-active-directory.html",
+    "chapter": "Ch. 13 Active Directory Integration",
+    "level": "Admin",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Auth Policy | User properties → Authorization policy | Domain login enabled"
+  },
+  {
+    "file": "ch14-library-management.html",
+    "chapter": "Ch. 14 Library Management",
+    "level": "Advanced",
+    "type": "SECTION",
+    "heading": "Creating a Library Component",
+    "content": ""
+  },
+  {
+    "file": "ch14-library-management.html",
+    "chapter": "Ch. 14 Library Management",
+    "level": "Advanced",
+    "type": "SECTION",
+    "heading": "Linking Projects to the Library",
+    "content": ""
+  },
+  {
+    "file": "ch14-library-management.html",
+    "chapter": "Ch. 14 Library Management",
+    "level": "Advanced",
+    "type": "SECTION",
+    "heading": "Understanding Inconsistency Indicators",
+    "content": ""
+  },
+  {
+    "file": "ch14-library-management.html",
+    "chapter": "Ch. 14 Library Management",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": ""
+  },
+  {
+    "file": "ch14-library-management.html",
+    "chapter": "Ch. 14 Library Management",
+    "level": "Advanced",
+    "type": "INFO",
+    "heading": "Maintaining Consistency",
+    "content": "💡 Maintaining Consistency Regularly check the Library Management view to identify and resolve inconsistencies. This ensures all projects use the latest, approved versions of shared code blocks."
+  },
+  {
+    "file": "ch14-library-management.html",
+    "chapter": "Ch. 14 Library Management",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Create Library | New component → Library type → Check-In | Central library available on server"
+  },
+  {
+    "file": "ch14-library-management.html",
+    "chapter": "Ch. 14 Library Management",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Link Projects | Component properties → Assign standard library | Projects linked to library"
+  },
+  {
+    "file": "ch14-library-management.html",
+    "chapter": "Ch. 14 Library Management",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Yellow Dot | Library block updated | Project copy is outdated"
+  },
+  {
+    "file": "ch14-library-management.html",
+    "chapter": "Ch. 14 Library Management",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Grey Dot | Library block deleted | Project has orphaned block"
+  },
+  {
+    "file": "ch14-library-management.html",
+    "chapter": "Ch. 14 Library Management",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Red Dot | Project block modified independently | Divergence from library standard"
+  },
+  {
+    "file": "ch15-scripting.html",
+    "chapter": "Ch. 15 Scripting",
+    "level": "Advanced",
+    "type": "SECTION",
+    "heading": "Preparing Script Files",
+    "content": ""
+  },
+  {
+    "file": "ch15-scripting.html",
+    "chapter": "Ch. 15 Scripting",
+    "level": "Advanced",
+    "type": "SECTION",
+    "heading": "Configuring Scripts in the AdminClient",
+    "content": ""
+  },
+  {
+    "file": "ch15-scripting.html",
+    "chapter": "Ch. 15 Scripting",
+    "level": "Advanced",
+    "type": "SECTION",
+    "heading": "Configuring Script Triggers",
+    "content": ""
+  },
+  {
+    "file": "ch15-scripting.html",
+    "chapter": "Ch. 15 Scripting",
+    "level": "Advanced",
+    "type": "SECTION",
+    "heading": "Creating a Custom Button",
+    "content": ""
+  },
+  {
+    "file": "ch15-scripting.html",
+    "chapter": "Ch. 15 Scripting",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": ""
+  },
+  {
+    "file": "ch15-scripting.html",
+    "chapter": "Ch. 15 Scripting",
+    "level": "Advanced",
+    "type": "INFO",
+    "heading": "Online Help",
+    "content": "💡 Online Help For more scripting examples and advanced usage, navigate to Help → Online help in the UserClient or AdminClient. The documentation includes sample scripts for common automation scenarios."
+  },
+  {
+    "file": "ch15-scripting.html",
+    "chapter": "Ch. 15 Scripting",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Prepare Files | .script + .exe + .ini files | Script package ready"
+  },
+  {
+    "file": "ch15-scripting.html",
+    "chapter": "Ch. 15 Scripting",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Register in AdminClient | Script management → Copy files to directory | Script registered in Octoplant"
+  },
+  {
+    "file": "ch15-scripting.html",
+    "chapter": "Ch. 15 Scripting",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Enable Scripting | Scripting settings → Enable globally | Scripting functionality active"
+  },
+  {
+    "file": "ch15-scripting.html",
+    "chapter": "Ch. 15 Scripting",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Set Trigger | Script config → Before Edit event | Script runs on specified event"
+  },
+  {
+    "file": "ch15-scripting.html",
+    "chapter": "Ch. 15 Scripting",
+    "level": "Advanced",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "Custom Button | Extras tab → Custom button | Manual script execution available"
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "1. Objective and Purpose",
+    "content": "For many components of our production systems, we create backups that are archived in our central backup management tool (Octoplant). The primary purpose of this process is to ensure regular training of the recovery procedure and to verify that the available backups are functional and can be successfully restored in an emergency. ℹ️ Scope of Application This procedure applies initially only to the"
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "2. Preparation of the Recovery Tests",
+    "content": "The recovery tests are intended to ensure that, in the event of a disruption—for example, a PLC failure—we can quickly restore the system to an operational state. The goal is not to pose a sustained risk to production or cause major downtime, as this would contradict the very purpose of the backup strategy."
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "2.1 Personnel Requirements",
+    "content": "The personnel performing the recovery tests must possess the necessary qualifications to carry out the tests. They must also be familiar with troubleshooting the respective components and have experience operating the associated machines."
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "2.2 Component Requirements",
+    "content": "Recovery tests should only be performed on components for which spare parts are available on-site in the event of a defect. Furthermore, the site must have full access permissions. For example, in the case of a Siemens PLC, any general or safety passwords must be known and available to the personnel conducting the test."
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "2.3 Machine Availability Requirements",
+    "content": "A time window of at least two hours must be planned for performing the recovery tests, even though the process will typically take significantly less time. In practice, this means that tests should only be conducted during maintenance shifts or sufficiently long planned system downtimes."
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "3. Execution of the Recovery Tests",
+    "content": "The execution depends heavily on the specific component and therefore cannot be defined in detail for all components. Based on the personnel requirements defined above, the general procedure should already be known to the employee performing the test. It is important that different types of components (e.g., S7‑300, S7‑1500, frequency converters from various systems) are tested regularly to ensure"
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "Create a Live Backup First",
+    "content": ""
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "SECTION",
+    "heading": "4. Documentation in SAP",
+    "content": "The execution of the recovery test must be documented thoroughly. The documentation must include: Date of the test Name of the person performing the test Specific component tested Backup version used Any anomalies or issues encountered For this purpose, a monthly maintenance order must be created in SAP by the site, through which the documentation is completed. The maintenance order must be create"
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary: OT Backup Test Workflow",
+    "content": "Phase Action Requirements / Details 1. Preparation Schedule test window Minimum 2 hours during maintenance shift or planned downtime. 2. Verification Check prerequisites Qualified personnel, spare parts available, full access/passwords known. 3. Safety Create live backup Mandatory: Create and store a backup of the current live system before proceeding. 4. Execution Perform recovery Restore selecte"
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "INFO",
+    "heading": "Scope of Application",
+    "content": "ℹ️ Scope of Application This procedure applies initially only to the sites of Dorsten, Hildesheim, and Knetzgau."
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "STEP",
+    "heading": "Create a Live Backup First",
+    "content": "CRITICAL STEP Create a Live Backup First Before beginning any work, a backup must always be created from the live system and stored securely. This ensures that, in case any issues arise during the test, the machine can be restored to its exact previous state immediately."
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "WARNING",
+    "heading": "Post-Test Verification",
+    "content": "⚠️ Post-Test Verification After completing the test, it must be ensured that the component and, if applicable, the machine have been restored to a fully operational state. Furthermore, the startup of the machine or component must be checked once again to verify proper functioning."
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "1. Preparation | Schedule test window | Minimum 2 hours during maintenance shift or planned downtime."
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "2. Verification | Check prerequisites | Qualified personnel, spare parts available, full access/passwords known."
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "3. Safety | Create live backup | Mandatory: Create and store a backup of the current live system before proceeding."
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "4. Execution | Perform recovery | Restore selected backup version to the component."
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "5. Validation | Verify operation | Ensure component/machine is fully operational and check startup sequence."
+  },
+  {
+    "file": "ch16-ot-backup-tests.html",
+    "chapter": "Ch. 16 OT Backup Tests",
+    "level": "Operations",
+    "type": "Summary",
+    "heading": "Summary",
+    "content": "6. Documentation | Log in SAP | Record date, name, component, version, and anomalies in the monthly SAP maintenance order."
+  }
+];
 
 // ─── SEARCH ENGINE ───────────────────────────────────────────────────────────
 
