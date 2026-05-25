@@ -175,11 +175,29 @@
       <div class="screenshot-row">
         <div class="screenshot-box" style="margin:0">
           <div class="screenshot-caption">Figure 1.2 – Component creation in the Project tree</div>
-          <img src="assets/img/2.jpg" alt="Working with Components" onclick="openLightbox(this)">
+          <div class="extracted-content" data-source="2.jpg">
+<h3 class="extracted-title">WORKING WITH COMPONENTS</h3>
+<p>A definition of components in octoplant is provided under Term: Component.</p>
+<p>On the following pages, you will learn how to create components in UserClient, move them, and change their properties.</p>
+</div>
         </div>
         <div class="screenshot-box" style="margin:0">
           <div class="screenshot-caption">Figure 1.3 – Component definition and types</div>
-          <img src="assets/img/3.jpg" alt="Component Definition" onclick="openLightbox(this)">
+          <div class="extracted-content" data-source="3.jpg">
+<h3 class="extracted-title">COMPONENT</h3>
+<h4 class="section-heading">Definition</h4>
+<p>A component is a directory in the Windows file system that is provided with special properties via octoplant. A component can therefore only be created by octoplant and its properties are only recognized in the octoplant system. The external structure of the component is similar to the virtual container. This contains a main project and any number of secondary files that are to be included in the project (e.g. an S7 project and an E-plan as a PDF).</p>
+<h4 class="section-heading">CHARACTERISTICS</h4>
+<p>A locally available component is displayed in the file manager, such as Windows Explorer, as a normal directory. If a component is not in the local client archive, but only on the server, it is not displayed in the file manager.</p>
+<p>When a component is created in octoplant, a database entry is created parallel to the project structure, which contains all settings relating to the component. The following information can be taken from:</p>
+<ul class="content-list">
+<li>The symbol that is displayed in the Project tree of the UserClient instead of the folder icon</li>
+<li>The comparator types and the method to be used in the comparison</li>
+<li>The files that have been included in or excluded from the comparison process</li>
+<li>The files that have been saved in or excluded from a version</li>
+</ul>
+<p>If a user deletes a component locally, it remains in the server archive and is grayed out in the Project tree of the UserClient.</p>
+</div>
         </div>
       </div>
 
@@ -276,7 +294,23 @@
 
       <div class="screenshot-box">
         <div class="screenshot-caption">Figure 1.4 – Check-In procedure uploading the component to the server</div>
-        <img src="assets/img/4.jpg" alt="Check-In Procedure" onclick="openLightbox(this)">
+        <div class="extracted-content" data-source="4.jpg">
+<h3 class="extracted-title">CHECKING OUT COMPONENTS</h3>
+<h4 class="section-heading">PREREQUISITE</h4>
+<p>Components can only be checked out if there is a connection to the server, i.e. the button above the Project tree is selected.</p>
+<h4 class="section-heading">PROCEDURE</h4>
+<ol class="step-list">
+<li class="step-item"><strong>Step 2:</strong> Select the component in the Project tree.</li>
+<li class="step-item"><strong>Step 3:</strong> Navigate to the Start tab in the menu bar or right-click the component and select Check-Out.</li>
+<li class="step-item"><strong>Step 3:</strong> In the Check-out dialog, check if the desired components are selected, and select Check-Out and close.</li>
+</ol>
+<h4 class="section-heading">When the Check-out is finished:</h4>
+<ul class="content-list">
+<li>A pop-up opens in the notification area with the result of the Check-Out.</li>
+<li>The display of the pop-up can be activated or deactivated in the Client settings dialog.</li>
+<li>The component type symbol will be displayed in color in the Project tree.</li>
+</ul>
+</div>
       </div>
 
       <div class="callout info">
