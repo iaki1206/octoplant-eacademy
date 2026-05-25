@@ -151,17 +151,63 @@
       <div class="screenshot-row">
       <div class="screenshot-box" style="margin:0">
         <div class="screenshot-caption">Figure 11.1 – Supplier Check-Out dialog configuration</div>
-        <img src="assets/img/7_1.jpg" alt="Figure 11.1 – Supplier Check-Out dialog configuration" onclick="openLightbox(this)">
+        <div class="extracted-content" data-source="7_1.jpg">
+<h3 class="extracted-title">EXPORT WITH SUPPLIER CHECK-OUT</h3>
+<ol class="step-list">
+<li class="step-item"><strong>Step 2:</strong> Start the UserClient, select the desired component and click on the Check-Out button.</li>
+<li class="step-item"><strong>Step 3:</strong> The Check-Out dialog opens.</li>
+<li class="step-item"><strong>Step 4:</strong> As with every Check-Out, transfer the files from the Components on server area to the Selected components area using the > button.</li>
+<li class="step-item"><strong>Step 5:</strong> Activate the Supplier Check-Out (user-defined target directory) checkbox in the Selected components area.</li>
+<li class="step-item"><strong>Step 5:</strong> The additional checkboxes are then displayed:<ul class="sub-list">
+<li>Activate the Compressed checkbox if you want to compress the files as ZIP files.</li>
+<li>Activate the Use project tree directory structure checkbox if you want to keep the access path. This is recommended if you want to check out more than one component.</li>
+<li>Activate the Show target directory in file manager after Check-Out checkbox to automatically open the target directory in the file manager.</li>
+</ul></li>
+<li class="step-item"><strong>Step 7:</strong> It is strongly recommended that you activate the Lock for other users option if you want to check out projects for suppliers.</li>
+<li class="step-item"><strong>Step 8:</strong> Select the directory to which you want to export the files. Select the ... checkbox next to the Target directory field.</li>
+<li class="step-item"><strong>Step 8:</strong> Select the Check-Out button if you want to perform other actions in the dialog or select Check-Out and close when you are finished.</li>
+</ol>
+<h4 class="section-heading">Selected components dialog samples</h4>
+<p>Selected components [ ] Supplier Check-Out (user-defined target directory)  Version(s) to be copied: [Latest version (dropdown)] [ ] Check-Out latest backup [x] Under development     [ ] Lock for other users     Comment: [________________] [ ] Check-Out referenced standard libraries</p>
+<p>Selected components [x] Supplier Check-Out (user-defined target directory)     [x] Compressed     [ ] Use project tree directory structure     [ ] Show target directory in file manager after Check-Out</p>
+</div>
       </div>
       <div class="screenshot-box" style="margin:0">
         <div class="screenshot-caption">Figure 11.2 – Supplier package contents including the delivery note file</div>
-        <img src="assets/img/7_2.jpg" alt="Figure 11.2 – Supplier package contents including the delivery note file" onclick="openLightbox(this)">
+        <div class="extracted-content" data-source="7_2.jpg">
+<h3 class="extracted-title">INFO</h3>
+<p>Each time you check out a project for suppliers with the Supplier Check-Out, the files SupplierChangeReason.txt and SupplierComment.txt are also checked out automatically. These files are used to transfer the text entered by the suppliers to the Change history tab in octoplant.</p>
+<p>Do not delete SupplierDeliveryNote.vdog-sdn</p>
+<p>This file is required for re-importing the project via SmartImport. Deleting it will make re-import impossible.</p>
+</div>
       </div>
     </div>
     <div class="screenshot-row">
       <div class="screenshot-box" style="margin:0">
         <div class="screenshot-caption">Figure 11.3 – SmartImport dialog for re-importing supplier changes</div>
-        <img src="assets/img/8_1.jpg" alt="Figure 11.3 – SmartImport dialog for re-importing supplier changes" onclick="openLightbox(this)">
+        <div class="extracted-content" data-source="8_1.jpg">
+<h3 class="extracted-title">RE-IMPORTING PROJECTS VIA SMARTIMPORT FOR SUPPLIERS</h3>
+<h4 class="section-heading">PREREQUISITES</h4>
+<ul class="content-list">
+<li>SmartImport only works if the project was checked out via Supplier Check-Out and includes the SupplierDeliveryNote.vdog-sdn file.</li>
+<li>The target component must be checked out at the time of import.</li>
+<li>Suppliers are recommended to return project files either in a folder with the name ProjectData or in a ZIP archive ProjectData.zip.</li>
+</ul>
+<h4 class="section-heading">RE-IMPORTING PROJECTS</h4>
+<ol class="step-list">
+<li class="step-item"><strong>Step 2:</strong> Start the UserClient and click on the Home tab. Then click on the SmartImport for supplier projects button.</li>
+<li class="step-item"><strong>Step 3:</strong> The SmartImport for supplier projects dialog opens.</li>
+<li class="step-item"><strong>Step 4:</strong> In the Supplier projects area, click Add and select the directory containing the projects you want to import. This must be the directory in which the file SupplierDeliveryNote.vdog-sh created during Check-Out is located.</li>
+<li class="step-item"><strong>Step 5:</strong> In the Import column, activate the checkboxes for the projects that you want to import.</li>
+<li class="step-item"><strong>Step 5:</strong> If you want to check what the supplier has changed in the project before importing, select a comparison setting on the right-hand side of the dialog: Differences: supplier data <-> original version<ul class="sub-list">
+<li>Differences: supplier data <-> original version: The differences between the component provided by the supplier and the version originally issued for the supplier are displayed.</li>
+<li>Differences: supplier data <-> working directory: The differences between the component provided by the suppliers and the contents of your working directory are displayed.</li>
+<li>Differences: working directory <-> last version: The differences between the state of the component in the working directory and the current version of the component are displayed.</li>
+</ul></li>
+</ol>
+<h4 class="section-heading">INFO</h4>
+<p>Initially, the option Differences: supplier data <-> original version is activated. You can select other options via the dropdown menu.</p>
+</div>
       </div>
       <div class="screenshot-box" style="margin:0">
         <div class="screenshot-caption">Figure 11.4 – SmartImport comparison and import options</div>
